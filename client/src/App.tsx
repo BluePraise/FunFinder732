@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function App() {
-  const [activities, setActivities] = useState<{ title: string; date: string }[]>([]);
+  const [activities, setActivities] = useState<{ title: string; date: string, description: string, url: string, time: string }[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold">FunFinder-732: Upcoming Activities</h1>
+      <p>Total events in monmouth county: {}</p>
 
       {loading ? (
         <p>Loading activities...</p>
@@ -26,6 +27,9 @@ function App() {
             <li key={index} className="border p-3 my-2 rounded-md">
               <strong>{activity.title}</strong>
               <p>{activity.date}</p>
+              <p>{activity.time}</p>
+              <p>{activity.description}</p>
+              <a href={activity.url}>Click here to register</a>
             </li>
           ))}
         </ul>
