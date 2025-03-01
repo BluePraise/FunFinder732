@@ -8,6 +8,7 @@ const scrapeActivities = async () => {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   let allEvents: { title: string; url: string; date: string; time: string; description: string }[] = [];
+  let monthEventCounts: Record<number, number> = {}; // Stores event count per month
 
   for (const month of MONTHS) {
     const url = `${BASE_URL}${month}`;
@@ -24,6 +25,7 @@ const scrapeActivities = async () => {
 
       if (noEvents) {
         console.warn(`⚠️ No events found for month ${month}, skipping.`);
+        monthEventCounts[month] = 0;
         continue; // Skip to the next month
       }
 
@@ -61,6 +63,7 @@ const scrapeActivities = async () => {
 
       console.log(`📅 Found ${events.length} events for month ${month}`);
       allEvents = allEvents.concat(events);
+      monthEventCounts[month] = events.length; // Store event count for this month
     } catch (error) {
       console.error(`❌ Error scraping ${url}:`, error);
     }
@@ -68,7 +71,7 @@ const scrapeActivities = async () => {
 
   await browser.close();
   console.log(`🎉 Scraping complete! Found ${allEvents.length} total events.`);
-  return allEvents;
+  return { totalEvents: allEvents.length, events: allEvents, monthEventCounts };
 };
 
 export default scrapeActivities;

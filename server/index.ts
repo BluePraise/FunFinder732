@@ -1,17 +1,22 @@
 import express from "express";
 import cors from "cors";
-import scrapeActivities from "./scraper.js";
+import scrapeActivities from "./scraper.js"; // Ensure correct import
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-let cachedActivities = [];
-let lastUpdated = null;
+let lastUpdated: Date | null = null;
+
+let cachedData: {
+  totalEvents: number;
+  events: { title: string; url: string; date: string; time: string; description: string }[];
+  monthEventCounts: Record<number, number>;
+} | null = null;
 
 const updateActivities = async () => {
   console.log("🔄 Fetching fresh activity data...");
-  cachedActivities = await scrapeActivities();
+  cachedData = await scrapeActivities();
   lastUpdated = new Date();
 };
 
@@ -19,11 +24,20 @@ const updateActivities = async () => {
 updateActivities();
 
 app.get("/activities", async (req, res) => {
-  if (!lastUpdated || new Date() - lastUpdated > 12 * 60 * 60 * 1000) {
+  if (!lastUpdated || new Date().getTime() - lastUpdated.getTime() > 12 * 60 * 60 * 1000) {
     await updateActivities();
   }
-  res.json(cachedActivities);
+  res.json(
+    {cachedData, lastUpdated}
+  );
 });
 
-const PORT = process.env.PORT || 5005;
+// API endpoint for status
+app.get("/status", (req, res) => {
+  res.json({
+    serverTime: new Date().toISOString()
+  });
+});
+
+const PORT = 5005;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
