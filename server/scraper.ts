@@ -48,6 +48,45 @@ const extractLocation = (title: string) => {
   return "Various Locations";
 };
 
+// Extract pricing information from description
+const extractPricing = (description: string): { isFree: boolean; cost: string | null; details: string | null } => {
+  const text = description;
+
+  // Check for FREE patterns
+  if (/FREE!?/i.test(text)) {
+    return { isFree: true, cost: "Free", details: null };
+  }
+
+  // Check for "The cost is" pattern
+  const costIsMatch = text.match(/The cost is\s+([^.!?\n]+)/i);
+  if (costIsMatch) {
+    const costDetails = costIsMatch[1].trim();
+    return {
+      isFree: false,
+      cost: costDetails,
+      details: costDetails
+    };
+  }
+
+  // Check for price patterns like $XX, $XX.XX
+  const priceMatch = text.match(/\$(\d+(?:\.\d{2})?)/i);
+  if (priceMatch) {
+    return {
+      isFree: false,
+      cost: `$${priceMatch[1]}`,
+      details: null
+    };
+  }
+
+  // Check for "no charge" or "no cost"
+  if (/no charge|no cost|admission is free/i.test(text)) {
+    return { isFree: true, cost: "Free", details: null };
+  }
+
+  // Price not mentioned
+  return { isFree: false, cost: null, details: null };
+};
+
 const scrapeActivities = async () => {
   console.log("🚀 Running scraper...");
   const browser = await puppeteer.launch({ headless: true });
@@ -60,6 +99,7 @@ const scrapeActivities = async () => {
     description: string;
     categories: string[];
     location: string;
+    pricing: { isFree: boolean; cost: string | null; details: string | null };
   }[] = [];
   let monthEventCounts: Record<number, number> = {}; // Stores event count per month
 
@@ -114,11 +154,12 @@ const scrapeActivities = async () => {
         return eventList;
       });
 
-      // Add categories and location to each event
+      // Add categories, location, and pricing to each event
       const enrichedEvents = events.map(event => ({
         ...event,
         categories: extractCategories(event.title, event.description),
-        location: extractLocation(event.title)
+        location: extractLocation(event.title),
+        pricing: extractPricing(event.description)
       }));
 
       console.log(`📅 Found ${enrichedEvents.length} events for month ${month}`);

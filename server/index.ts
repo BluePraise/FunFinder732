@@ -18,6 +18,7 @@ let cachedData: {
     description: string;
     categories: string[];
     location: string;
+    pricing: { isFree: boolean; cost: string | null; details: string | null };
   }[];
   monthEventCounts: Record<number, number>;
 } | null = null;

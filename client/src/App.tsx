@@ -1,15 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { CalendarCheck, Clock4, Grid3x3, List, MapPin, Tag } from "lucide-react";
+import { MapPin, Tag, DollarSign } from "lucide-react";
 
 interface Activity {
   title: string;
@@ -19,6 +10,7 @@ interface Activity {
   time: string;
   categories: string[];
   location: string;
+  pricing: { isFree: boolean; cost: string | null; details: string | null };
 }
 
 function App() {
@@ -27,11 +19,12 @@ function App() {
   const [totalEvents, setTotalEvents] = useState(0);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [loading, setLoading] = useState(true);
-  const [layout, setLayout] = useState<"grid" | "list">("grid");
 
   // Filter states
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedLocation, setSelectedLocation] = useState<string>("All");
+  const [showFreeOnly, setShowFreeOnly] = useState<boolean>(false);
+  const [hidePastEvents, setHidePastEvents] = useState<boolean>(false);
   const [availableCategories, setAvailableCategories] = useState<string[]>([]);
   const [availableLocations, setAvailableLocations] = useState<string[]>([]);
 
@@ -78,37 +71,37 @@ function App() {
       );
     }
 
+    if (showFreeOnly) {
+      filtered = filtered.filter(activity => activity.pricing.isFree);
+    }
+
+    if (hidePastEvents) {
+      filtered = filtered.filter(activity => !isPastDate(activity.date));
+    }
+
     setFilteredActivities(filtered);
-  }, [selectedCategory, selectedLocation, activities]);
+  }, [selectedCategory, selectedLocation, showFreeOnly, hidePastEvents, activities]);
+
+  // Helper function to check if event date has passed
+  const isPastDate = (dateString: string): boolean => {
+    try {
+      const eventDate = new Date(dateString);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); // Reset time to start of day
+      return eventDate < today;
+    } catch {
+      return false;
+    }
+  };
 
   return (
     <div className="p-6">
-      <div className="max-w-[1120px] mx-auto">
+      <div className="max-w-full mx-auto">
         <div className="flex flex-col gap-4 mb-6">
-          <div className="flex justify-between items-center">
-            <div>
-              <h1 className="text-2xl font-bold">Monmouth County Park Activities</h1>
-              <p>Total events: {totalEvents} | Showing: {filteredActivities.length}</p>
-              <p className="text-sm text-muted-foreground">Last updated: {lastUpdated ? new Date(lastUpdated).toLocaleString() : "N/A"} </p>
-            </div>
-            <div className="flex gap-2">
-              <Button
-                variant={layout === "grid" ? "default" : "outline"}
-                size="icon"
-                onClick={() => setLayout("grid")}
-                title="Grid view"
-              >
-                <Grid3x3 className="h-4 w-4" />
-              </Button>
-              <Button
-                variant={layout === "list" ? "default" : "outline"}
-                size="icon"
-                onClick={() => setLayout("list")}
-                title="List view"
-              >
-                <List className="h-4 w-4" />
-              </Button>
-            </div>
+          <div>
+            <h1 className="text-2xl font-bold">Monmouth County Park Activities</h1>
+            <p>Total events: {totalEvents} | Showing: {filteredActivities.length}</p>
+            <p className="text-sm text-muted-foreground">Last updated: {lastUpdated ? new Date(lastUpdated).toLocaleString() : "N/A"} </p>
           </div>
 
           {/* Filter Section */}
@@ -143,13 +136,40 @@ function App() {
               </select>
             </div>
 
-            {(selectedCategory !== "All" || selectedLocation !== "All") && (
+            <div className="flex items-center gap-2">
+              <DollarSign className="h-4 w-4" />
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={showFreeOnly}
+                  onChange={(e) => setShowFreeOnly(e.target.checked)}
+                  className="cursor-pointer"
+                />
+                <span className="font-medium">Free Events Only</span>
+              </label>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={hidePastEvents}
+                  onChange={(e) => setHidePastEvents(e.target.checked)}
+                  className="cursor-pointer"
+                />
+                <span className="font-medium">Hide Past Events</span>
+              </label>
+            </div>
+
+            {(selectedCategory !== "All" || selectedLocation !== "All" || showFreeOnly || hidePastEvents) && (
               <Button
                 variant="outline"
                 size="sm"
                 onClick={() => {
                   setSelectedCategory("All");
                   setSelectedLocation("All");
+                  setShowFreeOnly(false);
+                  setHidePastEvents(false);
                 }}
               >
                 Clear Filters
@@ -157,46 +177,74 @@ function App() {
             )}
           </div>
         </div>
-      <div className={layout === "grid" ? "grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3" : "flex flex-col gap-4"}>
-      {loading ? (
-        <p>Loading activities...</p>
-      ) : filteredActivities.length > 0 ? (
-          filteredActivities.map((activity, index) => (
-             <Card key={index} className={layout === "list" ? "flex flex-row" : ""}>
-              <div className={layout === "list" ? "flex-1" : ""}>
-                <CardHeader>
-                  <CardTitle className={layout === "list" ? "text-left" : "text-center"}>{activity.title}</CardTitle>
-                  <hr />
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    <div className="flex flex-wrap gap-2 mb-2">
-                      {activity.categories.map(cat => (
-                        <span key={cat} className="inline-flex items-center px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">
-                          {cat}
-                        </span>
-                      ))}
-                    </div>
-                    <p className="flex gap-2 items-center"><MapPin className="h-4 w-4" /><span className="text-xs">{activity.location}</span></p>
-                    <p className="flex gap-2 items-center"><CalendarCheck className="h-4 w-4" />{activity.date}</p>
-                    <p className="flex gap-2 items-center"><Clock4 className="h-4 w-4" />{activity.time}</p>
-                    <hr className="my-2" />
-                    <p className="text-sm">{activity.description}</p>
-                  </CardDescription>
-                </CardContent>
-              </div>
-              <hr />
-              <CardFooter>
-              {/* <Link className={buttonVariants({ variant: "outline" })} href="{activity.url}">Click here</Link> */}
-              </CardFooter>
-            </Card>
-          ))
 
-      ) : (
-        <p>No activities found.</p>
-      )}
-
-      </div>
+        {/* Table View */}
+        <div className="overflow-x-auto">
+          {loading ? (
+            <p>Loading activities...</p>
+          ) : filteredActivities.length > 0 ? (
+            <table className="w-full border-collapse bg-background">
+              <thead>
+                <tr className="border-b">
+                  <th className="text-left p-3 font-semibold">Event</th>
+                  <th className="text-left p-3 font-semibold">Date & Time</th>
+                  <th className="text-left p-3 font-semibold">Location</th>
+                  <th className="text-left p-3 font-semibold">Categories</th>
+                  <th className="text-left p-3 font-semibold">Price</th>
+                  <th className="text-left p-3 font-semibold">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredActivities.map((activity, index) => {
+                  const isPast = isPastDate(activity.date);
+                  return (
+                    <tr
+                      key={index}
+                      className={`border-b hover:bg-muted/50 ${isPast ? 'opacity-50 text-muted-foreground' : ''}`}
+                    >
+                      <td className="p-3">
+                        <div className="font-medium">{activity.title}</div>
+                      </td>
+                      <td className="p-3">
+                        <div className="text-sm">{activity.date}</div>
+                        <div className="text-xs text-muted-foreground">{activity.time}</div>
+                      </td>
+                      <td className="p-3">
+                        <div className="flex items-center gap-1 text-sm">
+                          <MapPin className="h-3 w-3" />
+                          {activity.location}
+                        </div>
+                      </td>
+                      <td className="p-3">
+                        <div className="flex flex-wrap gap-1">
+                          {activity.categories.map(cat => (
+                            <span key={cat} className="inline-flex items-center px-2 py-0.5 text-xs rounded-full bg-primary/10 text-primary">
+                              {cat}
+                            </span>
+                          ))}
+                        </div>
+                      </td>
+                      <td className="p-3">
+                        {activity.pricing.cost ? (
+                          <span className={activity.pricing.isFree ? "font-semibold text-green-600" : "text-sm"}>
+                            {activity.pricing.cost}
+                          </span>
+                        ) : (
+                          <span className="text-xs text-muted-foreground">-</span>
+                        )}
+                      </td>
+                      <td className="p-3">
+                        <div className="text-sm max-w-md line-clamp-3">{activity.description}</div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          ) : (
+            <p>No activities found.</p>
+          )}
+        </div>
     </div>
     </div>
 
