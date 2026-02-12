@@ -10,7 +10,15 @@ let lastUpdated: Date | null = null;
 
 let cachedData: {
   totalEvents: number;
-  events: { title: string; url: string; date: string; time: string; description: string }[];
+  events: {
+    title: string;
+    url: string;
+    date: string;
+    time: string;
+    description: string;
+    categories: string[];
+    location: string;
+  }[];
   monthEventCounts: Record<number, number>;
 } | null = null;
 
@@ -28,7 +36,10 @@ app.get("/activities", async (req, res) => {
     await updateActivities();
   }
   res.json(
-    {cachedData, lastUpdated}
+    {
+      cachedData,
+      lastUpdated
+    }
   );
 });
 
