@@ -1,0 +1,1096 @@
+import { useState, useMemo } from "react";
+
+// ─── Types ────────────────────────────────────────────────────────────────────
+
+type Month = "Mar" | "Apr" | "May" | "Jun" | "Ongoing";
+type Category =
+  | "Nature"
+  | "Arts & Crafts"
+  | "History & Tours"
+  | "Adventure & Fitness"
+  | "Family Programs"
+  | "Festivals & Culture";
+
+interface ParkEvent {
+  name: string;
+  location: string;
+  dates: string;
+  price: string;
+  isFree: boolean;
+  ages: string;
+  category: Category;
+  months: Month[];
+  note?: string;
+}
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
+
+const EVENTS: ParkEvent[] = [
+  // ── MARCH ──
+  {
+    name: "Summer Job Fair",
+    location: "Fort Monmouth Recreation Center",
+    dates: "Sat, Mar 7",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Festivals & Culture",
+    months: ["Mar"],
+    note: "Camp counselors, lifeguards, boat tour operators, rangers & more.",
+  },
+  {
+    name: "Cookstove Demonstration",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Mar 7, 21 · Apr 4, 18, 26 · May 2, 16, 31",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["Mar", "Apr", "May"],
+    note: "Wood-fired stove in the outdoor kitchen. 1890s recipes & techniques.",
+  },
+  {
+    name: "Morning Farm Chores",
+    location: "Longstreet Farm, Holmdel Park",
+    dates: "Sat – Mar 7, 22 · Apr 4, 19 · May 2, 17 · 8:00–9:30 AM",
+    price: "$15/person",
+    isFree: false,
+    ages: "6+ (under 18 with adult)",
+    category: "History & Tours",
+    months: ["Mar", "Apr", "May"],
+    note: "Milk a cow, collect eggs, feed livestock before the farm opens.",
+  },
+  {
+    name: "E. Murray Todd Half Marathon",
+    location: "Brookdale Community College, Lincroft",
+    dates: "Sun, Mar 8",
+    price: "Race entry fee",
+    isFree: false,
+    ages: "Adults",
+    category: "Adventure & Fitness",
+    months: ["Mar"],
+    note: "45+ years of tradition. 13.1 miles through Monmouth County parkland.",
+  },
+  {
+    name: "Blacksmith Demonstration",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Mar 8 · Apr 12 · May 10 · 1:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["Mar", "Apr", "May"],
+    note: "Watch iron become functional tools at the anvil.",
+  },
+  {
+    name: "Splendid Spring Strolls",
+    location: "Various parks",
+    dates: "Wed – Mar 11, 18 · Apr 15, 29 · May 13",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Nature",
+    months: ["Mar", "Apr", "May"],
+    note: "Naturalist-led trail walks. Blossoms, birds, & nature topics.",
+  },
+  {
+    name: "Rug Hooking Gathering",
+    location: "Longstreet Farm Visitor Center",
+    dates: "Tuesdays, Mar 17–May 19 · 10 AM–3 PM",
+    price: "$40/person",
+    isFree: false,
+    ages: "Adults",
+    category: "Arts & Crafts",
+    months: ["Mar", "Apr", "May"],
+    note: "10 sessions. Bring an existing project or come to learn.",
+  },
+  {
+    name: "Open Shoot Archery",
+    location: "Thompson Park Activity Barn",
+    dates: "Sat – Mar 14 · Apr 11 · May 16 · 10 AM–1 PM",
+    price: "$10/person (cash/check only)",
+    isFree: false,
+    ages: "10+ (under 18 with adult)",
+    category: "Adventure & Fitness",
+    months: ["Mar", "Apr", "May"],
+    note: "NOT a beginner class. All equipment provided. Dress for weather.",
+  },
+  {
+    name: "Spring Peeper Stroll",
+    location: "Freneau Woods Park",
+    dates: "Sat, Mar 14 · 6:30–7:45 PM",
+    price: "$12/person",
+    isFree: false,
+    ages: "4+ (under 18 with adult)",
+    category: "Nature",
+    months: ["Mar"],
+    note: "Hike to wooded pools to listen for spring peeper tree frogs.",
+  },
+  {
+    name: "Sunset Stroll Around Turkey Swamp Lake",
+    location: "Turkey Swamp Park, Freehold",
+    dates: "Sat, Mar 14 · 6:00–8:00 PM",
+    price: "$20 parent/child · $10 each add'l",
+    isFree: false,
+    ages: "All ages (under 18 with adult)",
+    category: "Nature",
+    months: ["Mar"],
+    note: "Naturalist-guided sunset walk ending at a bonfire. Bring s'mores!",
+  },
+  {
+    name: "Dr. Seuss Story Week",
+    location: "Dorbrook Recreation Area Program Building",
+    dates: "Mar 4–12 (multiple sessions)",
+    price: "$25/pair",
+    isFree: false,
+    ages: "2–5 with adult",
+    category: "Family Programs",
+    months: ["Mar"],
+    note: "Story, craft & games. Books: Horton, Cat in the Hat, Lorax & more.",
+  },
+  {
+    name: "Family Woodcock Walk",
+    location: "Dorbrook Recreation Area",
+    dates: "Thu, Mar 5 · 5:30–6:30 PM",
+    price: "$10/person",
+    isFree: false,
+    ages: "All ages (under 18 with adult)",
+    category: "Nature",
+    months: ["Mar"],
+    note: "Watch the American Woodcock's sunset sky dance mating ritual.",
+  },
+  {
+    name: "Mum! Dad! Bingo! Bluey™!",
+    location: "Fort Monmouth Recreation Center, Gym A",
+    dates: "Fri, Mar 13 & May 8 · 6:00–7:00 PM",
+    price: "$22/child",
+    isFree: false,
+    ages: "4–10 with adult",
+    category: "Family Programs",
+    months: ["Mar", "May"],
+    note: "Bluey-themed games, take-home craft & family scavenger hunt.",
+  },
+  {
+    name: "ART Capades (Parent & Child)",
+    location: "Fort Monmouth Recreation Center, Program Room B",
+    dates: "4-session series: Mar 12–Apr 2 · Apr 16–May 7 · May 14–Jun 4 · Thu 9:30 AM",
+    price: "$60/pair · $52 add'l sibling",
+    isFree: false,
+    ages: "2–4 with adult",
+    category: "Arts & Crafts",
+    months: ["Mar", "Apr", "May", "Jun"],
+    note: "Process-focused art. Splatter paint, playdough, stamping & more.",
+  },
+  {
+    name: "Craft 'n' Play (Parent & Child)",
+    location: "Fort Monmouth Recreation Center, Program Room B",
+    dates: "4-session series starting Mar 11, Apr 15, May 13",
+    price: "$60/pair · $52 add'l sibling",
+    isFree: false,
+    ages: "18 months–3 years with adult",
+    category: "Arts & Crafts",
+    months: ["Mar", "Apr", "May"],
+    note: "Colors, textures, paint, glitter. Seasonal themes & holiday crafts.",
+  },
+  {
+    name: "Let's Create! (Parent & Child)",
+    location: "Dorbrook Recreation Area Program Building",
+    dates: "Fri – Mar 6–Apr 24 · May 1–Jun 5 · 10:45–11:30 AM",
+    price: "$77/pair (6-session series)",
+    isFree: false,
+    ages: "2–4 with adult",
+    category: "Arts & Crafts",
+    months: ["Mar", "Apr", "May", "Jun"],
+    note: "Story, socialization, fine motor skills, art project each week.",
+  },
+  {
+    name: "Messy Art (Parent & Child)",
+    location: "Fort Monmouth Recreation Center, Program Room B",
+    dates: "4-session series – Wed, starting Mar 11, Apr 15, May 13",
+    price: "$60/pair · $52 add'l sibling",
+    isFree: false,
+    ages: "18 months–3 years with adult",
+    category: "Arts & Crafts",
+    months: ["Mar", "Apr", "May"],
+    note: "Paint, glue, glitter. Moves outdoors in nice weather.",
+  },
+  {
+    name: "Friday Evening Pottery",
+    location: "Thompson Park Creative Arts Center",
+    dates: "Fri – Mar 13–Apr 24 · May 1–Jun 12 · 6:30–8:30 PM",
+    price: "$140/person (7-session series)",
+    isFree: false,
+    ages: "11+ (under 13 with adult)",
+    category: "Arts & Crafts",
+    months: ["Mar", "Apr", "May", "Jun"],
+    note: "Throwing & hand building. Glazes + 12 lbs. clay included.",
+  },
+  {
+    name: "Sunday Ceramics",
+    location: "Thompson Park Creative Arts Center",
+    dates: "Sun, Mar 1 · Apr 12 · May 3 · 11:30 AM–1 PM or 1:30–3 PM",
+    price: "$15/person (bisqueware purchased on-site)",
+    isFree: false,
+    ages: "8+ (under 18 with paying adult)",
+    category: "Arts & Crafts",
+    months: ["Mar", "Apr", "May"],
+    note: "Glaze a bisque-fired piece. Ready for pickup in ~1 week.",
+  },
+  {
+    name: "Puppet Making / Puppet Show Day!",
+    location: "Thompson Park Visitor Center, Tulip Room",
+    dates: "Sat, Mar 21 · 1:30–3:00 PM",
+    price: "$28/family (up to 4)",
+    isFree: false,
+    ages: "All ages (under 18 with adult)",
+    category: "Family Programs",
+    months: ["Mar"],
+    note: "World Puppetry Day! Make paper plate puppets, then put on a show.",
+  },
+  {
+    name: "19th Century Woodworking Demonstration",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Mar 21 · May 16 · 1:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["Mar", "May"],
+    note: "Traditional tools crafting beautiful functional items.",
+  },
+  {
+    name: "Accordion Melodies of the 1890s",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Mar 21 · Apr 18 · May 16 · 1:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Festivals & Culture",
+    months: ["Mar", "Apr", "May"],
+    note: "Period melodies while touring the Longstreet farmhouse.",
+  },
+  {
+    name: "Under the Spring Stars",
+    location: "Dorbrook Recreation Area, Soccer Field Parking Lot",
+    dates: "Sat, Mar 21 · 9:00–10:00 PM",
+    price: "Free (registration required)",
+    isFree: true,
+    ages: "All ages (under 18 with adult)",
+    category: "Nature",
+    months: ["Mar"],
+    note: "Constellations, planets, satellites & shooting stars. Cancelled if overcast.",
+  },
+  {
+    name: "Spring Eggstravaganza",
+    location: "Historic Walnford, Upper Freehold",
+    dates: "Sun, Mar 29 · 1:00–2:00 PM",
+    price: "$15/parent+child",
+    isFree: false,
+    ages: "1+ (under 12 with adult)",
+    category: "Family Programs",
+    months: ["Mar"],
+    note: "Egg hunt, egg-and-spoon race, and photo with a chicken!",
+  },
+  {
+    name: "Flashlight Easter Eggstravaganza",
+    location: "Fort Monmouth Recreation Center, Gym A",
+    dates: "Fri, Mar 27 · 6:00, 6:45, 7:30 PM (three sessions)",
+    price: "$24/child",
+    isFree: false,
+    ages: "All ages (under 18 with adult)",
+    category: "Family Programs",
+    months: ["Mar"],
+    note: "Flashlight egg hunt, Easter Bunny visit & spring crafts.",
+  },
+  {
+    name: "Family Nature Days!",
+    location: "Seven Presidents Oceanfront Park, Long Branch",
+    dates: "Sun, Mar 29 · 10:00–11:30 AM",
+    price: "$18 parent/child · $9.50 each add'l",
+    isFree: false,
+    ages: "4+ (under 18 with adult)",
+    category: "Nature",
+    months: ["Mar"],
+    note: "Animal presentation, guided walk & craft.",
+  },
+  {
+    name: "Finding the Founding Fathers (GPS Hunt)",
+    location: "Thompson Park, 3 Barns Parking Lot",
+    dates: "Mon, Mar 30 · 10:00–11:30 AM",
+    price: "$20 adult+junior · $10 add'l sibling",
+    isFree: false,
+    ages: "8–12 with adult",
+    category: "Adventure & Fitness",
+    months: ["Mar"],
+    note: "America 250th GPS scavenger hunt to find hidden Founding Father waypoints.",
+  },
+  {
+    name: "Piano Ballads from the Turn of the Century",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Mar 28 · Apr 11 · May 30 · 1:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Festivals & Culture",
+    months: ["Mar", "Apr", "May"],
+    note: "Tap your feet or sing along to 1890s ballads on the farmhouse piano.",
+  },
+  {
+    name: "Wood Carving Demonstration",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Sat, Mar 28 · 1:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["Mar"],
+    note: "Watch a carver whittle a block of wood into art.",
+  },
+  {
+    name: "Spring Craft Show",
+    location: "Fort Monmouth Recreation Center",
+    dates: "Sat, Mar 28",
+    price: "Free admission",
+    isFree: true,
+    ages: "All ages",
+    category: "Festivals & Culture",
+    months: ["Mar"],
+    note: "Shop with unique homegrown artists and artisans.",
+  },
+  {
+    name: "KidzArt Squiggles to Grins",
+    location: "Thompson Park Visitor Center / Henry Hudson Trail Activity Center",
+    dates: "Tue, Mar 31–Jun 16 · Thu, Apr 2–Jun 18 · 6-session series",
+    price: "$104/child",
+    isFree: false,
+    ages: "2–3 with adult",
+    category: "Arts & Crafts",
+    months: ["Mar", "Apr", "May", "Jun"],
+    note: "Motor skills & social development through creative projects.",
+  },
+
+  // ── APRIL ──
+  {
+    name: "Seashore Open House",
+    location: "Seven Presidents Oceanfront Park, Long Branch",
+    dates: "Wed, Apr 1 · 1:00–4:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Nature",
+    months: ["Apr"],
+    note: "Hands-on seashore activities & aquatic animals on display.",
+  },
+  {
+    name: "Historic Seabrook-Wilson House Tours",
+    location: "Bayshore Waterfront Park, Port Monmouth",
+    dates: "Mon/Thu/Sun, Apr 2–Oct 29 · 1:00–4:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["Apr", "May", "Jun"],
+    note: "One of the oldest homes on the Jersey Shore (early 1700s). Drop-in.",
+  },
+  {
+    name: "Farm Buds (Gardening, Parent & Child)",
+    location: "Longstreet Farm Visitor Center",
+    dates: "Thu, Apr 2–May 28 · 10:30–11:45 AM (register per session)",
+    price: "$14/pair per session",
+    isFree: false,
+    ages: "4–5 with adult",
+    category: "Nature",
+    months: ["Apr", "May"],
+    note: "Weekly gardening: new plant, garden time, visit chickens, take home seeds.",
+  },
+  {
+    name: "Beginner Wood Carving Class",
+    location: "Longstreet Farm Visitor Center",
+    dates: "Sat, Apr 11 · 11:00 AM–3:00 PM",
+    price: "$40/person + $40 supply fee (paid on day)",
+    isFree: false,
+    ages: "Adults",
+    category: "Arts & Crafts",
+    months: ["Apr"],
+    note: "Complete two projects; supplies & extra wood included.",
+  },
+  {
+    name: "Dark Sky Hike",
+    location: "Huber Woods Park, Middletown",
+    dates: "Thu, Apr 16 · 7:30–8:30 PM",
+    price: "$18/person",
+    isFree: false,
+    ages: "11+ (under 18 with adult)",
+    category: "Nature",
+    months: ["Apr"],
+    note: "International Dark Sky Week night hike for nocturnal wildlife.",
+  },
+  {
+    name: "Earth Day Open House",
+    location: "Huber Woods Environmental Center, Middletown",
+    dates: "Sat, Apr 18 · 10:00 AM–2:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Nature",
+    months: ["Apr"],
+    note: "Live animal shows, nature & history walks. Bring a used nature book to swap.",
+  },
+  {
+    name: "Earth Day Beach Cleanup",
+    location: "Bayshore Waterfront Park, Port Monmouth",
+    dates: "Sun, Apr 19 · 10:00 AM–12:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Nature",
+    months: ["Apr"],
+    note: "Clean coastline trash near Sandy Hook Bay. Bags/tools supplied, bring gloves.",
+  },
+  {
+    name: "Earth Day Planting",
+    location: "Bayshore Waterfront Park, Port Monmouth",
+    dates: "Wed, Apr 22 · 5:00–6:30 PM",
+    price: "Free (limited plants, first come)",
+    isFree: true,
+    ages: "All ages",
+    category: "Nature",
+    months: ["Apr"],
+    note: "Plant native species to restore the maritime forest.",
+  },
+  {
+    name: "Animal Hours at a Park Near You!",
+    location: "Freneau Woods Park Visitor Center",
+    dates: "Sun, Apr 19 · 10:30–11:30 AM",
+    price: "$13 parent/child · $6.50 add'l",
+    isFree: false,
+    ages: "All ages (under 18 with adult)",
+    category: "Nature",
+    months: ["Apr"],
+    note: "Live snakes, box turtles, frogs & more from the Huber Woods Reptile House.",
+  },
+  {
+    name: "Traditional Quilting Demonstration",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Sun, Apr 19 · 1:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["Apr"],
+    note: "Hand quilting stitches that pre-date the sewing machine.",
+  },
+  {
+    name: "Fine Feathered Friends",
+    location: "Historic Walnford, Upper Freehold",
+    dates: "Sun, Apr 12 · 10:00–11:00 AM",
+    price: "$15/parent+child",
+    isFree: false,
+    ages: "5–10 with adult",
+    category: "Family Programs",
+    months: ["Apr"],
+    note: "Interact with Walnford's chickens & make a take-home craft.",
+  },
+  {
+    name: "Archery Golf",
+    location: "Thompson Park Activity Barn",
+    dates: "Sun, Apr 12 · 10:00 AM–12:00 PM",
+    price: "$27 adult+junior",
+    isFree: false,
+    ages: "9+ (under 18 with adult)",
+    category: "Adventure & Fitness",
+    months: ["Apr"],
+    note: "Archery basics, then soft-tipped arrows on a pop-up golf course.",
+  },
+  {
+    name: "Rug Hooking Demonstration",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Sat, Apr 25 · 1:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Arts & Crafts",
+    months: ["Apr"],
+    note: "19th-century rug hooking craft demonstration.",
+  },
+  {
+    name: "Wool Days / Sheep Shearing",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Sat–Sun, Apr 25–26 · 12:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["Apr"],
+    note: "Traditional blade shearing + border collie herding demos.",
+  },
+  {
+    name: "Felting Demonstration",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Sun, Apr 26 · 1:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Arts & Crafts",
+    months: ["Apr"],
+    note: "Felting wool — the world's oldest known textile.",
+  },
+  {
+    name: "Climb Time",
+    location: "Shark River Park",
+    dates: "Fri, Apr 10 · 12:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "8+ and must be 42″ tall",
+    category: "Adventure & Fitness",
+    months: ["Apr"],
+    note: "Scale a 25-foot portable climbing wall for a new view of the parks.",
+  },
+  {
+    name: "Spring into Spring Family Camping",
+    location: "Turkey Swamp Park, Freehold",
+    dates: "Apr 24–25 or Apr 25–26 (overnight)",
+    price: "$230/family (up to 4)",
+    isFree: false,
+    ages: "5+ with adult",
+    category: "Adventure & Fitness",
+    months: ["Apr"],
+    note: "Skills, games, rock wall, platform tent, dinner & breakfast included.",
+  },
+  {
+    name: "Holmes-Hendrickson House Tours (Begin)",
+    location: "Holmdel Park",
+    dates: "Sat & Sun, Apr 25–Oct 18 · 12:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["Apr", "May", "Jun"],
+    note: "Dutch-English colonial house museum (c. 1740s) with interpreters.",
+  },
+
+  // ── MAY ──
+  {
+    name: "Spinning, Knitting & Weaving Demonstration",
+    location: "Holmes-Hendrickson House, Holmdel Park",
+    dates: "Sat, May 2 · 11:00 AM–4:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["May"],
+    note: "Colonial-era fiber arts demonstration.",
+  },
+  {
+    name: "Natural Dyeing Demonstration",
+    location: "Holmes-Hendrickson House, Holmdel Park",
+    dates: "Sun, May 3 · 11:00 AM–4:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["May"],
+    note: "Plants used to create natural dyes — a practice from the 1700s.",
+  },
+  {
+    name: "Embroidery Demonstration",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Sat, May 2 · 1:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Arts & Crafts",
+    months: ["May"],
+    note: "Decorative stitches & embellishments with needle and thread.",
+  },
+  {
+    name: "Mommy and Me for Mother's Day",
+    location: "Thompson Park Creative Arts Center",
+    dates: "Sat, May 2 · 1:00–3:00 PM",
+    price: "$50/person",
+    isFree: false,
+    ages: "6–10 with adult",
+    category: "Arts & Crafts",
+    months: ["May"],
+    note: "Paint together recreating a floral Renoir painting.",
+  },
+  {
+    name: "Historic Portland Place Tours (Begin)",
+    location: "Hartshorne Woods Park, Locust",
+    dates: "Wed–Sun, May 2–Nov 14 · 10:30, 11:30 AM, 1:30, 2:30 PM",
+    price: "Free (max 10 people)",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["May", "Jun"],
+    note: "Restored 18th-century Hartshorne family home in the Navesink Highlands.",
+  },
+  {
+    name: "Historic Racing Stable Tours (Begin)",
+    location: "Thompson Park, Lincroft",
+    dates: "Fri/Sat/Sun, May 2–Oct 18 · 10:00 AM–4:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["May", "Jun"],
+    note: "Thoroughbred racing history of Monmouth County in the original horse stalls.",
+  },
+  {
+    name: "Afternoon Tea: Mother's Day Edition",
+    location: "Fort Monmouth Recreation Center Kitchen",
+    dates: "Fri, May 8 · 6:00–8:00 PM",
+    price: "$70/pair",
+    isFree: false,
+    ages: "8–12 with adult",
+    category: "Family Programs",
+    months: ["May"],
+    note: "Make pinwheel tea sandwiches, homemade 'Pop Tarts' & a Mother's Day card.",
+  },
+  {
+    name: "Climb Time",
+    location: "Swimming River Park",
+    dates: "Fri, May 8 · 3:00–6:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "8+ and must be 42″ tall",
+    category: "Adventure & Fitness",
+    months: ["May"],
+    note: "25-foot portable climbing wall.",
+  },
+  {
+    name: "Creative Arts Festival",
+    location: "Thompson Park, Lincroft",
+    dates: "Sat, May 9",
+    price: "Free admission",
+    isFree: true,
+    ages: "All ages",
+    category: "Festivals & Culture",
+    months: ["May"],
+    note: "Fine artists, artisans & live music by local musicians.",
+  },
+  {
+    name: "Native Plant Workshop & Exchange",
+    location: "Deep Cut Gardens, Middletown",
+    dates: "Sat, May 9",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Nature",
+    months: ["May"],
+    note: "Free native plant lecture + exchange of native garden plants.",
+  },
+  {
+    name: "Traditional Chair Caning Demonstration",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Sat, May 9 · 1:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Arts & Crafts",
+    months: ["May"],
+    note: "Weaving natural plant fibers into a chair seat — delicate but sturdy.",
+  },
+  {
+    name: "Eagle Boat Tours",
+    location: "Manasquan Reservoir, Howell",
+    dates: "Fri, May 15 & May 29 · 4:30, 5:30, 6:30 PM sessions",
+    price: "$9/person",
+    isFree: false,
+    ages: "4+ (under 18 with adult)",
+    category: "Nature",
+    months: ["May"],
+    note: "America 250th-themed pontoon tour for bald eagles & wildlife. Life jackets provided.",
+  },
+  {
+    name: "Forest Friends After Five",
+    location: "Manasquan Reservoir Environmental Center, Howell",
+    dates: "Tue, May 12 · 5:30–6:30 PM",
+    price: "$12/parent+child",
+    isFree: false,
+    ages: "4–7 with adult",
+    category: "Nature",
+    months: ["May"],
+    note: "Gentle evening nature walk for young children — bugs, birds & sensory activities.",
+  },
+  {
+    name: "Kayak Fishing the Manasquan Reservoir",
+    location: "Manasquan Reservoir, Howell",
+    dates: "Tue, May 19 & Sun, May 31 · 9:00 AM–1:00 PM",
+    price: "$58/person",
+    isFree: false,
+    ages: "12+ (under 18 with adult)",
+    category: "Adventure & Fitness",
+    months: ["May"],
+    note: "Tiger muskies, bass & catfish. Borrow gear or bring your own.",
+  },
+  {
+    name: "World Turtle Day Celebration",
+    location: "Manasquan River Greenway, Winter Run Activity Center",
+    dates: "Sat, May 23 · 1:00–2:00 PM",
+    price: "$12/person",
+    isFree: false,
+    ages: "7+ (under 18 with adult)",
+    category: "Nature",
+    months: ["May"],
+    note: "Live turtle show with native species. Learn about threats & how to help.",
+  },
+  {
+    name: "The Libby Prison Minstrels",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Sat, May 23 · 1:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Festivals & Culture",
+    months: ["May"],
+    note: "Historical songs from the battlefield & home front during the Civil War era.",
+  },
+  {
+    name: "Weekend Boat Tours at Manasquan Reservoir (Begin)",
+    location: "Manasquan Reservoir, Howell",
+    dates: "May 23–Sep 7 · Weekends · 2, 3, 4 & 5 PM (45 min)",
+    price: "$6 adults · $4 children 12 & under",
+    isFree: false,
+    ages: "All ages",
+    category: "Nature",
+    months: ["May", "Jun"],
+    note: "Narrated pontoon tour — turtles, egrets, herons, ospreys & bald eagles.",
+  },
+  {
+    name: "Historic Battery Lewis Tours (Begin)",
+    location: "Hartshorne Woods Park, Highlands",
+    dates: "Sat & Sun, May 23–Oct 11 · 10:00 AM–4:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["May", "Jun"],
+    note: "Cold War coastal defense battery with exhibits and a 16-inch gun barrel.",
+  },
+  {
+    name: "Canoe Rentals on Marlu Lake",
+    location: "Thompson Park, Lincroft",
+    dates: "May 23–24, Jun 6–7, Jun 20–21 · 10:00 AM–3:00 PM",
+    price: "$15/boat (1–3 people, 2 hours)",
+    isFree: false,
+    ages: "All ages (under 18 with adult)",
+    category: "Adventure & Fitness",
+    months: ["May", "Jun"],
+    note: "Paddle Thompson Park's Marlu Lake. All equipment provided.",
+  },
+  {
+    name: "Adult Farm Chores",
+    location: "Longstreet Farm, Holmdel Park",
+    dates: "Sat, May 30 · 8:00–9:30 AM",
+    price: "$20/person",
+    isFree: false,
+    ages: "Adults only",
+    category: "History & Tours",
+    months: ["May"],
+    note: "Milk a cow, collect eggs, feed livestock. Detailed 1890s farm life discussion.",
+  },
+  {
+    name: "Agatha Christie's The Mousetrap",
+    location: "Thompson Park Theater Barn, Lincroft",
+    dates: "Sat, May 30 & Sun, May 31 · 3:00–5:00 PM",
+    price: "Adults $12 · Seniors $7 · Children $5",
+    isFree: false,
+    ages: "12+ with adult",
+    category: "Festivals & Culture",
+    months: ["May"],
+    note: "World's longest-running play. Pre-registration required.",
+  },
+  {
+    name: "Decoration Day Celebration",
+    location: "Historic Longstreet Farm, Holmdel Park",
+    dates: "Mon, May 25 (Memorial Day) · 12:00–3:00 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Festivals & Culture",
+    months: ["May"],
+    note: "Honor Civil War origins of Memorial Day in Decoration Day tradition.",
+  },
+
+  // ── JUNE ──
+  {
+    name: "Freshwater Fishing Derby",
+    location: "Manasquan Reservoir (Jun 20) & Turkey Swamp Park (Jun 21)",
+    dates: "Sat Jun 20 & Sun Jun 21 · 2:00–5:00 PM",
+    price: "$34/family of 4 · $10/person",
+    isFree: false,
+    ages: "All ages — beginner friendly",
+    category: "Adventure & Fitness",
+    months: ["Jun"],
+    note: "Free casting clinic 12:30–1:30 PM. Prizes for longest fish. Poles for rent $5.",
+  },
+
+  // ── ONGOING ──
+  {
+    name: "Rockin' the Trails (America 250 Scavenger Hunt)",
+    location: "All Monmouth County Parks",
+    dates: "Apr 15–Dec 31, 2026 (self-paced)",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "Adventure & Fitness",
+    months: ["Ongoing"],
+    note: "Find hidden trail markers with patriotic symbols. Return brochure for prize entry.",
+  },
+  {
+    name: "Historic Longstreet Farm (Open Daily)",
+    location: "Holmdel Park",
+    dates: "Daily · 10 AM–4 PM (9 AM–5 PM Memorial Day–Labor Day)",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["Ongoing"],
+    note: "Living history farm. Drop-in anytime.",
+  },
+  {
+    name: "Historic Walnford (Open Daily)",
+    location: "Upper Freehold",
+    dates: "Daily · 8 AM–4:30 PM (buildings 9 AM–4 PM)",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["Ongoing"],
+    note: "Historic gristmill and Waln family estate. Drop-in.",
+  },
+  {
+    name: "Walnford Milling Demonstrations",
+    location: "Historic Walnford, Upper Freehold",
+    dates: "Weekends, Apr–Nov · 12:30, 1:30, 2:30, 3:30 PM",
+    price: "Free",
+    isFree: true,
+    ages: "All ages",
+    category: "History & Tours",
+    months: ["Ongoing"],
+    note: "Watch corn ground into meal at Waln's Mill.",
+  },
+];
+
+// ─── Constants ────────────────────────────────────────────────────────────────
+
+const MONTHS: { label: string; value: Month | "all" }[] = [
+  { label: "All months",  value: "all" },
+  { label: "March",       value: "Mar" },
+  { label: "April",       value: "Apr" },
+  { label: "May",         value: "May" },
+  { label: "June",        value: "Jun" },
+  { label: "Ongoing",     value: "Ongoing" },
+];
+
+const CATEGORIES: { label: string; value: Category | "all"; icon: string }[] = [
+  { label: "All",                value: "all",                icon: "🌎" },
+  { label: "Nature",             value: "Nature",             icon: "🌿" },
+  { label: "Arts & Crafts",      value: "Arts & Crafts",      icon: "🎨" },
+  { label: "History & Tours",    value: "History & Tours",    icon: "🏚️" },
+  { label: "Adventure & Fitness",value: "Adventure & Fitness",icon: "🧗" },
+  { label: "Family Programs",    value: "Family Programs",    icon: "👨‍👩‍👧" },
+  { label: "Festivals & Culture",value: "Festivals & Culture",icon: "🎭" },
+];
+
+const CAT_COLORS: Record<Category, string> = {
+  "Nature":              "bg-[var(--ff-green-pale)] text-[var(--ff-green)]",
+  "Arts & Crafts":       "bg-purple-50 text-purple-700",
+  "History & Tours":     "bg-amber-50 text-amber-700",
+  "Adventure & Fitness": "bg-blue-50 text-blue-700",
+  "Family Programs":     "bg-pink-50 text-pink-700",
+  "Festivals & Culture": "bg-orange-50 text-orange-700",
+};
+
+// ─── Component ────────────────────────────────────────────────────────────────
+
+export default function ParkEvents() {
+  const [search, setSearch]       = useState("");
+  const [month, setMonth]         = useState<Month | "all">("all");
+  const [category, setCategory]   = useState<Category | "all">("all");
+  const [freeOnly, setFreeOnly]   = useState(false);
+
+  const filtered = useMemo(() => {
+    const q = search.toLowerCase();
+    return EVENTS.filter((e) => {
+      if (freeOnly && !e.isFree) return false;
+      if (month !== "all" && !e.months.includes(month as Month)) return false;
+      if (category !== "all" && e.category !== category) return false;
+      if (q && !`${e.name} ${e.location} ${e.note ?? ""}`.toLowerCase().includes(q)) return false;
+      return true;
+    });
+  }, [search, month, category, freeOnly]);
+
+  const clearFilters = () => {
+    setSearch("");
+    setMonth("all");
+    setCategory("all");
+    setFreeOnly(false);
+  };
+
+  const isFiltered = search || month !== "all" || category !== "all" || freeOnly;
+
+  return (
+    <div className="max-w-[1000px] mx-auto">
+      {/* Page Intro */}
+      <div className="page-intro">
+        <h2>Monmouth County Park System — Spring 2026</h2>
+        <p>
+          Programs, events &amp; demonstrations from March through June 2026.
+          Registration opens <strong>Wednesday, February 11, 2026 at 8:00 AM</strong> at{" "}
+          <a href="https://www.MonmouthCountyParks.com" target="_blank" rel="noopener noreferrer"
+             className="text-[var(--ff-green)] underline">
+            MonmouthCountyParks.com
+          </a>{" "}
+          or call 732-842-4000 ext. 1.
+        </p>
+      </div>
+
+      {/* ── Filter Panel ── */}
+      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 mb-5 flex flex-col gap-3">
+        {/* Search row */}
+        <div className="flex items-center gap-2">
+          <span className="text-lg">🔍</span>
+          <input
+            type="search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search events, locations, activities…"
+            className="flex-1 border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--ff-green)] focus:border-transparent"
+          />
+          {isFiltered && (
+            <button
+              onClick={clearFilters}
+              className="text-xs text-[var(--ff-gray)] hover:text-[var(--ff-green)] underline whitespace-nowrap"
+            >
+              Clear all
+            </button>
+          )}
+        </div>
+
+        {/* Filter chips row */}
+        <div className="flex flex-wrap gap-2 items-center">
+          {/* Month */}
+          <select
+            value={month}
+            onChange={(e) => setMonth(e.target.value as Month | "all")}
+            className="border border-gray-300 rounded-lg px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[var(--ff-green)]"
+          >
+            {MONTHS.map((m) => (
+              <option key={m.value} value={m.value}>{m.label}</option>
+            ))}
+          </select>
+
+          {/* Category pills */}
+          <div className="flex flex-wrap gap-1.5">
+            {CATEGORIES.map(({ label, value, icon }) => (
+              <button
+                key={value}
+                onClick={() => setCategory(value as Category | "all")}
+                className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border transition-all
+                  ${category === value
+                    ? "bg-[var(--ff-green)] text-white border-[var(--ff-green)]"
+                    : "bg-white text-[var(--ff-gray)] border-gray-300 hover:border-[var(--ff-green)] hover:text-[var(--ff-green)]"
+                  }`}
+              >
+                {icon} {label}
+              </button>
+            ))}
+          </div>
+
+          {/* Free toggle */}
+          <button
+            onClick={() => setFreeOnly(!freeOnly)}
+            className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border transition-all ml-auto
+              ${freeOnly
+                ? "bg-[var(--ff-green)] text-white border-[var(--ff-green)]"
+                : "bg-white text-[var(--ff-gray)] border-gray-300 hover:border-[var(--ff-green)] hover:text-[var(--ff-green)]"
+              }`}
+          >
+            ✅ Free only
+          </button>
+        </div>
+      </div>
+
+      {/* Result count */}
+      <p className="text-sm text-[var(--ff-gray)] mb-3">
+        {filtered.length} event{filtered.length !== 1 ? "s" : ""}
+        {isFiltered ? " match your filters" : " total"}
+      </p>
+
+      {/* ── Table ── */}
+      {filtered.length === 0 ? (
+        <div className="gym-card p-10 text-center text-[var(--ff-gray)]">
+          No events match your filters. <button onClick={clearFilters} className="underline text-[var(--ff-green)]">Clear filters</button>
+        </div>
+      ) : (
+        <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+          <table className="w-full text-sm border-collapse bg-white">
+            <thead>
+              <tr className="bg-[var(--ff-green)] text-white text-left">
+                <th className="px-4 py-3 font-semibold">Event</th>
+                <th className="px-4 py-3 font-semibold hidden sm:table-cell">Location</th>
+                <th className="px-4 py-3 font-semibold">Date(s)</th>
+                <th className="px-4 py-3 font-semibold">Price</th>
+                <th className="px-4 py-3 font-semibold hidden md:table-cell">Ages</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filtered.map((event, i) => (
+                <tr
+                  key={i}
+                  className={`border-t border-gray-100 align-top ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"} hover:bg-[var(--ff-green-pale)] transition-colors`}
+                >
+                  {/* Event name + category badge + note */}
+                  <td className="px-4 py-3 min-w-[180px]">
+                    <div className="font-semibold text-[var(--ff-green)] leading-snug">
+                      {event.name}
+                    </div>
+                    {event.note && (
+                      <div className="text-xs text-[var(--ff-gray)] mt-0.5 leading-snug">
+                        {event.note}
+                      </div>
+                    )}
+                    <span className={`inline-block mt-1.5 text-[10px] font-semibold px-2 py-0.5 rounded-full ${CAT_COLORS[event.category]}`}>
+                      {event.category}
+                    </span>
+                  </td>
+
+                  {/* Location */}
+                  <td className="px-4 py-3 text-[var(--ff-gray)] hidden sm:table-cell min-w-[160px] leading-snug">
+                    {event.location}
+                  </td>
+
+                  {/* Dates */}
+                  <td className="px-4 py-3 whitespace-pre-line text-[var(--ff-gray)] min-w-[140px] leading-snug">
+                    {event.dates}
+                  </td>
+
+                  {/* Price */}
+                  <td className="px-4 py-3 whitespace-nowrap">
+                    {event.isFree ? (
+                      <span className="font-semibold text-[var(--ff-green)]">Free</span>
+                    ) : (
+                      <span className="text-[var(--ff-gray)]">{event.price}</span>
+                    )}
+                  </td>
+
+                  {/* Ages */}
+                  <td className="px-4 py-3 text-[var(--ff-gray)] hidden md:table-cell whitespace-nowrap">
+                    {event.ages}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      <p className="data-note mt-5">
+        Source: Spring 2026 Parks &amp; Programs Guide (co.monmouth.nj.us). Registration opens Feb 11 at 8 AM.
+        For June &amp; summer programs check the Summer 2026 guide. Always verify dates before visiting.
+      </p>
+    </div>
+  );
+}

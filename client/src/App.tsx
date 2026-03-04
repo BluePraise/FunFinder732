@@ -8,6 +8,7 @@ import About from "@/pages/About";
 import SubmitEvent from "@/pages/SubmitEvent";
 import FamilyFitness from "@/pages/FamilyFitness";
 import Pools from "@/pages/Pools";
+import ParkEvents from "@/pages/ParkEvents";
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 							element={<FamilyFitness />}
 						/>
 						<Route path="/pools" element={<Pools />} />
+						<Route path="/park-events" element={<ParkEvents />} />
 					</Routes>
 				</main>
 				<Footer />

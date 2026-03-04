@@ -1,10 +1,11 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { NavLink } from "react-router-dom";
-import { Home, Info, Send, Dumbbell, Waves } from "lucide-react";
+import { Home, Info, Send, Dumbbell, Waves, CalendarDays } from "lucide-react";
 const navItems = [
     { to: "/", label: "Home", icon: Home },
     { to: "/family-fitness", label: "Family Fitness", icon: Dumbbell },
     { to: "/pools", label: "Pools", icon: Waves },
+    { to: "/park-events", label: "Park Events", icon: CalendarDays },
     { to: "/about", label: "About", icon: Info },
     { to: "/submit", label: "Submit Event", icon: Send },
 ];
