@@ -5,7 +5,7 @@ export default function FamilyFitness() {
       <div className="page-intro">
         <h2>Work Out, Kids Play</h2>
         <p>
-          All gyms below offer supervised childcare so parents can work out worry-free. 
+          All gyms below offer supervised childcare so parents can work out worry-free.
           Drop-off is typically up to 2 hours per visit and requires an active membership.
         </p>
       </div>
@@ -198,8 +198,8 @@ export default function FamilyFitness() {
           <h3 className="section-header">Monthly Membership Cost — 2 Adults + 2 Children</h3>
           <table className="compare-table">
             <caption>
-              Atlantic Club: $207/mo for 2 adults + $35/mo kids add-on = $242/mo · 
-              YMCA: flat $102/mo covers entire family · 
+              Atlantic Club: $207/mo for 2 adults + $35/mo kids add-on = $242/mo ·
+              YMCA: flat $102/mo covers entire family ·
               Life Time: per-person pricing
             </caption>
             <thead>

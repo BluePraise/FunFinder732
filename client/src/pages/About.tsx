@@ -4,11 +4,11 @@ export default function About() {
   return (
     <div className="max-w-3xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">About FunFinder732</h1>
-      
+
       <div className="prose prose-lg">
         <p className="text-lg text-muted-foreground mb-6">
-          FunFinder732 helps families in Monmouth County, New Jersey discover local activities, 
-          events, and recreation opportunities. We believe every family deserves easy access 
+          FunFinder732 helps families in Monmouth County, New Jersey discover local activities,
+          events, and recreation opportunities. We believe every family deserves easy access
           to fun, affordable experiences in their community.
         </p>
 
@@ -56,14 +56,14 @@ export default function About() {
 
         <h2 className="text-2xl font-bold mt-8 mb-4">Our Mission</h2>
         <p className="text-muted-foreground">
-          We created FunFinder732 because finding local family activities shouldn't be hard. 
-          Our goal is to be the go-to resource for Monmouth County families looking to 
+          We created FunFinder732 because finding local family activities shouldn't be hard.
+          Our goal is to be the go-to resource for Monmouth County families looking to
           explore their community, stay active, and make memories together.
         </p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">Contact</h2>
         <p className="text-muted-foreground">
-          Have questions or suggestions? We'd love to hear from you! 
+          Have questions or suggestions? We'd love to hear from you!
           Reach out to us at <a href="mailto:hello@funfinder732.com" className="text-primary hover:underline">hello@funfinder732.com</a>
         </p>
       </div>

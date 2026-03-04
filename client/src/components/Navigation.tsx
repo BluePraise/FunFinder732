@@ -16,7 +16,7 @@ export default function Navigation() {
           <NavLink to="/" className="text-xl font-bold">
             FunFinder732
           </NavLink>
-          
+
           <nav className="flex items-center gap-1">
             {navItems.map(({ to, label, icon: Icon }) => (
               <NavLink
@@ -24,8 +24,8 @@ export default function Navigation() {
                 to={to}
                 className={({ isActive }) =>
                   `flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors
-                  ${isActive 
-                    ? "bg-white/20 text-white" 
+                  ${isActive
+                    ? "bg-white/20 text-white"
                     : "text-white/80 hover:text-white hover:bg-white/10"
                   }`
                 }
