@@ -1,49 +1,46 @@
 # FunFinder732
-An overview of activities that the Monmouth County Park System has to offer.
 
-## Description
-Scrapes the Monmouth County Park System website for activities and displays them in a user-friendly format.
+A family activity guide for Monmouth County, NJ. FunFinder732 is a project by [Navesink Humans](https://navesinkhumans.com).
 
-## Installation
-1. Clone the repository
-2. Install the required packages
+## What it does
+
+- **Home** — Landing page with quick links to sections
+- **Family Fitness** — Gyms with childcare, summer camps, and membership pricing comparisons (Life Time, The Atlantic Club, Red Bank YMCA)
+- **Submit Event** — Form for community members to submit local events
+- **About** — Project info and contact
+
+## Tech Stack
+
+- [React 19](https://react.dev) + [TypeScript](https://www.typescriptlang.org)
+- [Vite 6](https://vitejs.dev)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [React Router v7](https://reactrouter.com)
+- [Lucide React](https://lucide.dev) for icons
+- Deployed on [Vercel](https://vercel.com)
+
+## Local Development
 
 ```bash
+cd client
 npm install
+npm run dev
 ```
-3. Run the application
-```bash
-npm start
-```
-4. Navigate to the website
-```bash
-    http://localhost:5173/
-```
-## Usage
-1. Navigate to the website
-2. Click on the activity you are interested in
-3. View the details of the activity
 
+App runs at `http://localhost:5173`
 
-## log
- The server now has a new endpoint `/events/count` that returns the total number of events and the event count per month.
- Returns a JSON object with the following format:
-```json
-{
-  "totalEvents": 42,
-  "monthEventCounts": {
-    "1": 0,
-    "2": 8,
-    "3": 10,
-    "4": 12,
-    "5": 0,
-    "6": 5,
-    "7": 7,
-    "8": 0,
-    "9": 6,
-    "10": 4,
-    "11": 8,
-    "12": 5
-  }
-}
+## Build
+
+```bash
+cd client
+npm run build
 ```
+
+Output is in `client/dist/`.
+
+## Deployment
+
+The project is configured for Vercel. The `client/vercel.json` handles SPA routing rewrites. To deploy:
+
+1. Import the repo into Vercel
+2. Set the **Root Directory** to `client`
+3. Vercel auto-detects Vite — no further config needed
