@@ -1,16 +1,27 @@
 node_modules/
-client/node_modules/
-
-# Build output
-client/dist/
+dist/
+dist-ssr/
 
 # Environment variables
 .env
 .env.local
 .env.*.local
+*.local
 
 # OS
 .DS_Store
 
 # Vite
-client/vite.config.ts.timestamp-*
+vite.config.ts.timestamp-*
+
+PDF/
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

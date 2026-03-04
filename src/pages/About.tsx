@@ -28,7 +28,7 @@ export default function About() {
             <div>
               <h3 className="font-semibold mb-1">Family Focused</h3>
               <p className="text-sm text-muted-foreground">
-                Activities for all ages, from toddler programs to senior fitness.
+                Activities for all ages, from toddler programs to fun for parents.
               </p>
             </div>
           </div>

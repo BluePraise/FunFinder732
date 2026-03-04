@@ -205,6 +205,97 @@ export default function Pools() {
           </div>
         </article>}
 
+        {/* Hazlet Swim & Tennis Club */}
+        {show("day-pass", "membership") && <article className="gym-card">
+          <div className="gym-header">
+            <div className="gym-icon blue">🏊</div>
+            <div className="gym-name">
+              <h3>Hazlet Swim &amp; Tennis Club</h3>
+              <p className="subtitle">Hazlet, NJ · Olympic-size · Residents &amp; non-residents welcome</p>
+            </div>
+            <div className="gym-meta">
+              <div className="flex gap-1.5 flex-wrap">
+                <AccessBadge type="membership" />
+                <AccessBadge type="day-pass" />
+              </div>
+              <p className="membership-note mt-1">Opens May 23, 2026</p>
+            </div>
+          </div>
+          <section className="schedule-section">
+            <p className="childcare-label">Season &amp; Hours</p>
+            <dl className="schedule-grid">
+              <div className="schedule-row">
+                <dt className="day-label">Season</dt>
+                <dd className="time-slots">
+                  <span className="time-pill morning">Weekends only: May 23 – Jun 26</span>
+                  <span className="time-pill morning">Daily 11 AM–8 PM: Jun 26 onward</span>
+                </dd>
+              </div>
+              <div className="schedule-row">
+                <dt className="day-label">Features</dt>
+                <dd className="time-slots">
+                  <span className="time-pill">Olympic main pool</span>
+                  <span className="time-pill">Dive tank</span>
+                  <span className="time-pill">Rock wall &amp; slide</span>
+                  <span className="time-pill">Splash pad</span>
+                  <span className="time-pill">Kiddie pool</span>
+                  <span className="time-pill">Tennis/pickleball</span>
+                  <span className="time-pill">Playground &amp; zip line</span>
+                  <span className="time-pill">Aqua fitness</span>
+                  <span className="time-pill">Swim lessons &amp; swim team</span>
+                </dd>
+              </div>
+              <div className="schedule-row">
+                <dt className="day-label">Day passes</dt>
+                <dd className="time-slots">
+                  <span className="time-pill morning">Available at the gate · Ages 3+</span>
+                  <span className="time-pill">Infants under 3: FREE</span>
+                </dd>
+              </div>
+            </dl>
+          </section>
+          <section className="schedule-section">
+            <p className="childcare-label">2026 Season Memberships — Early Bird by May 15 / After May 15</p>
+            <dl className="schedule-grid">
+              <div className="schedule-row">
+                <dt className="day-label">Resident</dt>
+                <dd className="time-slots">
+                  <span className="time-pill morning">Individual: $275 / $350</span>
+                  <span className="time-pill morning">Indiv. + 1: $475 / $550</span>
+                  <span className="time-pill morning">2 adults + 2 kids: $500 / $575</span>
+                  <span className="time-pill morning">Family (up to 6): $625 / $700</span>
+                  <span className="time-pill morning">Senior (62+): $150 / $185</span>
+                </dd>
+              </div>
+              <div className="schedule-row">
+                <dt className="day-label">Non-resident</dt>
+                <dd className="time-slots">
+                  <span className="time-pill evening">Individual: $400 / $475</span>
+                  <span className="time-pill evening">Indiv. + 1: $600 / $675</span>
+                  <span className="time-pill evening">2 adults + 2 kids: $625 / $700</span>
+                  <span className="time-pill evening">Family (up to 6): $750 / $825</span>
+                  <span className="time-pill evening">Senior (62+): $250 / $285</span>
+                </dd>
+              </div>
+              <div className="schedule-row">
+                <dt className="day-label">Notes</dt>
+                <dd className="time-slots">
+                  <span className="time-pill">Early bird saves $75 (or $35 seniors) — ends May 15</span>
+                  <span className="time-pill">Extra child under 23: +$100</span>
+                  <span className="time-pill">Refunds until Jul 4 (15% admin fee)</span>
+                </dd>
+              </div>
+            </dl>
+          </section>
+          <div className="gym-footer">
+            <span className="address">📍 Green Acres Dr, Hazlet, NJ · Recreation Office: 1776 Union Ave</span>
+            <div className="flex flex-col gap-1">
+              <a href="tel:7322178683" className="phone">732-217-8683 (rec office)</a>
+              <a href="https://www.HazletTwp.org/Swim" className="phone text-xs" target="_blank" rel="noopener noreferrer">HazletTwp.org/Swim</a>
+            </div>
+          </div>
+        </article>}
+
         {/* Avon */}
         {show("membership") && <article className="gym-card">
           <div className="gym-header">
