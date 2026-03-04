@@ -1,0 +1,3025 @@
+[
+  {
+    "name": "Cookstove Demonstration",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sat Mar 7 11AM-3PM; Sat Mar 21 11AM-3PM; Sat Apr 4 11AM-3PM; Sat Apr 18 11AM-3PM; Sun Apr 26 11AM-3PM; Sat May 2 11AM-3PM; Sat May 16 11AM-3PM; Sun May 31 11AM-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "After a walk through the Longstreet Farmhouse, stop by the outdoor kitchen to see what's cooking on the wood-fired stove. Discover how recipes, cooking techniques and kitchens have changed since the 1890s."
+  },
+  {
+    "name": "Accordion Melodies of the 1890s",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sat Mar 21 1-3PM; Sat Apr 18 1-3PM; Sat May 16 1-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Enjoy melodies of the 1890s played on the accordion while you visit the Longstreet farmhouse."
+  },
+  {
+    "name": "Piano Ballads from the Turn of the Century",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sat Mar 28 1-3PM; Sat Apr 11 1-3PM; Sat May 30 1-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Tap your feet, dance a one-step, or sing along to popular turn-of-the-19th-century ballads as they are played on the farmhouse piano."
+  },
+  {
+    "name": "Blacksmith Demonstration",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sun Mar 8 1-3PM; Sun Apr 12 1-3PM; Sun May 10 1-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "The blacksmith will be working at the anvil turning iron into functional tools and hardware. See craftsmanship in action and learn about the rich history behind the forge."
+  },
+  {
+    "name": "19th Century Woodworking Demonstration",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sat Mar 21 1-3PM; Sat May 16 1-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Mar",
+      "May"
+    ],
+    "note": "Woodworking is more than carpentry. See how a woodworker studies his materials, plies his tools, and crafts beautiful and functional items."
+  },
+  {
+    "name": "Wood Carving Demonstration",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sat Mar 28 1-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Mar"
+    ],
+    "note": "Using a collection of knives, gauges, and their imagination, see how our wood carver whittles a block of wood into a beautiful work of art."
+  },
+  {
+    "name": "Traditional Quilting Demonstration",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sun Apr 19 1-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Apr"
+    ],
+    "note": "Traditional hand quilting is becoming a lost art. Be inspired as our quilter demonstrates beautiful quilting stitches so you can create your own heirloom quilt."
+  },
+  {
+    "name": "Rug Hooking Demonstration",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sat Apr 25 1-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Apr"
+    ],
+    "note": "A demonstration of the 19th-century craft of rug hooking."
+  },
+  {
+    "name": "Felting Demonstration",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sun Apr 26 1-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Apr"
+    ],
+    "note": "Felted wool is the world's oldest known textile. Learn the process of felting wool that can be used in garments."
+  },
+  {
+    "name": "Embroidery Demonstration",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sat May 2 1-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "May"
+    ],
+    "note": "Embroidery is the skilled art of applying decorative designs with a needle and thread. Be inspired by stitches and embellishments to create a beautiful piece of clothing or decoration."
+  },
+  {
+    "name": "Traditional Chair Caning Demonstration",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sat May 9 1-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "May"
+    ],
+    "note": "Chair caning is an intricate skill. See the process of weaving natural plant fibers into the seat of a chair, creating a delicate but sturdy design."
+  },
+  {
+    "name": "The Libby Prison Minstrels",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sat May 23 1-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "May"
+    ],
+    "note": "Visit the farm and be entertained by the Libby Prison Minstrels, known for their historical songs about life on the battlefield and the home front during the Civil War era."
+  },
+  {
+    "name": "Wool Days / Sheep Shearing",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sat Apr 25 12-3PM; Sun Apr 26 12-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Apr"
+    ],
+    "note": "Learn how farmers use traditional blade shearing practices to remove the fleece from sheep. Gene Sheninger will return with his collies to demonstrate herding skills."
+  },
+  {
+    "name": "Decoration Day Celebration",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Mon May 25 12-3PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "May"
+    ],
+    "note": "Before it was called Memorial Day, Americans celebrated Decoration Day. This family holiday originated after the Civil War for family reunions and remembrance of fallen soldiers."
+  },
+  {
+    "name": "Morning Farm Chores",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sat Mar 7; Sun Mar 22; Sat Apr 4; Sun Apr 19; Sat May 2; Sun May 17 (all 8-9:30AM)",
+    "price": "$15/person",
+    "isFree": false,
+    "ages": "Ages 6+",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Help the farm staff with morning chores before the farm opens. Experience milking a cow, collecting eggs, and feeding the livestock. Ages 6+; under 18 must be with adult. Closed-toe shoes required. ONE session per season per participant."
+  },
+  {
+    "name": "Adult Farm Chores",
+    "location": "Historic Longstreet Farm, Holmdel Park",
+    "dates": "Sat May 30 8-9:30AM",
+    "price": "$20/person",
+    "isFree": false,
+    "ages": "Adults",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "May"
+    ],
+    "note": "Adults-only farm chores: milk a cow, collect eggs, feed livestock, with detailed discussions about 1890s farm life. Closed-toe shoes and clothes that can get dirty required."
+  },
+  {
+    "name": "Beginner Wood Carving Class",
+    "location": "Longstreet Farm Visitor Center",
+    "dates": "Sat Apr 11 11AM-3PM",
+    "price": "$40 + $40 supply fee (to instructor)",
+    "isFree": false,
+    "ages": "Adults",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Apr"
+    ],
+    "note": "Get a foundation in traditional wood carving. Complete two projects; carving supplies and two extra pieces of wood are yours to take home. All supplies provided by instructor."
+  },
+  {
+    "name": "Rug Hooking Gathering",
+    "location": "Longstreet Farm Visitor Center",
+    "dates": "Tue Mar 17–May 19 10AM-3PM (10 sessions)",
+    "price": "$40/person (10 sessions)",
+    "isFree": false,
+    "ages": "Adults",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Mar",
+      "May"
+    ],
+    "note": "Gather with other rug hookers or learn techniques from experienced rug hookers. Bring an existing project or come for inspiration. Bring your lunch."
+  },
+  {
+    "name": "Farm Buds",
+    "location": "Longstreet Farm Visitor Center",
+    "dates": "Thu Apr 2–May 28 10:30-11:45AM (9 sessions)",
+    "price": "$14/parent-child per session",
+    "isFree": false,
+    "ages": "Ages 4-5 with adult",
+    "category": "History & Tours",
+    "series": "Longstreet Farm",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "Growing a garden! Each week, learn about a new plant, spend time in the garden, visit the chickens, and head to the farmhouse for stories and games. Plant seeds to take home."
+  },
+  {
+    "name": "Walnford Day",
+    "location": "Historic Walnford, 62 Walnford Rd, Upper Freehold",
+    "dates": "Sun May 17 11AM-5PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Walnford",
+    "months": [
+      "May"
+    ],
+    "note": "Annual celebration of 200 years of Waln history! Historical demonstrations, gristmill in action, horse-drawn wagon ride, 1773 Waln family home tour, and bluegrass music by Magnolia Street String Band 2-4PM."
+  },
+  {
+    "name": "Milling Demonstrations",
+    "location": "Historic Walnford",
+    "dates": "Weekends Apr–Nov at 12:30PM, 1:30PM, 2:30PM, 3:30PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Walnford",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Experience sights and sounds of years past as corn is ground into meal at Waln's Mill. Demonstrations on weekend afternoons April–November."
+  },
+  {
+    "name": "Spring Eggstravaganza",
+    "location": "Historic Walnford Outdoor Area",
+    "dates": "Sun Mar 29 1-2PM",
+    "price": "$15/parent-child",
+    "isFree": false,
+    "ages": "Ages 1+ with adult",
+    "category": "History & Tours",
+    "series": "Walnford",
+    "months": [
+      "Mar"
+    ],
+    "note": "Egg hunt where children search for eggs filled with treats hidden throughout the site, followed by an egg and spoon race and a photo with a chicken! Starts promptly at 1PM."
+  },
+  {
+    "name": "Fine Feathered Friends",
+    "location": "Historic Walnford Outdoor Area",
+    "dates": "Sun Apr 12 10-11AM",
+    "price": "$15/parent-child",
+    "isFree": false,
+    "ages": "Ages 5-10 with adult",
+    "category": "History & Tours",
+    "series": "Walnford",
+    "months": [
+      "Apr"
+    ],
+    "note": "Learn what Walnford's chickens eat, where they live, and how many eggs they lay. Interact with the flock and make a take-home craft."
+  },
+  {
+    "name": "Natural Dyeing Demonstration",
+    "location": "Holmes-Hendrickson House, Holmdel Park",
+    "dates": "Sun May 3 11AM-4PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Holmes-Hendrickson House",
+    "months": [
+      "May"
+    ],
+    "note": "In the 1700s, all dyes came from natural sources. Explore the magic of color at the Holmes-Hendrickson House. Kelly Bahash demonstrates locally grown plants used to make natural dyes."
+  },
+  {
+    "name": "Spinning, Knitting & Weaving Demonstration",
+    "location": "Holmes-Hendrickson House, Holmdel Park",
+    "dates": "Sat May 2 11AM-4PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Holmes-Hendrickson House",
+    "months": [
+      "May"
+    ],
+    "note": "Enjoy a demonstration of spinning, knitting, and weaving at the Holmes-Hendrickson House (c. 1754), an example of New Jersey's colonial past."
+  },
+  {
+    "name": "Historic Seabrook-Wilson House Tours",
+    "location": "Bayshore Waterfront Park, Port Monmouth",
+    "dates": "Mon/Thu/Sun Apr 2–Oct 29 1-4PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Historic Site Tours",
+    "months": [
+      "Apr"
+    ],
+    "note": "Visit the Seabrook-Wilson House, dating back to the early 1700s — one of the oldest homes along the Jersey shore and the oldest along Sandy Hook Bay."
+  },
+  {
+    "name": "Historic Portland Place Tours",
+    "location": "Hartshorne Woods Park",
+    "dates": "Wed–Sun May 2–Nov 14 at 10:30AM, 11:30AM, 1:30PM, 2:30PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Historic Site Tours",
+    "months": [
+      "May"
+    ],
+    "note": "Owned by the Hartshorne family for most of its history, Portland Place is interwoven with the early settlement of the Navesink Highlands. Tours limited to 10 people."
+  },
+  {
+    "name": "Historic Racing Stable Tours",
+    "location": "Thompson Park, Lincroft",
+    "dates": "Fri/Sat/Sun May 2–Oct 18 10AM-4PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Historic Site Tours",
+    "months": [
+      "May"
+    ],
+    "note": "Located within the Brookdale Farm National Historic District, the racing stable showcases the history of Thoroughbred racing in Monmouth County through exhibits in the horse stalls."
+  },
+  {
+    "name": "Historic Battery Lewis Tours",
+    "location": "Hartshorne Woods Park, Rocky Point, Highlands",
+    "dates": "Sat/Sun May 23–Oct 11 10AM-4PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "History & Tours",
+    "series": "Historic Site Tours",
+    "months": [
+      "May"
+    ],
+    "note": "The restored Battery Lewis at the 224-acre Navesink Military Reservation includes interpretive exhibits and a 16-inch gun barrel."
+  },
+  {
+    "name": "Friday Evening Pottery",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Fri Mar 13–Apr 24 6:30-8:30PM; Fri May 1–Jun 12 6:30-8:30PM",
+    "price": "$140/person (7 sessions, includes glazes, firings, 12 lbs clay)",
+    "isFree": false,
+    "ages": "Ages 11+",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Discover throwing and hand building with clay. Great family class. Participants 13 and under must register with an adult. No makeup classes."
+  },
+  {
+    "name": "Puppet Making / Puppet Show Day!",
+    "location": "Thompson Park Visitor Center Tulip Room",
+    "dates": "Sat Mar 21 1:30-3PM",
+    "price": "$28/family of up to 4",
+    "isFree": false,
+    "ages": "All Ages (under 18 with adult)",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar"
+    ],
+    "note": "World Puppetry Day! Make paper plate puppets then put on a puppet show. All supplies provided."
+  },
+  {
+    "name": "Sunday Ceramics",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Sun Mar 1; Sun Apr 12; Sun May 3 (11:30AM-1PM & 1:30-3PM)",
+    "price": "$15/person + bisqueware purchased on-site",
+    "isFree": false,
+    "ages": "Ages 8+ (under 18 with paying adult)",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Choose from bisque fired pottery pieces to glaze in your own style. Piece is glaze fired and ready to pick up in about a week. Space is limited."
+  },
+  {
+    "name": "Flashlight Easter Eggstravaganza",
+    "location": "Fort Monmouth Recreation Center Gym A",
+    "dates": "Fri Mar 27 (sessions: 6-6:30PM, 6:45-7:15PM, 7:30-8PM)",
+    "price": "$24/child",
+    "isFree": false,
+    "ages": "All Ages (under 18 with adult)",
+    "category": "Festivals & Culture",
+    "series": "Family Fun",
+    "months": [
+      "Mar"
+    ],
+    "note": "Grab your flashlight! Easter Bunny is supervising an egg clean-up. Help collect eggs, create spring crafts, and enjoy a visit with the Bunny."
+  },
+  {
+    "name": "Mum! Dad! Bingo! Bluey™!",
+    "location": "Fort Monmouth Recreation Center Gym A",
+    "dates": "Fri Mar 13 6-7PM; Fri May 8 6-7PM",
+    "price": "$22/child",
+    "isFree": false,
+    "ages": "Ages 4-10 with adult",
+    "category": "Festivals & Culture",
+    "series": "Family Fun",
+    "months": [
+      "Mar",
+      "May"
+    ],
+    "note": "Step into the world of Bluey™! Musical Statues, Pass the Parcel, Keepy Uppy, Raiders, plus a Bluey™-themed craft and scavenger hunt."
+  },
+  {
+    "name": "Agatha Christie's 'The Mousetrap'",
+    "location": "Thompson Park Theater Barn",
+    "dates": "Sat May 30 3-5PM; Sun May 31 3-5PM",
+    "price": "Adults $12 / Seniors $7 / Children $5",
+    "isFree": false,
+    "ages": "Ages 12+ with adult",
+    "category": "Festivals & Culture",
+    "series": "Family Fun",
+    "months": [
+      "May"
+    ],
+    "note": "A snowstorm traps strangers in a remote manor; a murder has been committed. The world's longest running play. Pre-registration required."
+  },
+  {
+    "name": "Under the Spring Stars",
+    "location": "Dorbrook Recreation Area Soccer Field Parking Lot",
+    "dates": "Sat Mar 21 9-10PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages (under 18 with adult)",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Mar"
+    ],
+    "note": "Gaze into the night skies searching for constellations, planets, satellites, and shooting stars. Bring a camp chair or blanket and a flashlight. Cancelled if overcast."
+  },
+  {
+    "name": "Animal Hours at a Park Near You!",
+    "location": "Freneau Woods Park Visitor Center",
+    "dates": "Sun Apr 19 10:30-11:30AM",
+    "price": "$13/parent-child, $6.50 additional",
+    "isFree": false,
+    "ages": "All Ages (under 18 with adult)",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Apr"
+    ],
+    "note": "Get a close-up view of animals from the Huber Woods Reptile House. What does a living snake feel like? Is it a toad or a frog?"
+  },
+  {
+    "name": "Family Nature Days!",
+    "location": "Seven Presidents Oceanfront Park Activity Center",
+    "dates": "Sun Mar 29 10-11:30AM",
+    "price": "$18/parent-child, $9.50 additional",
+    "isFree": false,
+    "ages": "Ages 4+ (under 18 with adult)",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Mar"
+    ],
+    "note": "A day filled with nature: animal presentation, guided walk, and craft suited for children of all ages."
+  },
+  {
+    "name": "Family Woodcock Walk",
+    "location": "Dorbrook Recreation Area (Parking Lot Southside of Rt. 537)",
+    "dates": "Thu Mar 5 5:30-6:30PM (approx)",
+    "price": "$10/person",
+    "isFree": false,
+    "ages": "All Ages (under 18 with adult)",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Mar"
+    ],
+    "note": "Evening walk to search for the American Woodcock's spectacular sky dance mating ritual. Waterproof shoes and flashlight recommended."
+  },
+  {
+    "name": "Dark Sky Hike",
+    "location": "Huber Woods Park Environmental Center Courtyard",
+    "dates": "Thu Apr 16 7:30-8:30PM (approx)",
+    "price": "$18/person",
+    "isFree": false,
+    "ages": "Ages 11+ (under 18 with adult)",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Apr"
+    ],
+    "note": "Celebrate International Dark Sky Week with a guided night hike searching for nocturnal wonders. Learn how outdoor lighting affects wildlife. Closed-toe shoes required."
+  },
+  {
+    "name": "Eagle Boat Tours",
+    "location": "Manasquan Reservoir Outdoor Area",
+    "dates": "Fri May 15 & May 29 (sessions: 4:30-5:30PM, 5:30-6:30PM, 6:30-7:30PM)",
+    "price": "$9/person",
+    "isFree": false,
+    "ages": "Ages 4+ (under 18 with adult)",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "May"
+    ],
+    "note": "America 250-themed evening pontoon tour on Manasquan Reservoir searching for bald eagles. Wear red, white, and blue! Life jackets provided and required."
+  },
+  {
+    "name": "Forest Friends After Five",
+    "location": "Manasquan Reservoir Environmental Center Parking Lot",
+    "dates": "Tue May 12 5:30-6:30PM",
+    "price": "$12/parent-child",
+    "isFree": false,
+    "ages": "Ages 4-7 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "May"
+    ],
+    "note": "Gentle nature-filled stroll for young children and families. Look for bugs, listen to birds, enjoy sensory activities. Perfect before bedtime."
+  },
+  {
+    "name": "Spring Peeper Stroll",
+    "location": "Freneau Woods Park Visitor Center Parking Area",
+    "dates": "Sat Mar 14 6:30-7:45PM",
+    "price": "$12/person",
+    "isFree": false,
+    "ages": "Ages 4+ (under 18 with adult)",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Mar"
+    ],
+    "note": "Hike quietly to wooded pools to catch a glimpse of spring peeper tree frogs — a sure sign spring has arrived!"
+  },
+  {
+    "name": "Sunset Stroll Around Turkey Swamp Lake",
+    "location": "Turkey Swamp Park Shelter Building",
+    "dates": "Sat Mar 14 6-8PM",
+    "price": "$20/parent-child, $10 additional",
+    "isFree": false,
+    "ages": "All Ages (under 18 with adult)",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Mar"
+    ],
+    "note": "Naturalist-guided walk around Turkey Swamp Lake just before sunset, finishing next to a crackling bonfire. Bring s'mores supplies and a flashlight."
+  },
+  {
+    "name": "World Turtle Day Celebration",
+    "location": "Manasquan River Greenway Winter Run Activity Center",
+    "dates": "Sat May 23 1-2PM",
+    "price": "$12/person",
+    "isFree": false,
+    "ages": "Ages 7+ (under 18 with adult)",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "May"
+    ],
+    "note": "Live turtle show to celebrate World Turtle Day. Meet native turtle species and learn about their threats and how to help them."
+  },
+  {
+    "name": "Earth Day Open House",
+    "location": "Huber Woods Environmental Center, Middletown",
+    "dates": "Sat Apr 18 10AM-2PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "Nature",
+    "series": "Earth Day",
+    "months": [
+      "Apr"
+    ],
+    "note": "Celebrate Earth Day with live animal shows, guided nature and history walks. Bring a gently used nature book to exchange for a new one."
+  },
+  {
+    "name": "Earth Day Beach Cleanup",
+    "location": "Bayshore Waterfront Park, Port Monmouth",
+    "dates": "Sun Apr 19 10AM-12PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "Nature",
+    "series": "Earth Day",
+    "months": [
+      "Apr"
+    ],
+    "note": "Help clean our coastline of trash and plastic debris. Bring your own gloves; trash bags and tools supplied. Meet near the fishing pier."
+  },
+  {
+    "name": "Earth Day Planting",
+    "location": "Bayshore Waterfront Park, Port Monmouth",
+    "dates": "Wed Apr 22 5-6:30PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "Nature",
+    "series": "Earth Day",
+    "months": [
+      "Apr"
+    ],
+    "note": "Help restore our native maritime forest by planting native plants. First come, first served — plants in limited supply."
+  },
+  {
+    "name": "Seashore Open House",
+    "location": "Seven Presidents Oceanfront Park Activity Center",
+    "dates": "Wed Apr 1 1-4PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "Festivals & Culture",
+    "series": "Special Events",
+    "months": [
+      "Apr"
+    ],
+    "note": "Hands-on seashore activities at Seven Presidents Oceanfront Park. Speak with a Naturalist about your shell collection or aquatic animals on display. Call 732-872-2670."
+  },
+  {
+    "name": "Rockin' the Trails (Scavenger Hunt)",
+    "location": "Various Parks",
+    "dates": "Apr 15–Dec 31, 2026",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "Festivals & Culture",
+    "series": "Special Events",
+    "months": [
+      "Apr"
+    ],
+    "note": "America 250th birthday cross-county scavenger hunt! Use the brochure to find hidden trail markers with patriotic symbols. Return brochure for grand prize entry. Call 732-872-2670."
+  },
+  {
+    "name": "Weekend Boat Tours at Manasquan Reservoir",
+    "location": "Manasquan Reservoir Visitor Center, Windeler Road",
+    "dates": "May 23–Sep 7, weekends at 2PM, 3PM, 4PM, 5PM",
+    "price": "$6/adult, $4/child 12 and under",
+    "isFree": false,
+    "ages": "All Ages",
+    "category": "Festivals & Culture",
+    "series": "Special Events",
+    "months": [
+      "May"
+    ],
+    "note": "45-minute narrated boat tours with chances to view turtles, egrets, herons, ospreys, and possibly a bald eagle. Life jackets provided and required. Call 732-751-9453."
+  },
+  {
+    "name": "Kayak Fishing the Manasquan Reservoir",
+    "location": "Manasquan Reservoir Environmental Center Outdoor Area",
+    "dates": "Tue May 19 9AM-1PM; Sun May 31 9AM-1PM",
+    "price": "$58/person",
+    "isFree": false,
+    "ages": "Ages 12+ (under 18 with adult)",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "May"
+    ],
+    "note": "Fish for tiger muskies, largemouth bass, channel catfish, perch, crappie, and bluegill from sit-on-top kayaks. Bring gear or borrow ours."
+  },
+  {
+    "name": "Freshwater Fishing Derbies",
+    "location": "Manasquan Reservoir (Jun 20) / Turkey Swamp Park (Jun 21)",
+    "dates": "Sat Jun 20 2-5PM (Manasquan Res); Sun Jun 21 2-5PM (Turkey Swamp)",
+    "price": "$34/family of 4 or $10/person",
+    "isFree": false,
+    "ages": "All Ages",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "Jun"
+    ],
+    "note": "Annual fishing derbies for beginners and experienced anglers. Free casting/rigging clinic 12:30-1:30PM. Prizes for longest fish. Worms included. Fishing poles rent $5."
+  },
+  {
+    "name": "Canoe Rentals on Marlu Lake",
+    "location": "Thompson Park, Lincroft",
+    "dates": "May 23 & 24; Jun 6 & 7; Jun 20 & 21; Jul 4 & 5; Jul 18 & 19; Aug 1 & 2; Aug 15 & 16; Aug 29 & 30 (10AM-3PM)",
+    "price": "$15/boat (1-3 people, 2 hours, tax included)",
+    "isFree": false,
+    "ages": "All Ages (under 18 with adult)",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "May",
+      "Jun"
+    ],
+    "note": "Rent a canoe at Thompson Park's Marlu Lake. All equipment provided. Must return by 3PM. Available every other weekend from Memorial Day through August."
+  },
+  {
+    "name": "Climb Time",
+    "location": "Shark River Park (Apr 10) / Swimming River Park (May 8)",
+    "dates": "Fri Apr 10 12-3PM; Fri May 8 3-6PM",
+    "price": "Free",
+    "isFree": true,
+    "ages": "Ages 8+ with adult",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "Experience the thrill of climbing our 25-foot portable climbing wall. Must be 42 inches or taller to climb."
+  },
+  {
+    "name": "Open Shoot Archery",
+    "location": "Thompson Park Activity Barn",
+    "dates": "Sat Mar 14; Sat Apr 11; Sat May 16 (all 10AM-1PM)",
+    "price": "$10/person (cash or check only)",
+    "isFree": false,
+    "ages": "Ages 10+ (under 18 with adult)",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Improve your archery skills at Thompson Park Activity Barn's indoor range. NOT for beginners — take an instructional class first. Dress for weather (barn not heated/cooled)."
+  },
+  {
+    "name": "Archery Golf",
+    "location": "Thompson Park Activity Barn",
+    "dates": "Sun Apr 12 10AM-12PM",
+    "price": "$27/adult & junior",
+    "isFree": false,
+    "ages": "Ages 9+ (under 18 with adult)",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "Apr"
+    ],
+    "note": "Learn the basics of archery, then shoot a round of archery golf on our pop-up course using soft-tipped arrows. Score a birdie instead of a bullseye!"
+  },
+  {
+    "name": "Finding the Founding Fathers (GPS Hunt)",
+    "location": "Thompson Park 3 Barns Parking Lot",
+    "dates": "Mon Mar 30 10-11:30AM",
+    "price": "$20/adult & junior, $10 additional sibling",
+    "isFree": false,
+    "ages": "Ages 8-12 with adult",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "Mar"
+    ],
+    "note": "America's 250th anniversary GPS scavenger hunt! Use hand-held GPS units around the park to locate hiding spots of the founding fathers."
+  },
+  {
+    "name": "Spring into Spring Family Camping",
+    "location": "Turkey Swamp Park Nomoco Group Campground",
+    "dates": "Fri-Sat Apr 24-25 OR Sat-Sun Apr 25-26 (12PM–11AM)",
+    "price": "$230/family of up to 4",
+    "isFree": false,
+    "ages": "Ages 5+ with adult",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "Apr"
+    ],
+    "note": "Overnight family camping with camping skills instruction, games, portable rock wall, and more. Platform tent, dinner, and breakfast provided."
+  },
+  {
+    "name": "ART Capades",
+    "location": "Fort Monmouth Recreation Center Program Room B",
+    "dates": "Thu Mar 12–Apr 2; Thu Apr 16–May 7; Thu May 14–Jun 4 (9:30-10:15AM)",
+    "price": "$60/parent-child, $52 additional sibling (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-4 with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "All about the process! Each week a new project, medium, and materials. Splatter painting, playdough, stamped art, mixing colors, ornaments, and more."
+  },
+  {
+    "name": "Craft 'n' Play",
+    "location": "Fort Monmouth Recreation Center Program Room B",
+    "dates": "Wed Mar 11–Apr 1; Wed Apr 15–May 6; Wed May 13–Jun 3",
+    "price": "$60/parent-child, $52 additional sibling (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 18 months–3 years with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Crafts exploring colors, textures, paint, glitter, and glue while exploring seasons and holidays. Plus time in the play area."
+  },
+  {
+    "name": "Messy Art",
+    "location": "Fort Monmouth Recreation Center Program Room B",
+    "dates": "Wed Mar 11–Apr 1; Wed Apr 15–May 6; Wed May 13–Jun 3 (10:30-11:15AM)",
+    "price": "$60/parent-child, $52 additional sibling (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 18 months–3 years with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Toddlers delight in paint, glue, glitter, and more. Moves outdoors during nice weather."
+  },
+  {
+    "name": "Let's Create!",
+    "location": "Dorbrook Recreation Area Program Building",
+    "dates": "Fri Mar 6–Apr 24 10:45-11:30AM (no class 4/3 & 4/10); Fri May 1–Jun 5",
+    "price": "$77/parent-child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-4 with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Circle time for socialization and fine motor skills, featuring a story and an art project to bring home. No additional family members please."
+  },
+  {
+    "name": "KidzArt Squiggles to Grins",
+    "location": "Thompson Park Visitor Center Tulip Room / Henry Hudson Trail Activity Center",
+    "dates": "Multiple series: Tue Mar 31–May 5; Tue May 12–Jun 16 (Thompson); Thu Apr 2–May 7; Thu May 14–Jun 18 (Henry Hudson)",
+    "price": "$104/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-3 with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Fun and creative activities to enhance motor skills and develop language and social skills using fun and safe materials."
+  },
+  {
+    "name": "Mommy and Me for Mother's Day",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Sat May 2 1-3PM",
+    "price": "$50/person",
+    "isFree": false,
+    "ages": "Ages 6-10 with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "May"
+    ],
+    "note": "Mothers and children paint together recreating a floral painting by Renoir!"
+  },
+  {
+    "name": "Dr. Seuss Story Week",
+    "location": "Dorbrook Recreation Area Program Building",
+    "dates": "Multiple sessions Mar 4-12 (Horton Hears a Who, Cat in the Hat, The Lorax, Hop on Pop, Fox in Socks)",
+    "price": "$25/pair per session",
+    "isFree": false,
+    "ages": "Ages 2-5 with adult",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "Mar"
+    ],
+    "note": "Celebrate Dr. Seuss's birthday! Each session features a different beloved book with a story, craft, and games. Dress for mess or bring a smock."
+  },
+  {
+    "name": "Afternoon Tea: Mother's Day Edition",
+    "location": "Fort Monmouth Recreation Center Kitchen",
+    "dates": "Fri May 8 6-8PM",
+    "price": "$70/pair",
+    "isFree": false,
+    "ages": "Ages 8-12 with adult",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "May"
+    ],
+    "note": "Make Mother's Day treats with Mrs. Chef: Pinwheel Tea Sandwiches, Heart Shaped 'Pop Tarts', plus one more treat. Finish with an old-fashioned Mother's Day Card."
+  },
+  {
+    "name": "Fun with Minions (Cake Decorating)",
+    "location": "Fort Monmouth Recreation Center Kitchen",
+    "dates": "Sat Apr 25 10AM-12:30PM",
+    "price": "$70/pair",
+    "isFree": false,
+    "ages": "Ages 8-12 with adult",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "Apr"
+    ],
+    "note": "Get creative with cake and frosting with Mrs. Chef! Focus on design using a chocolate box mix. You'll be amazed at what you can do with store-bought ingredients!"
+  },
+  {
+    "name": "Kids Springtime Cupcakes",
+    "location": "Fort Monmouth Recreation Center Kitchen",
+    "dates": "Sat Apr 11 10AM-12:30PM",
+    "price": "$70/pair",
+    "isFree": false,
+    "ages": "Ages 8-12 with adult",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "Apr"
+    ],
+    "note": "Create springtime cupcakes with Mrs. Chef! Learn to follow directions, use food coloring, then assemble and decorate."
+  },
+  {
+    "name": "Parent/Child Food Truck Favorites",
+    "location": "Fort Monmouth Recreation Center Kitchen",
+    "dates": "Fri Apr 17 6-8PM",
+    "price": "$70/pair",
+    "isFree": false,
+    "ages": "Ages 8-12 with adult",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "Apr"
+    ],
+    "note": "Make food truck faves! Menu: Grilled Pizza on a Stick, Frito Pie, and Ice Cream Sodas or M&M Ice Cream Cookie Sandwiches."
+  },
+  {
+    "name": "Red, White, and Blue Tea Party",
+    "location": "Dorbrook Recreation Area Visitor Center",
+    "dates": "Thu May 21 10-10:45AM & 11:15AM-12PM",
+    "price": "$25/person",
+    "isFree": false,
+    "ages": "Ages 2-5 with adult",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "May"
+    ],
+    "note": "A patriotic themed tea party — make a snack, drink tea, do a craft, and enjoy quality time together."
+  },
+  {
+    "name": "Shamrock Cut-Up Cake",
+    "location": "Fort Monmouth Recreation Center Kitchen",
+    "dates": "Fri Mar 13 6-8:30PM",
+    "price": "$70/pair",
+    "isFree": false,
+    "ages": "Ages 8-12 with adult",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "Mar"
+    ],
+    "note": "Make a St. Patrick's Day Shamrock cut-up cake! Single-layer cakes cut into shapes, rearranged, and iced."
+  },
+  {
+    "name": "Spring Bunny Cut-Up Cake",
+    "location": "Fort Monmouth Recreation Center Kitchen",
+    "dates": "Sat Mar 21 10AM-12:30PM; Fri Mar 27 6-8:30PM",
+    "price": "$70/pair",
+    "isFree": false,
+    "ages": "Ages 8-12 with adult",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "Mar"
+    ],
+    "note": "Make a spring bunny cut-up cake using chocolate cake mix with food coloring design techniques."
+  },
+  {
+    "name": "Summer Treats",
+    "location": "Fort Monmouth Recreation Center Kitchen",
+    "dates": "Fri May 29 6-8PM",
+    "price": "$70/pair",
+    "isFree": false,
+    "ages": "Ages 10-13 with adult",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "May"
+    ],
+    "note": "Create fun summertime treats with Mrs. Chef as you gear up for summer holidays. Menu TBA."
+  },
+  {
+    "name": "Creature Comforts at Your Fingertips",
+    "location": "Dorbrook Recreation Area Visitor Center",
+    "dates": "Mon Mar 9 6-7:30PM",
+    "price": "$60/pair",
+    "isFree": false,
+    "ages": "Ages 5-8 with adult",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Mar"
+    ],
+    "note": "Mindful parent-child workshop: explore simple ways to find calm using breath, awareness, and hands. MELT exercises, breathwork, and mindfulness activities. Includes a copy of the book."
+  },
+  {
+    "name": "Keyboard Beginnings Level 1",
+    "location": "Thompson Park Visitor Center Tulip Room",
+    "dates": "Mon May 4–Jun 22 4-4:45PM (no class 5/25)",
+    "price": "$162/parent-child (7 sessions) + $25 materials fee",
+    "isFree": false,
+    "ages": "Ages 4.5-6 with adult",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "May",
+      "Jun"
+    ],
+    "note": "Young children learn the names of musical keys and play short songs on keyboards. Recommended to have keyboard at home. Includes music book, rhythm instrument, crayons, and lesson outlines."
+  },
+  {
+    "name": "Keyboard Beginnings Level 2",
+    "location": "Thompson Park Visitor Center Tulip Room",
+    "dates": "Mon May 4–Jun 22 5-5:45PM (no class 5/25)",
+    "price": "$162/parent-child (7 sessions) + $25 materials fee",
+    "isFree": false,
+    "ages": "Ages 5-7",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "May",
+      "Jun"
+    ],
+    "note": "Continuation of Level 1. Play new songs, read notes on the musical staff. Includes Keyboard Beginnings Music Book 2, lesson outlines, flash cards, and concentration game."
+  },
+  {
+    "name": "Little Learners",
+    "location": "Dorbrook Recreation Area Program Building",
+    "dates": "Fri Mar 6–Apr 24 9:30-10:15AM (no class 4/3 & 4/10); Fri May 1–Jun 5",
+    "price": "$77/parent-child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-4 with adult",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Introduction to literacy using play, movement, art, stories, and circle time. Much of the session outdoors when weather allows."
+  },
+  {
+    "name": "Morning Tea Party",
+    "location": "Dorbrook Recreation Area Visitor Center",
+    "dates": "Thu Mar 26 (10-10:45AM & 11-11:45AM); Thu May 7 (10-10:45AM & 11-11:45AM)",
+    "price": "$25/parent-child",
+    "isFree": false,
+    "ages": "Ages 2-4 with adult",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Mar",
+      "May"
+    ],
+    "note": "Themed stories, snacks, and making a simple snack and tea together. Make new friends!"
+  },
+  {
+    "name": "You, Me & Karaoke",
+    "location": "Tatum Park Red Hill Activity Center",
+    "dates": "Sun Apr 12 2-4PM",
+    "price": "$77/family of 4",
+    "isFree": false,
+    "ages": "Ages 6-12 with adult",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Apr"
+    ],
+    "note": "Family-friendly karaoke and dance party! Song requests, group sing-alongs, holiday classics. Dancing encouraged! Bring your own snacks and non-alcoholic drinks."
+  },
+  {
+    "name": "Mommy and Me Painted Flower Pots",
+    "location": "Deep Cut Gardens Horticultural Center",
+    "dates": "Sat May 2 & Sat May 9 10-11:30AM",
+    "price": "$20/pair (2 sessions)",
+    "isFree": false,
+    "ages": "Ages 4-6 with adult",
+    "category": "Nature",
+    "series": "Horticulture",
+    "months": [
+      "May"
+    ],
+    "note": "Paint a flower pot together and plant seeds to watch flowers grow at home. For mothers and all mother figures to celebrate Mother's Day."
+  },
+  {
+    "name": "Storytime in the Garden: Growing Vegetable Soup",
+    "location": "Deep Cut Gardens Horticultural Center",
+    "dates": "Fri May 15 10-11AM; Sat May 23 10-11AM",
+    "price": "$15/parent-child",
+    "isFree": false,
+    "ages": "Ages 4-6 with adult",
+    "category": "Nature",
+    "series": "Horticulture",
+    "months": [
+      "May"
+    ],
+    "note": "Springtime story about growing vegetables, followed by a spring-themed craft and a garden walk to see what's growing."
+  },
+  {
+    "name": "Storytime in the Garden: Planting a Rainbow",
+    "location": "Deep Cut Gardens Horticultural Center",
+    "dates": "Fri Mar 13; Fri Mar 20; Sat Apr 18 (10-11AM)",
+    "price": "$15/parent-child",
+    "isFree": false,
+    "ages": "Ages 4-6 with adult",
+    "category": "Nature",
+    "series": "Horticulture",
+    "months": [
+      "Mar",
+      "Apr"
+    ],
+    "note": "Story time about planting rainbow seeds and watching a garden grow, followed by a rainbow-themed craft."
+  },
+  {
+    "name": "Abracadabra, It's Spring!",
+    "location": "Longstreet Farm Visitor Center",
+    "dates": "Sat May 9 10-10:45AM",
+    "price": "$15/child",
+    "isFree": false,
+    "ages": "Ages 3.5-6 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "May"
+    ],
+    "note": "Story time about spring magic, followed by a magical craft and a walk around the pond."
+  },
+  {
+    "name": "Case File: Whose Toes are Those?",
+    "location": "Freneau Woods Park Visitor Center",
+    "dates": "Sun Apr 12 1-2PM",
+    "price": "$15/child",
+    "isFree": false,
+    "ages": "Ages 6-9 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Apr"
+    ],
+    "note": "Become a nature investigator! Identify animals by their toes and feet to learn about habitat, diet, and activity. Finish with animal tracks bingo."
+  },
+  {
+    "name": "Avian Anatomy 101",
+    "location": "Manasquan River Greenway Winter Run Activity Center",
+    "dates": "Mon May 18 4-5:30PM",
+    "price": "$16/child",
+    "isFree": false,
+    "ages": "Ages 5-10 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "May"
+    ],
+    "note": "What do we have in common with birds? Learn about bird anatomy, make a take-home bird craft, and take a nature walk. Your kiddos will be 'raven' about it!"
+  },
+  {
+    "name": "Curious Kids",
+    "location": "Huber Woods Park Environmental Center",
+    "dates": "Tue Apr 7-28 10-11AM (approx)",
+    "price": "$54/parent-child (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 3-5 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Apr"
+    ],
+    "note": "Encourage your child's natural curiosity with nature artifacts, crafts, stories, and nature walks. New topic each week. Dress for the weather."
+  },
+  {
+    "name": "Forest Bathing with Kids",
+    "location": "Freneau Woods Park Visitor Center Parking Area",
+    "dates": "Wed Apr 22 11AM-12PM; Wed Apr 29 11AM-12PM",
+    "price": "$17/parent-child, $8.50 additional sibling",
+    "isFree": false,
+    "ages": "Ages 2-7 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Apr"
+    ],
+    "note": "De-stress with a forest-bathing adventure. Mindful hour in the woods listening to trees and birds. Closed-toe shoes required."
+  },
+  {
+    "name": "Grow with Love",
+    "location": "Freneau Woods Park Visitor Center",
+    "dates": "Thu May 7 10-11AM",
+    "price": "$16/parent-child, $7.50 additional",
+    "isFree": false,
+    "ages": "Ages 3-5 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "May"
+    ],
+    "note": "Mother's Day nature adventure: story time, plant a seed to take home, then a gentle walk to explore flowers, trees, and tiny creatures."
+  },
+  {
+    "name": "Growing Up Wild",
+    "location": "Multiple Parks (Huber Woods, Thompson Park, Holmdel Park)",
+    "dates": "Thu Mar 12-26 10-11AM",
+    "price": "$43.50/parent-child (3 sessions)",
+    "isFree": false,
+    "ages": "Ages 3-5 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Mar"
+    ],
+    "note": "Preschool series exploring a different park each week — guided walks and nature activities. Different park each session."
+  },
+  {
+    "name": "How to Catch a Garden Fairy",
+    "location": "Huber Woods Park Environmental Center",
+    "dates": "Sat May 2 10-11AM (approx)",
+    "price": "$16.50/parent-child",
+    "isFree": false,
+    "ages": "Ages 4-6 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "May"
+    ],
+    "note": "Help Naturalists catch a garden fairy! Create a fairy-themed craft, listen to a story, and go on a garden walk. Indoor and outdoor components."
+  },
+  {
+    "name": "Hue Hike",
+    "location": "Deep Cut Gardens / Freneau Woods Park",
+    "dates": "Tue Apr 21 10-11AM (Deep Cut); Wed May 20 10-11AM (Freneau)",
+    "price": "$9-$12/parent-child",
+    "isFree": false,
+    "ages": "Ages 3-5 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "Walk where children explore nature through the lens of a single color. Toddler's pace, building observation skills and sparking curiosity."
+  },
+  {
+    "name": "My First Fish",
+    "location": "Turkey Swamp Park",
+    "dates": "Sun Apr 26 10-11:30AM; Sun May 17 10-11:30AM",
+    "price": "$16/child",
+    "isFree": false,
+    "ages": "Ages 6-12 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "A Naturalist helps you and your child catch their first fish! Catch-and-release. Bait, poles, and instruction provided."
+  },
+  {
+    "name": "Nature Tots",
+    "location": "Multiple Parks (varies by series)",
+    "dates": "Chipmunk Series: Fri Mar 6-20; Purple Martin Series: Wed Apr 1-15; Butterfly Series: Thu May 7-21",
+    "price": "$45/person, $18 additional sibling (3 sessions per series)",
+    "isFree": false,
+    "ages": "Ages 2-5 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Outdoor fun with toddlers on scenic park trails with nature discovery and craft activities. Designed for short legs and short attention spans. Children under 2 welcome free."
+  },
+  {
+    "name": "Springing Into Sunshine",
+    "location": "Huber Woods Park Environmental Center",
+    "dates": "Wed Apr 22–May 13 10-11:15AM (approx)",
+    "price": "$54/parent-child (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 3-5 with adult",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "Preschool series exploring nature topics with short walks, games, and crafts. At times part of the program takes place indoors."
+  },
+  {
+    "name": "Hiking Adventures",
+    "location": "Various Parks",
+    "dates": "Sat Mar 21 (Thompson Pk); Sat Apr 18 (Big Brook Pk); Fri May 22 (Deep Cut Gardens)",
+    "price": "$18/parent-child, $7 additional sibling",
+    "isFree": false,
+    "ages": "Ages 2-5 with adult",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Short hikes designed for little legs and short attention spans. Children under 2 welcome free. Bring a back or front carrier."
+  },
+  {
+    "name": "Let's Explore",
+    "location": "Dorbrook Recreation Area Program Building",
+    "dates": "Mon Mar 2–Apr 20 (10-10:45AM & 11-11:45AM); Mon Apr 27–Jun 8 (no class 5/25)",
+    "price": "$72/pair (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-5 with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
+      "Mar",
+      "Apr",
+      "Jun"
+    ],
+    "note": "Sensory play, fine and large motor activities, simple art projects, story time, and nature exploration. Dress for mess."
+  },
+  {
+    "name": "Miss Melissa's Aardvarks",
+    "location": "Dorbrook Recreation Area / Tatum Park / Freneau Woods",
+    "dates": "Multiple locations/times Apr 13–Jun 8",
+    "price": "$205/parent-child, $155 2nd child (8 sessions)",
+    "isFree": false,
+    "ages": "Ages 6 months–5 years with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
+      "Apr",
+      "Jun"
+    ],
+    "note": "Music for Aardvarks: early childhood music development with bells, drums, shakers, sticks, and original music from Jack's Big Music Show. Teacher plays guitar; children sing and dance."
+  },
+  {
+    "name": "Mommy & Me Ballet",
+    "location": "Tatum Park Red Hill Activity Center",
+    "dates": "Tue Mar 24–Jun 9; Wed Mar 25–Jun 10 (9:30-10:15AM, no class 4/7-8 & 5/12-13)",
+    "price": "$125/pair (10 sessions)",
+    "isFree": false,
+    "ages": "Ages 2.5-3.5 with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
+      "Mar",
+      "Jun"
+    ],
+    "note": "Pre-ballet class! Basic ballet movement through props and fun songs. Adults dressed to move. Students wear ballet shoes and attire."
+  },
+  {
+    "name": "Morning Playtime",
+    "location": "Dorbrook / Freneau Woods / Tatum Park / Thompson Park",
+    "dates": "Multiple series starting Mar 12 and Apr 23 at various locations",
+    "price": "$65/parent-child (5 sessions)",
+    "isFree": false,
+    "ages": "Ages 18 months–3.5 years with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
+      "Mar",
+      "Apr"
+    ],
+    "note": "Build creativity and confidence through exercise, music, and specialized play equipment. Tunnels, mini-trampoline, ribbon sticks, and bells. Parent must be present; no drop-offs."
+  },
+  {
+    "name": "Move and Groove",
+    "location": "Dorbrook Recreation Area Visitor Center",
+    "dates": "Wed Mar 4–Apr 22; Wed Apr 29–Jun 3 (various times)",
+    "price": "$72/pair (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 18 months–3 years with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
+      "Mar",
+      "Apr",
+      "Jun"
+    ],
+    "note": "Introduction to dance and movement! Sing, dance, and explore while building basic motor skills using scarves, beanbags, and musical instruments."
+  },
+  {
+    "name": "My Morning Playtime",
+    "location": "Dorbrook Recreation Area / Thompson Park",
+    "dates": "Multiple series: Thu Mar 12–Apr 9; Thu Apr 23–May 21; Wed Apr 1-29; Wed May 6–Jun 3",
+    "price": "$65/parent-child (5 sessions)",
+    "isFree": false,
+    "ages": "Ages 3-4 with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Most active Playtime class for preschoolers ready for a little independence. Free-play with tunnels and trampolines, then themed and movement activities."
+  },
+  {
+    "name": "PreK Prep",
+    "location": "Freneau Woods Park Visitor Center",
+    "dates": "Thu Mar 12–Apr 16 11:30AM-12:15PM; Thu Apr 30–May 28 11:30AM-12:15PM",
+    "price": "$65/person (5 sessions)",
+    "isFree": false,
+    "ages": "Ages 3-4 with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Get your child ready for school: number recognition, counting, letter recognition, seasons, days of week, shapes, and free play."
+  },
+  {
+    "name": "Sensory Explorers",
+    "location": "Dorbrook Recreation Area Program Building",
+    "dates": "Tue Mar 3–Apr 21; Tue Apr 28–Jun 2",
+    "price": "$70/pair (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 9 months–2 years with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
+      "Mar",
+      "Apr",
+      "Jun"
+    ],
+    "note": "Explore the world through sound, vision, and touch! Multi-sensory activities, messy art, song, and dance. Designed to grow young children's brains and fine motor skills."
+  },
+  {
+    "name": "Superheroes",
+    "location": "Fort Monmouth Recreation Center Gym A",
+    "dates": "Avengers: Mon Mar 2-30; Justice League: Mon Apr 13–May 11",
+    "price": "$70/parent-child (5 sessions)",
+    "isFree": false,
+    "ages": "Ages 2.5-5 with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Unleash your child's inner superhero! After a story, soar, climb, jump, run, and have fun. Different superhero each week. Avengers series (Mar) and Justice League series (Apr-May)."
+  },
+  {
+    "name": "The Power of Play",
+    "location": "Fort Monmouth Recreation Center Gym A",
+    "dates": "Fri Mar 13–Apr 10; Fri Apr 24–May 15",
+    "price": "$56/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-4 with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Structured play using games and recreation to reinforce following directions, taking turns, motor skills, and social play. Fun intro to competition for young children."
+  },
+  {
+    "name": "When You Wish Upon a Star",
+    "location": "Tatum Park Holland Activity Center / Freneau Woods Park",
+    "dates": "Multiple series and locations starting Mar 11",
+    "price": "$65/person (5 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-4 with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
+      "Mar"
+    ],
+    "note": "Walt Disney® themed program with classic stories, crafts, fun with food, and exciting activities. Different Disney theme each week."
+  },
+  {
+    "name": "When You Wish Upon a Star-Spangled Banner",
+    "location": "Freneau Woods Park / Tatum Park Holland Activity Center",
+    "dates": "Multiple series and locations starting Mar 11",
+    "price": "$65/parent-child (5 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-4 with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
+      "Mar"
+    ],
+    "note": "America 250th Disney program! Red, white, and blue crafts, classic stories, fun with food, and movement. Mickey's early days to modern heroes like Elsa and Moana."
+  },
+  {
+    "name": "Basketball with Me & Dad/Mom",
+    "location": "Dorbrook Recreation Area",
+    "dates": "Multiple series: Mon Apr 6–27; Sat Apr 11–May 2; Mon May 11–Jun 8; Sat May 16–Jun 20",
+    "price": "$60/parent-child (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 5-6 with adult",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Parent and child practice passing, shooting, and dribbling together. Parent participation required."
+  },
+  {
+    "name": "Hat Trick Hockey - Mites",
+    "location": "Dorbrook Recreation Area",
+    "dates": "Thu Apr 9-30; Sat Apr 11–May 2; Thu May 14–Jun 4",
+    "price": "$60/parent-child (4 sessions)",
+    "isFree": false,
+    "ages": "Age 3 with adult",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Fun start in sports with sneakers (not skates) and soft equipment! Parental assistance required during each class. Bring a camera!"
+  },
+  {
+    "name": "Summer Job Fair",
+    "location": "Fort Monmouth Recreation Center",
+    "dates": "Sat Mar 7",
+    "price": "Free",
+    "isFree": true,
+    "ages": "Teens and Adults",
+    "category": "Festivals & Culture",
+    "series": "Special Events",
+    "months": [
+      "Mar"
+    ],
+    "note": "Explore Park System summer job opportunities: Camp Counselors, Lifeguards, Boat Tour Operators, Rangers, Greenskeepers, and more!"
+  },
+  {
+    "name": "E. Murray Todd Half Marathon",
+    "location": "Brookdale Community College Collins Arena, Lincroft",
+    "dates": "Sun Mar 8",
+    "price": "See registration",
+    "isFree": false,
+    "ages": "Adults",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Mar"
+    ],
+    "note": "Over 45 years of racing tradition! 13.1 miles on one of New Jersey's most attractive courses through Lincroft, Holmdel, and Colts Neck."
+  },
+  {
+    "name": "Spring Craft Show",
+    "location": "Fort Monmouth Recreation Center",
+    "dates": "Sat Mar 28",
+    "price": "Free admission",
+    "isFree": false,
+    "ages": "All Ages",
+    "category": "Festivals & Culture",
+    "series": "Special Events",
+    "months": [
+      "Mar"
+    ],
+    "note": "Support local artists and artisans. Shop for Mother's Day, Father's Day, graduations, weddings, and more!"
+  },
+  {
+    "name": "Creative Arts Festival",
+    "location": "Thompson Park, Lincroft",
+    "dates": "Sat May 9",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "Festivals & Culture",
+    "series": "Special Events",
+    "months": [
+      "May"
+    ],
+    "note": "Family-friendly festival with fine artists and artisans, plus live music by top local musicians."
+  },
+  {
+    "name": "Native Plant Workshop & Exchange",
+    "location": "Deep Cut Gardens, Middletown",
+    "dates": "Sat May 9",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "Nature",
+    "series": "Horticulture",
+    "months": [
+      "May"
+    ],
+    "note": "Free native plant lecture followed by a native plant exchange. Swap native plants from your garden with others."
+  },
+  {
+    "name": "Splendid Spring Strolls",
+    "location": "Various Parks",
+    "dates": "Wed Mar 11; Wed Mar 18; Wed Apr 15; Wed Apr 29; Wed May 13; Wed May 21",
+    "price": "See registration",
+    "isFree": false,
+    "ages": "All Ages",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Join a Park System Naturalist on a peaceful trail walk. Trees blossoming, birds returning from migration, and tons of topics to discuss!"
+  },
+  {
+    "name": "Casual Birder",
+    "location": "Various Parks",
+    "dates": "Tue Mar 24; Tue Apr 28; Tue May 5; Tue May 19",
+    "price": "Free",
+    "isFree": true,
+    "ages": "All Ages",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "FREE laid-back morning bird walks with a Park System Naturalist for about an hour and a half. No expertise needed."
+  },
+  {
+    "name": "Menhaden: The Most Important Fish Along the Jersey Shore!",
+    "location": "Various",
+    "dates": "Wed Apr 15",
+    "price": "See registration",
+    "isFree": false,
+    "ages": "All Ages",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Apr"
+    ],
+    "note": "Learn about the menhaden — a keystone species critical to the Jersey Shore ecosystem."
+  },
+  {
+    "name": "Horseshoe Crabs Trying to Survive in a Modern World",
+    "location": "Various",
+    "dates": "Wed May 20",
+    "price": "See registration",
+    "isFree": false,
+    "ages": "All Ages",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "May"
+    ],
+    "note": "Learn about horseshoe crabs, an ancient creature that comes ashore each spring to mate and lay eggs as it has for 400+ million years."
+  },
+  {
+    "name": "Kids Kixx Pee Wee",
+    "location": "Dorbrook Rec Area / Fort Monmouth Rec Ctr / Holmdel Park",
+    "dates": "Mar 7–28, Apr 6–May 3, May 11–Jun 14 (multiple times/days)",
+    "price": "$60.00/child (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 2.5-3 (with adult)",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Fun soccer basics through games, demonstrations, and modified drills. Small classes with walk-along parent assistance required."
+  },
+  {
+    "name": "Kixx Soccer & Crafts",
+    "location": "Fort Monmouth Rec Ctr Gym A",
+    "dates": "Mar 10–31 (indoor); Apr 7–28, May 12–Jun 2 (outdoor)",
+    "price": "$64.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 3-5 (with adult)",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Combines soccer skills with art projects. Builds gross and fine motor skills, socialization, and preschool readiness."
+  },
+  {
+    "name": "Kixx Soccer & Crafts: World Cup Edition!",
+    "location": "Fort Monmouth Rec Ctr Outdoor Area",
+    "dates": "Apr 7–28, May 12–Jun 2",
+    "price": "$64.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 3-5 (with adult)",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Soccer + crafts with a World Cup theme — exploring countries, flags, and fun cultural elements alongside skill-building."
+  },
+  {
+    "name": "Mini Pee Wee Sports",
+    "location": "Freneau Woods Park Visitor Center",
+    "dates": "Mar 13–Apr 17 (no 4/3), May 1–29",
+    "price": "$65.00/parent-child (5 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-3 (with adult)",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Intro to movement: throwing, kicking, running, jumping. Fun noncompetitive setting designed for toddlers with parent guidance."
+  },
+  {
+    "name": "Pee Wee Sports",
+    "location": "Freneau Woods Park Visitor Center",
+    "dates": "Mar 13–Apr 17 (no 4/3), May 1–29",
+    "price": "$65.00/parent-child (5 sessions)",
+    "isFree": false,
+    "ages": "Ages 3-5 (with adult)",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Fundamentals of sport through fun, skill-building games. Coordination, teamwork, and confidence in a positive noncompetitive environment."
+  },
+  {
+    "name": "Mini-Hawk Multi Sport",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 27–Jun 8 (no 5/25) Mon",
+    "price": "$105.00/person (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 4-6 (with adult)",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "Jun"
+    ],
+    "note": "Multi-sport program: flag football, lacrosse, and track & field. Safe, structured environment with encouragement and fun."
+  },
+  {
+    "name": "T-Ball with Me & Dad/Mom",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 11–May 2, Apr 12–May 3, May 16–Jun 13, May 17–Jun 14",
+    "price": "$60.00/parent-child (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 4-5 (with adult)",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Learn catching, throwing, and hitting off the tee. Noncompetitive with parent participation required."
+  },
+  {
+    "name": "Build a Flower Pot",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Sat Apr 11 (12–1:30 or 2–3:30 PM)",
+    "price": "$42.00/child (1 session)",
+    "isFree": false,
+    "ages": "Ages 7-12",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Apr"
+    ],
+    "note": "Hand-build a clay flower pot. Learn basic techniques and embellish with glazes. Ready for pickup 2 weeks after."
+  },
+  {
+    "name": "Ceramic Bunnies",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Sat Mar 14 (12–1:30 or 2–3:30 PM)",
+    "price": "$40.00/child (1 session)",
+    "isFree": false,
+    "ages": "Ages 6-10",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar"
+    ],
+    "note": "Glaze and decorate a pre-cast ceramic Easter bunny. Kiln-fired and ready for pickup one week after class."
+  },
+  {
+    "name": "Children's Ceramics",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Mar 14–Apr 25 (no 4/4), May 2–Jun 13 (no 5/9)",
+    "price": "$85.00/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 8-16",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Decorate pre-cast ceramic items. Learn about greenware, bisque, underglaze, and glaze. Fee includes instruction, tools, firings."
+  },
+  {
+    "name": "Children's Handbuilding with Clay",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Mar 13–Apr 24 (no 4/3) Fri, May 1–Jun 5 Fri",
+    "price": "$105.00/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 7-10",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Create functional or decorative clay works using slab and coil construction. Includes 10 lbs clay, glazes, and firings."
+  },
+  {
+    "name": "Children's Wheel-Thrown Pottery",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Mar 12–Apr 23 Thu, Apr 30–Jun 11 Thu; Sat Mar 14–Apr 25, May 2–Jun 20 (no 5/9)",
+    "price": "$140.00/child (7 sessions)",
+    "isFree": false,
+    "ages": "Ages 11-17",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Learn wheel-throwing and hand-building with instructor demos and individual guidance. Includes tools, 10 lbs clay, glazes, firings."
+  },
+  {
+    "name": "Mother's Day Plate",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Sat Apr 18 (12–1:30 or 2–3:30 PM)",
+    "price": "$40.00/child (1 session)",
+    "isFree": false,
+    "ages": "Ages 7-12",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Apr"
+    ],
+    "note": "Paint and decorate a ceramic plate as a Mother's Day gift. Kiln-fired, ready for pickup in one week."
+  },
+  {
+    "name": "Springtime Birdhouses",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Sat May 16 (12–1:30 or 2–3:30 PM)",
+    "price": "$42.00/child (1 session)",
+    "isFree": false,
+    "ages": "Ages 7-12",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "May"
+    ],
+    "note": "Build and paint a clay birdhouse. Hand-building skills included. Ready for pickup two weeks after class."
+  },
+  {
+    "name": "Aspiring Artists for Homeschoolers",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Mar 4–25, Apr 1–22, Apr 29–May 20 (Wed/Sat options)",
+    "price": "$96.00/child (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 6-12",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Paint famous masterpieces as inspiration using mixed media. Each series ends with an original seasonal design. Instructor: Debra Stasiak."
+  },
+  {
+    "name": "Great Impressionism for 5, 6 & 7 Year Olds",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Mar 7–28, Mar 4–25, Apr 1–22, Apr 4–25, Apr 29–May 20, May 2–30",
+    "price": "$66.00/person (4 sessions) + $10 supply fee",
+    "isFree": false,
+    "ages": "Ages 5-7",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Learn Impressionism/Fauvism brushstrokes using acrylic paints. Paint famous masterpieces plus original compositions. Instructor: Debra Stasiak."
+  },
+  {
+    "name": "Great Impressionism for Aspiring Young Artists",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Mar 6–27, Apr 10–May 1, May 8–29 (Fridays)",
+    "price": "$102.00/person (4 sessions) + $10 supply fee",
+    "isFree": false,
+    "ages": "Ages 7-12",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Paint famous Impressionist masterpieces on canvas board. Includes original compositions. Instructor: Debra Stasiak."
+  },
+  {
+    "name": "Creating Iconic Comic Book Characters",
+    "location": "Dorbrook Rec Area Program Building",
+    "dates": "Sat Mar 14 or May 2, 10:00–11:30 AM",
+    "price": "$40.00/person (1 session)",
+    "isFree": false,
+    "ages": "Ages 7-10",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "May"
+    ],
+    "note": "Learn to draw iconic comic book characters with publisher Derek 'Lonzo Starr' Allen. Combines drawing and creative writing."
+  },
+  {
+    "name": "KidzArt Discover",
+    "location": "Thompson Park Visitor Center / Henry Hudson Trail Activity Center",
+    "dates": "Multiple sessions Mar–Jun (Tue/Thu)",
+    "price": "$104.00/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 3.5-5",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Jun"
+    ],
+    "note": "Art as a new language: drawing skills, confidence, focus, social interaction, and Kindergarten readiness. KidzArt curriculum."
+  },
+  {
+    "name": "KidzArt Explore",
+    "location": "Henry Hudson Trail Act Ctr / Fort Monmouth / Thompson Park",
+    "dates": "Multiple sessions Mar–Jun (Mon/Wed/Thu)",
+    "price": "$104.00/person (6 sessions) + $8 supply fee",
+    "isFree": false,
+    "ages": "Ages 6-10",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Jun"
+    ],
+    "note": "Creative thinking through drawing using charcoal, watercolor, chalk pastel, oil pastel, and marker. Complete a piece each class."
+  },
+  {
+    "name": "KidzArt Painting Workshop",
+    "location": "Henry Hudson Trail Act Ctr / Thompson Park Creative Arts Center",
+    "dates": "Mar 14, Apr 18, May 16 (Sweet Treats / Spring Bunny / Spring Flowers)",
+    "price": "$37.00/child (1 session)",
+    "isFree": false,
+    "ages": "Ages 6-11",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Step-by-step painting instruction with encouragement for personal creativity. All supplies included."
+  },
+  {
+    "name": "TeenzArt Studio",
+    "location": "Henry Hudson Trail Act Ctr / Fort Monmouth / Thompson Park",
+    "dates": "Multiple sessions Mar–Jun (Mon/Wed/Thu)",
+    "price": "$110.00/child (6 sessions) + $10 supply fee",
+    "isFree": false,
+    "ages": "Ages 11-17",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Jun"
+    ],
+    "note": "Drawing, sculpture, watercolor, pastels, painting, and mixed media. Creative freedom in a relaxed, fun atmosphere."
+  },
+  {
+    "name": "American Girl Doll Design",
+    "location": "Fort Monmouth Rec Ctr Program Room A",
+    "dates": "Mar 14 (hiking), Apr 18 (spring fashion), May 16 (beach day)",
+    "price": "$38.00/child (1 session)",
+    "isFree": false,
+    "ages": "Ages 7-12",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Create fun accessories for 18\" dolls using hot glue gun under supervision. Child must bring their own doll."
+  },
+  {
+    "name": "Books & Cooks",
+    "location": "Dorbrook Rec Area Visitor Center / Fort Monmouth Rec Ctr",
+    "dates": "Mar 18–Apr 22 (no 4/1 & 4/8), Mar 19–Apr 23 (no 4/2 & 4/9), May 6–27",
+    "price": "$74.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 4-5 (drop-off, must be potty trained)",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Explore basic recipes, practice fine motor skills, and read stories while food cooks. Kitchen safety basics in a fun environment."
+  },
+  {
+    "name": "Cooking Basics for Teens",
+    "location": "Dorbrook Rec Area Visitor Center",
+    "dates": "May 7–28 Thu",
+    "price": "$74.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 13-16",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "May"
+    ],
+    "note": "Hands-on cooking: chopping, measuring, reading recipes. Fun and tasty recipes you can recreate at home. No experience needed."
+  },
+  {
+    "name": "Dinner Party Chefs",
+    "location": "Dorbrook Rec Area Visitor Center",
+    "dates": "Mar 14 (ages 8-10), Apr 18 (ages 11-13), May 16",
+    "price": "$67.00/person (1 session)",
+    "isFree": false,
+    "ages": "Ages 8-13",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Prepare a full dinner party menu: hors d'oeuvres, salad, entrée, side, and dessert. Learn proper technique and kitchen safety."
+  },
+  {
+    "name": "Kids Baking",
+    "location": "Fort Monmouth Rec Ctr Kitchen",
+    "dates": "Apr 7–21 Tue, May 5–19 Tue",
+    "price": "$65.00/person (3 sessions)",
+    "isFree": false,
+    "ages": "Ages 10-13",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "Hands-on baking: different treats each week. Proper measuring, mixing, following a recipe, and more."
+  },
+  {
+    "name": "Let's Cook",
+    "location": "Dorbrook Rec Area Visitor Center",
+    "dates": "Mar 18–Apr 22 (no 4/1 & 4/8), May 6–27 (Wed/Thu options)",
+    "price": "$74.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 6-8",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Fun and creative foods with basic culinary skills: reading recipes, chopping, measuring, kitchen safety. At least one recipe per class."
+  },
+  {
+    "name": "Let's Decorate Cupcakes for America's 250th Birthday!",
+    "location": "Dorbrook Rec Area Visitor Center",
+    "dates": "Mon May 18, 5:00–7:00 PM",
+    "price": "$60.00/child (1 session)",
+    "isFree": false,
+    "ages": "Ages 9-11",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "May"
+    ],
+    "note": "Decorate patriotic cupcakes with buttercream icing. Learn stars, shells, flowers, and more. Take home your beautifully decorated cupcakes."
+  },
+  {
+    "name": "Tween Chefs",
+    "location": "Dorbrook Rec Area Visitor Center",
+    "dates": "May 3–Jun 7 Sun",
+    "price": "$92.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 11-13",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "May",
+      "Jun"
+    ],
+    "note": "Expand palates with simple meals, culinary basics, and meal planning. Limited class sizes. Bring an apron."
+  },
+  {
+    "name": "Wee Can Cook",
+    "location": "Dorbrook Rec Area Visitor Center",
+    "dates": "Mar 17–Apr 21, Mar 20–Apr 24, Apr 28–May 19, May 1–22 (Tue/Fri options)",
+    "price": "$75.00/parent-child (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 3-4 (with adult)",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Chop, roll, measure, spread, mix, toss, and pour! Yummy hands-on cooking projects with food-related stories. Bring an apron."
+  },
+  {
+    "name": "Young Chefs",
+    "location": "Dorbrook Rec Area Visitor Center",
+    "dates": "Mar 15–Apr 19 Sun (no 3/29 & 4/5)",
+    "price": "$93.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 8-10",
+    "category": "Arts & Crafts",
+    "series": "Culinary Arts",
+    "months": [
+      "Mar",
+      "Apr"
+    ],
+    "note": "Simple entrées each week. Kitchen safety and healthy eating habits discussed. Limited class sizes. Bring an apron."
+  },
+  {
+    "name": "Among Us at Fort Monmouth",
+    "location": "Fort Monmouth Rec Ctr Gym A",
+    "dates": "Apr 11, May 2 (ages 6-10 1:30-3PM; ages 7-14 3:30-5PM)",
+    "price": "$32.00/person (1 session)",
+    "isFree": false,
+    "ages": "Ages 6-14",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "Real-life version of the popular social deduction game with multiple rounds and Among Us activities."
+  },
+  {
+    "name": "Beginner Chess",
+    "location": "Thompson Park Visitor Center Beech Room",
+    "dates": "Apr 21–May 12 Tue, 4:00–5:30 PM",
+    "price": "$75.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 9-12",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "Learn piece names, movements, and how to win, lose, or draw. Each session: instruction then play. Chess boards/pieces provided."
+  },
+  {
+    "name": "Child and Babysitting Safety",
+    "location": "Thompson Park Visitor Center Beech Room",
+    "dates": "Apr 11 or May 16, 10 AM–12 PM",
+    "price": "$72.00/person (1 session)",
+    "isFree": false,
+    "ages": "Ages 13-17",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "Safety and injury prevention, conflict resolution, age-appropriate play, and basic first aid. Builds confidence for caring for children."
+  },
+  {
+    "name": "Junior Detective Workshop",
+    "location": "Thompson Park Visitor Center Beech Room",
+    "dates": "Wed–Thu Apr 8–9, 9 AM–12 PM",
+    "price": "$160.00/child (2 sessions)",
+    "isFree": false,
+    "ages": "Ages 9-11",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Apr"
+    ],
+    "note": "Fingerprinting, grid searches, invisible ink, UV puzzles, and CSI crime scenes. Taught by active duty and retired detectives."
+  },
+  {
+    "name": "Learn to Play Dungeons & Dragons",
+    "location": "Fort Monmouth Rec Ctr Atrium Room",
+    "dates": "Mar 18–Apr 29 Wed (no 4/1), 6:00–7:30 PM",
+    "price": "$120.00/person (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 9-15",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Mar",
+      "Apr"
+    ],
+    "note": "Beginner-friendly tabletop RPG. Create heroes, solve problems, and go on quests using imagination, dice, and teamwork. Dice included."
+  },
+  {
+    "name": "Minecraft at Fort Monmouth",
+    "location": "Fort Monmouth Rec Ctr Gym A",
+    "dates": "Mar 20, Apr 17 Fri, 5:30–6:30 PM",
+    "price": "$18.00/person (1 session)",
+    "isFree": false,
+    "ages": "Ages 6-10",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Mar",
+      "Apr"
+    ],
+    "note": "Craft a pixelated pickaxe, go on a scavenger hunt for 'ores', make Creeper masks, and build blocky structures."
+  },
+  {
+    "name": "Snapology RoboPets Robotics & Coding",
+    "location": "Big Brook Park Elsa's Lodge",
+    "dates": "Mar 3–Apr 14 Tue (no 4/7), 5:00–6:00 PM",
+    "price": "$165.00/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 5-8",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Mar",
+      "Apr"
+    ],
+    "note": "Build animal robot models (fish, alligator, dogs, frogs) that teach robotics design and coding fundamentals."
+  },
+  {
+    "name": "Snapology Mechanical Masterminds Engineering",
+    "location": "Fort Monmouth Rec Ctr Program Room D",
+    "dates": "Mar 4–Apr 15 Wed (no 4/8), 5:00–6:00 PM",
+    "price": "$165.00/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 8-11",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Mar",
+      "Apr"
+    ],
+    "note": "Explore mechanical movement through simple machines, physics, and engineering design using LEGO bricks."
+  },
+  {
+    "name": "Snapology Space Science",
+    "location": "Thompson Park Visitor Center Beech Room",
+    "dates": "Mar 5–Apr 16 Thu (no 4/9), 5:00–6:00 PM",
+    "price": "$165.00/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 6-9",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Mar",
+      "Apr"
+    ],
+    "note": "Study the solar system via STEM/STEAM projects, LEGO builds, and robotic space stations. Learn about NASA, astronauts, and the universe."
+  },
+  {
+    "name": "Snapology Planes, Trains, and Automobiles",
+    "location": "Big Brook Park Elsa's Lodge",
+    "dates": "Apr 28–Jun 2 Tue, 5:00–6:00 PM",
+    "price": "$165.00/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 5-8",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Apr",
+      "Jun"
+    ],
+    "note": "Explore transportation engineering: build trains, cars, and airplanes with LEGO kits. Learn energy, wheels, axles, and STEM concepts."
+  },
+  {
+    "name": "Snapology Movie Fan Favorites",
+    "location": "Fort Monmouth Rec Ctr Program Room D",
+    "dates": "Apr 29–Jun 3 Wed, 5:00–6:00 PM",
+    "price": "$165.00/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 5-8",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Apr",
+      "Jun"
+    ],
+    "note": "Build LEGO projects inspired by Toy Story, Harry Potter, Frozen, Star Wars, and more. Creative building with new friends."
+  },
+  {
+    "name": "Snapology Mega Machines Robotics & Coding",
+    "location": "Thompson Park Visitor Center Beech Room",
+    "dates": "Apr 30–Jun 4 Thu, 5:00–6:00 PM",
+    "price": "$165.00/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 6-8",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
+      "Apr",
+      "Jun"
+    ],
+    "note": "Build motorized vehicles and learn gear ratio, sensors, pulleys, cranks, and programming. Trucks, rovers, helicopters, and more."
+  },
+  {
+    "name": "Plentiful Ponds - A Freshwater Eco Study",
+    "location": "Manasquan Reservoir Environmental Center Outdoor Area",
+    "dates": "Sat May 9, 1:00–3:30 PM",
+    "price": "$26.00/person (1 session)",
+    "isFree": false,
+    "ages": "Ages 8-12 (with adult)",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "May"
+    ],
+    "note": "Strap on waders and scoop up freshwater macroinvertebrates. Examine and identify fascinating species up close. All equipment provided."
+  },
+  {
+    "name": "Hooked on Fishing Birthday Parties",
+    "location": "Big Brook Park (Elsa's Lodge)",
+    "dates": "By appointment (call for available dates)",
+    "price": "Call 732-834-9606 for pricing",
+    "isFree": false,
+    "ages": "Ages 6-14",
+    "category": "Nature",
+    "series": "Nature",
+    "months": [
+      "Ongoing"
+    ],
+    "note": "Party-goers learn to bait, cast, and fish for bluegills and largemouth bass. 1 hour fishing + 30 min party time in Elsa's Lodge."
+  },
+  {
+    "name": "Building Confidence Through Bike Riding",
+    "location": "Thompson Park Activity Barn",
+    "dates": "Mar 30–Apr 2, Apr 25–May 2, May 19–21",
+    "price": "$50.00/child (2 sessions)",
+    "isFree": false,
+    "ages": "Ages 5-8 (with adult)",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Lose the training wheels! Small class with individual attention. Parents assist the instructor and practice between sessions."
+  },
+  {
+    "name": "Take a Shot: Intro to Archery",
+    "location": "Thompson Park Activity Barn",
+    "dates": "Mar 12, Apr 7, May 20 Thu/Tue",
+    "price": "$28.00/person (1 session)",
+    "isFree": false,
+    "ages": "Ages 9-17",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Learn basics of archery for recreation, competition, or hunting. All equipment provided. Dress for the weather (barn not climate-controlled)."
+  },
+  {
+    "name": "Take a Shot: Archery Series",
+    "location": "Thompson Park Activity Barn",
+    "dates": "Apr 2–16 Thu, 4:30–6:30 PM",
+    "price": "$69.00/person (3 sessions)",
+    "isFree": false,
+    "ages": "Ages 10-17",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "Apr"
+    ],
+    "note": "Three-session archery series with new games each session. Beginner or refresher. All equipment provided."
+  },
+  {
+    "name": "Super Archers Academy",
+    "location": "Thompson Park Activity Barn",
+    "dates": "Sun May 17, 10 AM–12 PM",
+    "price": "$28.00/person (1 session)",
+    "isFree": false,
+    "ages": "Ages 10-17",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "May"
+    ],
+    "note": "Superhero-themed archery session. Learn the same skills as your favorite hero. All equipment provided."
+  },
+  {
+    "name": "Young Explorers",
+    "location": "Holmdel Park / Tatum Park / Hartshorne Woods Park",
+    "dates": "May 6–20 Wed, 5:15–6:45 PM",
+    "price": "$45.00/child (3 sessions) + $30 additional sibling",
+    "isFree": false,
+    "ages": "Ages 6-8",
+    "category": "Adventure & Fitness",
+    "series": "Outdoor Adventures",
+    "months": [
+      "May"
+    ],
+    "note": "Hit the trails, learn trail etiquette and safety, spot wildlife, and make new friends. Pack water, snack, and dress for adventure."
+  },
+  {
+    "name": "Beginner Acting: The Magical Meezie Pirates at the USA's 250th Birthday Bash!",
+    "location": "Freneau Woods Park / Manasquan River Greenway",
+    "dates": "Mar 30–May 4 Mon; Apr 14–May 19 Tue",
+    "price": "$135.00/person (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 8-11",
+    "category": "Festivals & Culture",
+    "series": "Performing Arts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Original play performed on the last day for family and friends. Includes acting games and performance skills."
+  },
+  {
+    "name": "Downtown Daily News Special Edition: USA's 250th Birthday Bash!",
+    "location": "Big Brook Park Boundary Rd Activity Center / Freneau Woods Park",
+    "dates": "Mar 20–May 1 Fri (no 4/3); Mar 26–Apr 30 Thu",
+    "price": "$135.00/person (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 11-14",
+    "category": "Festivals & Culture",
+    "series": "Performing Arts",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Original play with performance for family on last day. Covers vocal, movement, and creative acting skills."
+  },
+  {
+    "name": "Homeschool Troupe of Actors",
+    "location": "Navesink Library Theater",
+    "dates": "Apr 7–May 12 Tue (ages 9-15); Apr 8–May 13 Wed (ages 13-17)",
+    "price": "$135.00/person (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 9-17",
+    "category": "Festivals & Culture",
+    "series": "Performing Arts",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "Create monologues/scenes/play performed for family on last day. Voice, movement, imagination, and the Four Centers of Acting."
+  },
+  {
+    "name": "Good Morning Puppet Show!",
+    "location": "Navesink Library Theater",
+    "dates": "Apr 8–29 Wed, 10:00–11:30 AM",
+    "price": "$95.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 5-7",
+    "category": "Festivals & Culture",
+    "series": "Performing Arts",
+    "months": [
+      "Apr"
+    ],
+    "note": "Make your own puppet, play acting games, and perform stories, songs, and jokes for family on the last day."
+  },
+  {
+    "name": "The Afternoon Puppet Show",
+    "location": "Big Brook Park / Freneau Woods Park",
+    "dates": "Apr 10–May 1 Fri; Apr 9–30 Thu",
+    "price": "$85.00/child (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 5-7",
+    "category": "Festivals & Culture",
+    "series": "Performing Arts",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "Make a puppet, play acting games, and perform stories, songs, and jokes for family on the last day."
+  },
+  {
+    "name": "Hip Hop Dance",
+    "location": "Fort Monmouth Rec Ctr Group Fitness Room",
+    "dates": "Mar 3–Apr 7 Tue, Apr 21–May 26 Tue (4:30 or 5:30 PM)",
+    "price": "$84.00/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 5-7",
+    "category": "Arts & Crafts",
+    "series": "Dancing",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Breaking, crumping, Slide Glide, and more. Warm-ups, moves into routines, and a parent performance at end of session."
+  },
+  {
+    "name": "Little Dancers",
+    "location": "Tatum Park Red Hill Activity Center",
+    "dates": "Mar 24–Jun 9 Tue 4:45–5:30 PM (no 4/7 & 5/12)",
+    "price": "$130.00/child (10 sessions)",
+    "isFree": false,
+    "ages": "Ages 5-6",
+    "category": "Arts & Crafts",
+    "series": "Dancing",
+    "months": [
+      "Mar",
+      "Jun"
+    ],
+    "note": "Basic ballet movement, terminology, and first barre introduction. Tap section builds rhythmic coordination. Ballet attire and shoes required."
+  },
+  {
+    "name": "Storytime Ballet",
+    "location": "Tatum Park Red Hill Activity Center",
+    "dates": "Mar 25–Jun 10 Wed 10:15–11:00 AM (no 4/8 & 5/13)",
+    "price": "$130.00/person (10 sessions)",
+    "isFree": false,
+    "ages": "Ages 3-4",
+    "category": "Arts & Crafts",
+    "series": "Dancing",
+    "months": [
+      "Mar",
+      "Jun"
+    ],
+    "note": "Children's books + movement: listening skills, language, and coordination. Ballet attire and shoes required."
+  },
+  {
+    "name": "Tots in Tutus I",
+    "location": "Tatum Park Red Hill Activity Center",
+    "dates": "Mar 24–Jun 9 Tue 10:15–11:00 AM (no 4/7 & 5/12)",
+    "price": "$130.00/person (10 sessions)",
+    "isFree": false,
+    "ages": "Ages 3-4",
+    "category": "Arts & Crafts",
+    "series": "Dancing",
+    "months": [
+      "Mar",
+      "Jun"
+    ],
+    "note": "Simple ballet exercises with professional instruction in a beautiful park setting. Creativity and enjoyment emphasized."
+  },
+  {
+    "name": "Tots in Tutus II Combo",
+    "location": "Tatum Park Red Hill Activity Center",
+    "dates": "Mar 24–Jun 9 Tue 4:00–4:45 PM (no 4/7 & 5/12)",
+    "price": "$130.00/person (10 sessions)",
+    "isFree": false,
+    "ages": "Ages 4-5",
+    "category": "Arts & Crafts",
+    "series": "Dancing",
+    "months": [
+      "Mar",
+      "Jun"
+    ],
+    "note": "Ballet and tap basics using fun music and props. Builds self-confidence, listening skills, and imagination."
+  },
+  {
+    "name": "Rock to Bach - Guitar for Kids",
+    "location": "Fort Monmouth Rec Ctr Group Fitness Room",
+    "dates": "Mar 9–Apr 27 Mon (8 sessions); May 4–Jun 15 Mon (6 sessions, no 5/25)",
+    "price": "$168.00/person (8 sessions) or $126.00 (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 8-16",
+    "category": "Arts & Crafts",
+    "series": "Music",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Classical to rock: read music, strum chords, and develop technique. Small group. Required workbook; bring your own guitar."
+  },
+  {
+    "name": "Rock to Bach - Vocal for Kids",
+    "location": "Fort Monmouth Rec Ctr Group Fitness Room",
+    "dates": "Mar 9–Apr 27 Mon (8 sessions); May 4–Jun 15 Mon (6 sessions, no 5/25)",
+    "price": "$168.00/person (8 sessions) or $126.00 (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 8-16",
+    "category": "Arts & Crafts",
+    "series": "Music",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Classical harmonies to rock melodies: sheet music, hitting notes, vocal technique. Small group. Required workbook; bring your voice."
+  },
+  {
+    "name": "Baseball FUNdamentals",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 11–May 2 Sat, May 16–Jun 13 Sat (no 5/23)",
+    "price": "$60.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 6-8",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Fun, noncompetitive baseball: batting, fielding, base running, and the rules of the game."
+  },
+  {
+    "name": "T-Ball",
+    "location": "Fort Monmouth Rec Ctr Gym A / Dorbrook Rec Area",
+    "dates": "Mar 7–28 Sat; Apr 7–28 Tue, Apr 11–May 3, May 12–Jun 14 (multiple times)",
+    "price": "$60.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 4-5",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Fun introduction to baseball/softball: hitting, throwing, base running, and fielding. Mini-game situations at end."
+  },
+  {
+    "name": "T-Ball 2",
+    "location": "Dorbrook Rec Area",
+    "dates": "May 16–Jun 13 Sat (no 5/23), May 17–Jun 14 Sun (no 5/24)",
+    "price": "$60.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 4-5",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "May",
+      "Jun"
+    ],
+    "note": "Continue developing fielding, throwing, and hitting skills. Prior T-Ball experience suggested."
+  },
+  {
+    "name": "Basketball FUNdamentals",
+    "location": "Dorbrook Rec Area / Fort Monmouth Rec Ctr Gym A",
+    "dates": "Mar–Jun (multiple days/times)",
+    "price": "$60.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 6-8",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Mar",
+      "Jun"
+    ],
+    "note": "Learn shooting, dribbling, passing, and defense through age-appropriate drills and games in a fun, noncompetitive environment."
+  },
+  {
+    "name": "Basketball FUNdamentals Clinic",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 12, Apr 26, May 10 Sun, 10:00–10:55 AM",
+    "price": "$15.00/person (1 session)",
+    "isFree": false,
+    "ages": "Ages 6-8",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "One-off basketball intro session. Fun and noncompetitive fundamentals without the full program commitment."
+  },
+  {
+    "name": "Girls' Basketball FUNdamentals",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 11–May 2 Sat, May 16–Jun 20 Sat (no 5/23 & 6/6)",
+    "price": "$60.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 6-9",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Basketball fundamentals for girls in a noncompetitive, non-intimidating environment with age-appropriate drills and games."
+  },
+  {
+    "name": "Girls' Basketball FUNdamentals Clinic",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 12 or May 10 Sun, 11:00–11:55 AM",
+    "price": "$15.00/person (1 session)",
+    "isFree": false,
+    "ages": "Ages 6-9",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "One-off girls' basketball intro. Non-intimidating, noncompetitive environment."
+  },
+  {
+    "name": "Junior Hoopsters",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 9–30 Thu, May 14–Jun 4 Thu",
+    "price": "$60.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 8-11",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Continue developing shooting, passing, rebounding, ball handling, and defense. For athletes with beginner basketball experience."
+  },
+  {
+    "name": "Young Junior Hoopsters Clinic",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 26 Sun, 11:00–11:55 AM",
+    "price": "$15.00/person (1 session)",
+    "isFree": false,
+    "ages": "Ages 8-10",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr"
+    ],
+    "note": "Extra practice session for beginner-experience players wanting to keep momentum without a multi-week commitment."
+  },
+  {
+    "name": "Touché! Intro to Fencing",
+    "location": "Fort Monmouth Rec Ctr Gym A",
+    "dates": "Mar 12–Apr 30 Thu, May 7–Jun 25 Thu, 3:30–4:30 PM",
+    "price": "$295.00/person (8 sessions)",
+    "isFree": false,
+    "ages": "Ages 5-12",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Swordsmanship with sportsmanship. Taught by a four-time Olympic coach. Protective gear provided. Space very limited."
+  },
+  {
+    "name": "Gymnastics - Kids",
+    "location": "All American Gymnastics, Cindy Lane, Ocean",
+    "dates": "Mar 7–28, Apr 11–May 2, May 9–30 Sat (multiple age groups/times)",
+    "price": "$70.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 3-10",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Speed, strength, flexibility, and balance through gymnastics apparatus including mats and trampoline. Multiple age groups."
+  },
+  {
+    "name": "Introduction to Cheerleading",
+    "location": "All American Gymnastics, Cindy Lane, Ocean",
+    "dates": "Mar 7–28, Apr 11–May 2, May 9–30 Sat, 11:00–11:45 AM",
+    "price": "$70.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 5-8",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "note": "Basic chants, stunts, arm motions, and beginner tumbling in a positive, recreational environment."
+  },
+  {
+    "name": "Hat Trick Hockey - Floor",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 9–30 Thu, Apr 11–May 2 Sat (10 or 11 AM), May 14–Jun 4 Thu",
+    "price": "$60.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 4-6",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "No skates or pads needed! Learn to shoot, pass, and control the puck in sneakers. Noncompetitive, builds hand-eye coordination."
+  },
+  {
+    "name": "Skyhawks Field Hockey",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 27–Jun 8 Mon (no 5/25), 5:00–5:50 PM",
+    "price": "$115.00/person (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 7-12",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "Jun"
+    ],
+    "note": "USA Field Hockey curriculum: stick handling, dribbling, passing, and receiving. All participants receive a stick and ball. For boys and girls."
+  },
+  {
+    "name": "Skyhawks Flag Football",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 12–May 10 Sun, May 31–Jun 28 Sun, 9:00–9:50 AM",
+    "price": "$85.00/person (5 sessions)",
+    "isFree": false,
+    "ages": "Ages 6-11",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "USA Football curriculum: passing, receiving, kicking, and flag pulling. Confidence and life lessons in a fun, positive environment."
+  },
+  {
+    "name": "Skyhawks Lacrosse",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 12–May 10 Sun, May 31–Jun 28 Sun, 10:00–10:50 AM",
+    "price": "$85.00/person (5 sessions)",
+    "isFree": false,
+    "ages": "Ages 6-11",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Stick handling, cradling, passing, and shooting in a fun, non-checking environment. Respect, teamwork, and discipline emphasized."
+  },
+  {
+    "name": "Skyhawks Track & Field",
+    "location": "Dorbrook Rec Area",
+    "dates": "Apr 12–May 10 Sun, May 31–Jun 28 Sun, 11:00–11:50 AM",
+    "price": "$85.00/person (5 sessions)",
+    "isFree": false,
+    "ages": "Ages 6-11",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Javelin, shot put, hurdles, long jump, and relay races with special equipment. Builds footspeed, flexibility, endurance, and coordination."
+  },
+  {
+    "name": "Pickleball for Kids",
+    "location": "Fort Monmouth Sport Court",
+    "dates": "Apr 1–22, May 13–Jun 3 Wed (ages 7-10 4:30–5:30; ages 11-14 5:45–6:45 PM)",
+    "price": "$60.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 7-14",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "note": "Learn rules, skills, and gameplay of one of the fastest growing sports. Youth-geared instruction. Paddles and balls provided."
+  },
+  {
+    "name": "Cool Runners Fitness Run for Fun",
+    "location": "Thompson Park / Wolf Hill Rec Area",
+    "dates": "Apr 29–Jun 3 Wed/Fri, Apr 30–Jun 4 Thu, 5:30–6:30 PM",
+    "price": "$126.00/person (6 sessions)",
+    "isFree": false,
+    "ages": "Grades K-8",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "Jun"
+    ],
+    "note": "Build self-confidence and stamina on the trails. Running technique, form, nutrition, games, and races. Certified coach instruction."
+  },
+  {
+    "name": "Skateboarding Beginner",
+    "location": "Seven Presidents Park Skateplex",
+    "dates": "Apr 21–May 12 Tue, Apr 22–May 13 Wed",
+    "price": "$68.00/person (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 9-15",
+    "category": "Adventure & Fitness",
+    "series": "Sports & Fitness",
+    "months": [
+      "Apr",
+      "May"
+    ],
+    "note": "Progress and build confidence on a skateboard at Seven Presidents Oceanfront Park. Bring your own board and safety gear (loaners available)."
+  }
+]
