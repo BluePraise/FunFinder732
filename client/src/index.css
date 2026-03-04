@@ -1,2 +1,277 @@
 @import "tailwindcss";
 
+:root {
+  --ff-green: #2d5a27;
+  --ff-green-light: #4a8c41;
+  --ff-green-pale: #e8f2e6;
+  --ff-cream: #faf8f3;
+  --ff-gray: #5a5650;
+  --ff-gray-light: #767067;
+  --ff-dark: #1a1a1a;
+  --ff-accent: #9e6420;
+  --ff-accent-pale: #fdf1e4;
+  --ff-red: #8f2020;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Gym Card Styles */
+.gym-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border: 1px solid #e8e4dc;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gym-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.gym-header {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 1px solid #f0ece4;
+}
+
+.gym-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.gym-icon.green { background: var(--ff-green-pale); }
+.gym-icon.blue { background: #e6f0fa; }
+.gym-icon.gold { background: var(--ff-accent-pale); }
+
+.gym-name h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ff-dark);
+  line-height: 1.2;
+}
+
+.gym-name .subtitle {
+  font-size: 0.85rem;
+  color: var(--ff-gray);
+  margin-top: 0.2rem;
+}
+
+.gym-meta {
+  margin-left: auto;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.age-range {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ff-green);
+  background: var(--ff-green-pale);
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.membership-note {
+  font-size: 0.8rem;
+  color: var(--ff-gray);
+  margin-top: 0.4rem;
+}
+
+/* Schedule Section */
+.schedule-section {
+  padding: 1.25rem 1.5rem;
+}
+
+.childcare-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ff-gray);
+  margin-bottom: 0.75rem;
+}
+
+.schedule-grid {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.schedule-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.day-label {
+  font-size: 0.85rem;
+  color: var(--ff-gray);
+  width: 110px;
+  flex-shrink: 0;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.time-pill {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  background: #f3f0ea;
+  color: var(--ff-dark);
+  border: 1px solid #e0dbd0;
+}
+
+.time-pill.morning { background: #e8f4f8; border-color: #7ab8d0; color: #0f3f5a; }
+.time-pill.evening { background: #f3ede6; border-color: #c8a070; color: #5a2e08; }
+
+/* Gym Footer */
+.gym-footer {
+  padding: 0.75rem 1.5rem;
+  background: #faf9f6;
+  border-top: 1px solid #f0ece4;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.gym-footer .address {
+  font-size: 0.85rem;
+  color: var(--ff-gray);
+  flex: 1;
+}
+
+.gym-footer .phone {
+  font-size: 0.85rem;
+  color: var(--ff-green);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.gym-footer .phone:hover { color: var(--ff-green-light); }
+
+/* Comparison Tables */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.compare-table caption {
+  font-size: 0.75rem;
+  color: var(--ff-gray);
+  text-align: left;
+  margin-bottom: 0.5rem;
+  caption-side: bottom;
+  padding-top: 0.5rem;
+}
+
+.compare-table th {
+  background: var(--ff-green);
+  color: white;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.compare-table th:first-child { border-radius: 8px 0 0 0; }
+.compare-table th:last-child { border-radius: 0 8px 0 0; }
+
+.compare-table td {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid #ede9e0;
+  vertical-align: middle;
+}
+
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table tr:nth-child(even) td { background: #f7f5f0; }
+
+.compare-table td:first-child {
+  font-weight: 500;
+  color: var(--ff-gray);
+  white-space: nowrap;
+}
+
+.avail { color: #1e5218; font-weight: 600; }
+.avail-eve { color: #6b3a00; font-weight: 600; }
+.unavail { color: #aaa; }
+
+/* Pricing */
+.price-total td { font-weight: 700; font-size: 0.9rem; border-top: 2px solid #e0dbd0; }
+.price-low { color: #1e5218; }
+.price-mid { color: #7a4a00; }
+.price-high { color: var(--ff-red); }
+
+/* Page Intro */
+.page-intro {
+  background: var(--ff-green-pale);
+  border-bottom: 1px solid #c8dfc4;
+  padding: 1.5rem;
+  text-align: center;
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+}
+
+.page-intro h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ff-green);
+  margin-bottom: 0.4rem;
+}
+
+.page-intro p {
+  color: var(--ff-gray);
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Section Headers */
+.section-header {
+  color: var(--ff-green);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ff-green);
+}
+
+/* Data Note */
+.data-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ff-gray);
+  padding: 1rem 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .gym-header { flex-wrap: wrap; }
+  .gym-meta { margin-left: 0; text-align: left; }
+  .day-label { width: 80px; }
+  .compare-table { font-size: 0.78rem; }
+  .compare-table th, .compare-table td { padding: 0.4rem 0.5rem; }
+}
