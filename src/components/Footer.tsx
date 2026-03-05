@@ -13,7 +13,7 @@ export default function Footer() {
               Family activities in Monmouth County, NJ
             </p>
             <p className="text-sm text-white/80">
-              FunFinder is a project by Navesink Humans
+              FunFinder is a project by <a href="https://navesinkhumans.com" className="text-white/80 hover:text-white">Navesink Humans</a> and developed by Magalie Chetrit in Middletown, New Jersey.
             </p>
           </div>
 
