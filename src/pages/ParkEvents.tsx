@@ -321,13 +321,13 @@ export default function ParkEvents() {
         </div>
       ) : (
         <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
-          <table className="w-full text-sm border-collapse bg-white">
+          <table className="w-full table-auto text-sm border-collapse bg-white">
             <thead>
               <tr className="bg-[var(--ff-green)] text-white text-left">
-                <th className="px-4 py-3 font-semibold whitespace-nowrap">Date</th>
-                <th className="px-4 py-3 font-semibold">Event</th>
+                <th className="px-4 py-3 font-semibold whitespace-nowrap w-[100px]">Date</th>
+                <th className="px-4 py-3 font-semibold w-[360px]">Event</th>
                 <th className="px-4 py-3 font-semibold hidden sm:table-cell">Location</th>
-                <th className="px-4 py-3 font-semibold w-[1%]">Price</th>
+                <th className="px-4 py-3 font-semibold w-[100px]">Price</th>
                 <th className="px-4 py-3 font-semibold hidden md:table-cell">Ages</th>
               </tr>
             </thead>
@@ -338,12 +338,12 @@ export default function ParkEvents() {
                   className={`border-t border-gray-100 align-top ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"} hover:bg-[var(--ff-green-pale)] transition-colors`}
                 >
                   {/* Date */}
-                  <td className="px-4 py-3 whitespace-nowrap text-[var(--ff-gray)] font-medium align-middle">
+                  <td className="px-4 py-3 whitespace-nowrap text-[var(--ff-gray)] font-medium align-middle w-[100px]">
                     {dateStr}
                   </td>
 
                   {/* Event name + category badge + note */}
-                  <td className="px-4 py-3 min-w-[280px]">
+                  <td className="px-4 py-3 w-[360px]">
                     <div className="font-semibold text-[var(--ff-green)] leading-snug">
                       {event.name}
                     </div>
@@ -363,7 +363,7 @@ export default function ParkEvents() {
                   </td>
 
                   {/* Price */}
-                  <td className="px-3 py-3 whitespace-nowrap w-[1%]">
+                  <td className="px-3 py-3 whitespace-nowrap w-[100px]">
                     {event.isFree ? (
                       <span className="font-semibold text-[var(--ff-green)]">Free</span>
                     ) : (
