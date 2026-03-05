@@ -79,6 +79,17 @@ function getAgeBuckets(ages: string): AgeBucket[] {
   return buckets.size ? [...buckets] : ALL;
 }
 
+// ─── Date parsing helper ─────────────────────────────────────────────────────
+
+function parseFirstDate(dates: string): Date {
+  const match = dates.match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d+)/);
+  if (match) {
+    return new Date(`${match[1]} ${match[2]} 2026`);
+  }
+  // No recognisable date (e.g. open-ended "Ongoing") → sort to end
+  return new Date(8640000000000000);
+}
+
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const EVENTS = EVENTS_RAW as ParkEvent[];
@@ -132,17 +143,55 @@ export default function ParkEvents() {
   const [ageGroup, setAgeGroup]   = useState<AgeBucket | "all">("all");
   const [freeOnly, setFreeOnly]   = useState(false);
 
-  const filtered = useMemo(() => {
+  const today = new Date();
+  const todayStr = today.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+
+  // Each entry in `rows` is a single date occurrence for an event.
+  const rows = useMemo(() => {
     const q = search.toLowerCase();
-    return EVENTS.filter((e) => {
-      if (freeOnly && !e.isFree) return false;
-      if (month !== "all" && !e.months.includes(month as Month)) return false;
-      if (category !== "all" && e.category !== category) return false;
-      if (ageGroup !== "all" && !getAgeBuckets(e.ages).includes(ageGroup as AgeBucket)) return false;
-      if (q && !`${e.name} ${e.location} ${e.note ?? ""}`.toLowerCase().includes(q)) return false;
-      return true;
-    });
+    const MONTH_ABBRS: Record<string, string> = {
+      Mar: "Mar", Apr: "Apr", May: "May", Jun: "Jun",
+    };
+    const result: { event: ParkEvent; dateStr: string; dateObj: Date }[] = [];
+
+    for (const e of EVENTS) {
+      if (freeOnly && !e.isFree) continue;
+      if (month !== "all" && !e.months.includes(month as Month)) continue;
+      if (category !== "all" && e.category !== category) continue;
+      if (ageGroup !== "all" && !getAgeBuckets(e.ages).includes(ageGroup as AgeBucket)) continue;
+      if (q && !`${e.name} ${e.location} ${e.note ?? ""}`.toLowerCase().includes(q)) continue;
+
+      const segments = e.dates.split(";").map((s) => s.trim()).filter(Boolean);
+
+      // Detect trailing "(all HH…)" shared time and propagate it to earlier segments
+      const lastSeg = segments[segments.length - 1];
+      const sharedTime = lastSeg?.match(/\(all ([^)]+)\)/)?.[1];
+
+      for (let si = 0; si < segments.length; si++) {
+        let seg = segments[si];
+
+        // Append shared time to segments that have no time of their own
+        if (sharedTime && si < segments.length - 1 && !/\d+(AM|PM)/i.test(seg)) {
+          seg = `${seg} (${sharedTime})`;
+        }
+
+        // When a month filter is active, skip segments that don't belong to it
+        if (month !== "all" && month !== "Ongoing") {
+          const abbr = MONTH_ABBRS[month as string];
+          if (abbr && !seg.includes(abbr)) continue;
+        }
+
+        result.push({ event: e, dateStr: seg, dateObj: parseFirstDate(seg) });
+      }
+    }
+
+    return result.sort((a, b) => a.dateObj.getTime() - b.dateObj.getTime());
   }, [search, month, category, ageGroup, freeOnly]);
+
+  const uniqueEventCount = useMemo(
+    () => new Set(rows.map((r) => r.event.name)).size,
+    [rows]
+  );
 
   const clearFilters = () => {
     setSearch("");
@@ -155,7 +204,7 @@ export default function ParkEvents() {
   const isFiltered = search || month !== "all" || category !== "all" || ageGroup !== "all" || freeOnly;
 
   return (
-    <div className="max-w-[1000px] mx-auto">
+    <div className="max-w-[1600px] mx-auto">
       {/* Page Intro */}
       <div className="page-intro">
         <h2>Monmouth County Park System — Spring 2026</h2>
@@ -254,36 +303,47 @@ export default function ParkEvents() {
       </div>
 
       {/* Result count */}
-      <p className="text-sm text-[var(--ff-gray)] mb-3">
-        {filtered.length} event{filtered.length !== 1 ? "s" : ""}
-        {isFiltered ? " match your filters" : " total"}
+      <p className="text-sm text-[var(--ff-gray)] mb-3 flex items-center gap-3">
+        <span className="font-medium text-[var(--ff-green)]">Today: {todayStr}</span>
+        <span className="text-gray-300">|</span>
+        <span>
+          {uniqueEventCount} event{uniqueEventCount !== 1 ? "s" : ""}
+          {isFiltered ? " match your filters" : " total"}
+          {" "}· {rows.length} occurrence{rows.length !== 1 ? "s" : ""}
+        </span>
       </p>
 
       {/* ── Table ── */}
-      {filtered.length === 0 ? (
+      {rows.length === 0 ? (
         <div className="gym-card p-10 text-center text-[var(--ff-gray)]">
-          No events match your filters. <button onClick={clearFilters} className="underline text-[var(--ff-green)]">Clear filters</button>
+          No events match your filters.{" "}
+          <button onClick={clearFilters} className="underline text-[var(--ff-green)]">Clear filters</button>
         </div>
       ) : (
         <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
           <table className="w-full text-sm border-collapse bg-white">
             <thead>
               <tr className="bg-[var(--ff-green)] text-white text-left">
+                <th className="px-4 py-3 font-semibold whitespace-nowrap">Date</th>
                 <th className="px-4 py-3 font-semibold">Event</th>
                 <th className="px-4 py-3 font-semibold hidden sm:table-cell">Location</th>
-                <th className="px-4 py-3 font-semibold">Date(s)</th>
                 <th className="px-4 py-3 font-semibold w-[1%]">Price</th>
                 <th className="px-4 py-3 font-semibold hidden md:table-cell">Ages</th>
               </tr>
             </thead>
             <tbody>
-              {filtered.map((event, i) => (
+              {rows.map(({ event, dateStr }, i) => (
                 <tr
-                  key={i}
+                  key={`${event.name}-${dateStr}`}
                   className={`border-t border-gray-100 align-top ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"} hover:bg-[var(--ff-green-pale)] transition-colors`}
                 >
+                  {/* Date */}
+                  <td className="px-4 py-3 whitespace-nowrap text-[var(--ff-gray)] font-medium align-middle">
+                    {dateStr}
+                  </td>
+
                   {/* Event name + category badge + note */}
-                  <td className="px-4 py-3 min-w-[360px]">
+                  <td className="px-4 py-3 min-w-[280px]">
                     <div className="font-semibold text-[var(--ff-green)] leading-snug">
                       {event.name}
                     </div>
@@ -300,11 +360,6 @@ export default function ParkEvents() {
                   {/* Location */}
                   <td className="px-4 py-3 text-[var(--ff-gray)] hidden sm:table-cell min-w-[160px] leading-snug">
                     {event.location}
-                  </td>
-
-                  {/* Dates */}
-                  <td className="px-4 py-3 whitespace-pre-line text-[var(--ff-gray)] min-w-[140px] leading-snug">
-                    {event.dates}
                   </td>
 
                   {/* Price */}
