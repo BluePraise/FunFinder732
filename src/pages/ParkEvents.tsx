@@ -272,7 +272,7 @@ export default function ParkEvents() {
                 <th className="px-4 py-3 font-semibold">Event</th>
                 <th className="px-4 py-3 font-semibold hidden sm:table-cell">Location</th>
                 <th className="px-4 py-3 font-semibold">Date(s)</th>
-                <th className="px-4 py-3 font-semibold">Price</th>
+                <th className="px-4 py-3 font-semibold w-[1%]">Price</th>
                 <th className="px-4 py-3 font-semibold hidden md:table-cell">Ages</th>
               </tr>
             </thead>
@@ -283,7 +283,7 @@ export default function ParkEvents() {
                   className={`border-t border-gray-100 align-top ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"} hover:bg-[var(--ff-green-pale)] transition-colors`}
                 >
                   {/* Event name + category badge + note */}
-                  <td className="px-4 py-3 min-w-[180px]">
+                  <td className="px-4 py-3 min-w-[360px]">
                     <div className="font-semibold text-[var(--ff-green)] leading-snug">
                       {event.name}
                     </div>
@@ -308,7 +308,7 @@ export default function ParkEvents() {
                   </td>
 
                   {/* Price */}
-                  <td className="px-4 py-3 whitespace-nowrap">
+                  <td className="px-3 py-3 whitespace-nowrap w-[1%]">
                     {event.isFree ? (
                       <span className="font-semibold text-[var(--ff-green)]">Free</span>
                     ) : (
