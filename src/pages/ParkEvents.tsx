@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import EVENTS_RAW from "../data/events.json";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -13,6 +13,12 @@ type Category =
   | "Family Programs"
   | "Festivals & Culture";
 
+interface EventSession {
+  code: string;
+  time: string;
+  dates: string[];
+}
+
 interface ParkEvent {
   name: string;
   location: string;
@@ -24,6 +30,7 @@ interface ParkEvent {
   series?: string;
   months: Month[];
   note?: string;
+  sessions?: EventSession[];
 }
 
 // ─── Age bucket helper ────────────────────────────────────────────────────────
@@ -142,6 +149,14 @@ export default function ParkEvents() {
   const [category, setCategory]   = useState<Category | "all">("all");
   const [ageGroup, setAgeGroup]   = useState<AgeBucket | "all">("all");
   const [freeOnly, setFreeOnly]   = useState(false);
+  const [expandedKeys, setExpandedKeys] = useState<Set<string>>(new Set());
+
+  const toggleRow = (key: string) =>
+    setExpandedKeys((prev) => {
+      const next = new Set(prev);
+      next.has(key) ? next.delete(key) : next.add(key);
+      return next;
+    });
 
   const today = new Date();
   const todayStr = today.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
@@ -204,188 +219,302 @@ export default function ParkEvents() {
   const isFiltered = search || month !== "all" || category !== "all" || ageGroup !== "all" || freeOnly;
 
   return (
-    <div className="max-w-[1600px] mx-auto">
-      {/* Page Intro */}
-      <div className="page-intro">
-        <h2>Monmouth County Park System — Spring 2026</h2>
-        <p>
-          Programs, events &amp; demonstrations from March through June 2026.
-          Registration opens <strong>Wednesday, February 11, 2026 at 8:00 AM</strong> at{" "}
-          <a href="https://www.MonmouthCountyParks.com" target="_blank" rel="noopener noreferrer"
-             className="text-[var(--ff-green)] underline">
-            MonmouthCountyParks.com
-          </a>{" "}
-          or call 732-842-4000 ext. 1.
-        </p>
-      </div>
+		<div className="max-w-[1600px] mx-auto">
+			{/* Page Intro */}
+			<div className="page-intro">
+				<h2>Monmouth County Park System — Spring 2026</h2>
+				<p>
+					Programs, events &amp; demonstrations from March through
+					June 2026. Registration opens{" "}
+					<strong>Wednesday, February 11, 2026 at 8:00 AM</strong> at{" "}
+					<a
+						href="https://www.MonmouthCountyParks.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-[var(--ff-green)] underline">
+						MonmouthCountyParks.com
+					</a>{" "}
+					or call 732-842-4000 ext. 1.
+				</p>
+			</div>
 
-      {/* ── Filter Panel ── */}
-      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 mb-5 flex flex-col gap-3">
-        {/* Search row */}
-        <div className="flex items-center gap-2">
-          <span className="text-lg">🔍</span>
-          <input
-            type="search"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search events, locations, activities…"
-            className="flex-1 border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--ff-green)] focus:border-transparent"
-          />
-          {isFiltered && (
-            <button
-              onClick={clearFilters}
-              className="text-xs text-[var(--ff-gray)] hover:text-[var(--ff-green)] underline whitespace-nowrap"
-            >
-              Clear all
-            </button>
-          )}
-        </div>
+			{/* ── Filter Panel ── */}
+			<div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 mb-5 flex flex-col gap-3">
+				{/* Search row */}
+				<div className="flex items-center gap-2">
+					<span className="text-lg">🔍</span>
+					<input
+						type="search"
+						value={search}
+						onChange={(e) => setSearch(e.target.value)}
+						placeholder="Search events, locations, activities…"
+						className="flex-1 border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--ff-green)] focus:border-transparent"
+					/>
+					{isFiltered && (
+						<button
+							onClick={clearFilters}
+							className="text-xs text-[var(--ff-gray)] hover:text-[var(--ff-green)] underline whitespace-nowrap">
+							Clear all
+						</button>
+					)}
+				</div>
 
-        {/* Filter chips row */}
-        <div className="flex flex-wrap gap-2 items-center">
-          {/* Month */}
-          <select
-            value={month}
-            onChange={(e) => setMonth(e.target.value as Month | "all")}
-            className="border border-gray-300 rounded-lg px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[var(--ff-green)]"
-          >
-            {MONTHS.map((m) => (
-              <option key={m.value} value={m.value}>{m.label}</option>
-            ))}
-          </select>
+				{/* Filter chips row */}
+				<div className="flex flex-wrap gap-2 items-center">
+					{/* Month */}
+					<select
+						value={month}
+						onChange={(e) =>
+							setMonth(e.target.value as Month | "all")
+						}
+						className="border border-gray-300 rounded-lg px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[var(--ff-green)]">
+						{MONTHS.map((m) => (
+							<option key={m.value} value={m.value}>
+								{m.label}
+							</option>
+						))}
+					</select>
 
-          {/* Category pills */}
-          <div className="flex flex-wrap gap-1.5">
-            {CATEGORIES.map(({ label, value, icon }) => (
-              <button
-                key={value}
-                onClick={() => setCategory(value as Category | "all")}
-                className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border transition-all
-                  ${category === value
-                    ? "bg-[var(--ff-green)] text-white border-[var(--ff-green)]"
-                    : "bg-white text-[var(--ff-gray)] border-gray-300 hover:border-[var(--ff-green)] hover:text-[var(--ff-green)]"
-                  }`}
-              >
-                {icon} {label}
-              </button>
-            ))}
-          </div>
-        </div>
+					{/* Category pills */}
+					<div className="flex flex-wrap gap-1.5">
+						{CATEGORIES.map(({ label, value, icon }) => (
+							<button
+								key={value}
+								onClick={() =>
+									setCategory(value as Category | "all")
+								}
+								className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border transition-all
+                  ${
+						category === value
+							? "bg-[var(--ff-green)] text-white border-[var(--ff-green)]"
+							: "bg-white text-[var(--ff-gray)] border-gray-300 hover:border-[var(--ff-green)] hover:text-[var(--ff-green)]"
+					}`}>
+								{icon} {label}
+							</button>
+						))}
+					</div>
+				</div>
 
-        {/* Age row */}
-        <div className="flex flex-wrap gap-1.5 items-center">
-          {AGE_BUCKETS.map(({ label, value, icon }) => (
-            <button
-              key={value}
-              onClick={() => setAgeGroup(value as AgeBucket | "all")}
-              className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border transition-all
-                ${ageGroup === value
-                  ? "bg-[var(--ff-green)] text-white border-[var(--ff-green)]"
-                  : "bg-white text-[var(--ff-gray)] border-gray-300 hover:border-[var(--ff-green)] hover:text-[var(--ff-green)]"
-                }`}
-            >
-              {icon} {label}
-            </button>
-          ))}
+				{/* Age row */}
+				<div className="flex flex-wrap gap-1.5 items-center">
+					{AGE_BUCKETS.map(({ label, value, icon }) => (
+						<button
+							key={value}
+							onClick={() =>
+								setAgeGroup(value as AgeBucket | "all")
+							}
+							className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border transition-all
+                ${
+					ageGroup === value
+						? "bg-[var(--ff-green)] text-white border-[var(--ff-green)]"
+						: "bg-white text-[var(--ff-gray)] border-gray-300 hover:border-[var(--ff-green)] hover:text-[var(--ff-green)]"
+				}`}>
+							{icon} {label}
+						</button>
+					))}
 
-          {/* Free toggle */}
-          <button
-            onClick={() => setFreeOnly(!freeOnly)}
-            className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border transition-all ml-auto
-              ${freeOnly
-                ? "bg-[var(--ff-green)] text-white border-[var(--ff-green)]"
-                : "bg-white text-[var(--ff-gray)] border-gray-300 hover:border-[var(--ff-green)] hover:text-[var(--ff-green)]"
-              }`}
-          >
-            ✅ Free only
-          </button>
-        </div>
-      </div>
+					{/* Free toggle */}
+					<button
+						onClick={() => setFreeOnly(!freeOnly)}
+						className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border transition-all ml-auto
+              ${
+					freeOnly
+						? "bg-[var(--ff-green)] text-white border-[var(--ff-green)]"
+						: "bg-white text-[var(--ff-gray)] border-gray-300 hover:border-[var(--ff-green)] hover:text-[var(--ff-green)]"
+				}`}>
+						✅ Free only
+					</button>
+				</div>
+			</div>
 
-      {/* Result count */}
-      <p className="text-sm text-[var(--ff-gray)] mb-3 flex items-center gap-3">
-        <span className="font-medium text-[var(--ff-green)]">Today: {todayStr}</span>
-        <span className="text-gray-300">|</span>
-        <span>
-          {uniqueEventCount} event{uniqueEventCount !== 1 ? "s" : ""}
-          {isFiltered ? " match your filters" : " total"}
-          {" "}· {rows.length} occurrence{rows.length !== 1 ? "s" : ""}
-        </span>
-      </p>
+			{/* Result count */}
+			<p className="text-sm text-[var(--ff-gray)] mb-3 flex items-center gap-3">
+				<span className="font-medium text-[var(--ff-green)]">
+					Today: {todayStr}
+				</span>
+				<span className="text-gray-300">|</span>
+				<span>
+					{uniqueEventCount} event{uniqueEventCount !== 1 ? "s" : ""}
+					{isFiltered ? " match your filters" : " total"} ·{" "}
+					{rows.length} occurrence{rows.length !== 1 ? "s" : ""}
+				</span>
+			</p>
 
-      {/* ── Table ── */}
-      {rows.length === 0 ? (
-        <div className="gym-card p-10 text-center text-[var(--ff-gray)]">
-          No events match your filters.{" "}
-          <button onClick={clearFilters} className="underline text-[var(--ff-green)]">Clear filters</button>
-        </div>
-      ) : (
-        <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
-          <table className="w-full table-auto text-sm border-collapse bg-white">
-            <thead>
-              <tr className="bg-[var(--ff-green)] text-white text-left">
-                <th className="px-4 py-3 font-semibold whitespace-nowrap w-[100px]">Date</th>
-                <th className="px-4 py-3 font-semibold w-[360px]">Event</th>
-                <th className="px-4 py-3 font-semibold hidden sm:table-cell">Location</th>
-                <th className="px-4 py-3 font-semibold w-[100px]">Price</th>
-                <th className="px-4 py-3 font-semibold hidden md:table-cell">Ages</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map(({ event, dateStr }, i) => (
-                <tr
-                  key={`${event.name}-${dateStr}`}
-                  className={`border-t border-gray-100 align-top ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"} hover:bg-[var(--ff-green-pale)] transition-colors`}
-                >
-                  {/* Date */}
-                  <td className="px-4 py-3 whitespace-nowrap text-[var(--ff-gray)] font-medium align-middle w-[100px]">
-                    {dateStr}
-                  </td>
+			{/* ── Table ── */}
+			{rows.length === 0 ? (
+				<div className="gym-card p-10 text-center text-[var(--ff-gray)]">
+					No events match your filters.{" "}
+					<button
+						onClick={clearFilters}
+						className="underline text-[var(--ff-green)]">
+						Clear filters
+					</button>
+				</div>
+			) : (
+				<div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+					<table className="w-full table-fixed text-sm border-collapse bg-white">
+						<thead>
+							<tr className="bg-[var(--ff-green)] text-white text-left">
+								<th className="px-4 py-3 font-semibold text-wrap w-[200px]">
+									Date
+								</th>
+								<th className="px-4 py-3 font-semibold w-[360px]">
+									Event
+								</th>
+								<th className="px-4 py-3 font-semibold hidden sm:table-cell">
+									Location
+								</th>
+								<th className="px-4 py-3 font-semibold w-[100px]">
+									Price
+								</th>
+								<th className="px-4 py-3 font-semibold hidden md:table-cell">
+									Ages
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							{rows.map(({ event, dateStr }, i) => {
+								const rowKey = `${event.name}-${dateStr}`;
+								const hasSessions = !!event.sessions?.length;
+								const isExpanded = expandedKeys.has(rowKey);
+								const rowBg =
+									i % 2 === 0 ? "bg-white" : "bg-gray-50/60";
 
-                  {/* Event name + category badge + note */}
-                  <td className="px-4 py-3 w-[360px]">
-                    <div className="font-semibold text-[var(--ff-green)] leading-snug">
-                      {event.name}
-                    </div>
-                    {event.note && (
-                      <div className="text-xs text-[var(--ff-gray)] mt-0.5 leading-snug">
-                        {event.note}
-                      </div>
-                    )}
-                    <span className={`inline-block mt-1.5 text-[10px] font-semibold px-2 py-0.5 rounded-full ${CAT_COLORS[event.category]}`}>
-                      {event.category}
-                    </span>
-                  </td>
+								return (
+									<React.Fragment key={rowKey}>
+										<tr
+											onClick={
+												hasSessions
+													? () => toggleRow(rowKey)
+													: undefined
+											}
+											className={`border-t border-gray-100 align-top ${rowBg} hover:bg-[var(--ff-green-pale)] transition-colors ${hasSessions ? "cursor-pointer select-none" : ""}`}>
+											{/* Date */}
+											<td className="px-4 py-3 break-words text-[var(--ff-gray)] font-medium align-middle w-[400px]">
+												{hasSessions ? (
+													<span className="flex items-center gap-1">
+														<span
+															className={`text-[var(--ff-green)] transition-transform duration-200 inline-block ${isExpanded ? "rotate-90" : ""}`}
+															aria-hidden>
+															▶
+														</span>
+														<span className="ml-2">{dateStr}</span>
+													</span>
+												) : (
+													dateStr
+												)}
+											</td>
 
-                  {/* Location */}
-                  <td className="px-4 py-3 text-[var(--ff-gray)] hidden sm:table-cell min-w-[160px] leading-snug">
-                    {event.location}
-                  </td>
+											{/* Event name + category badge + note */}
+											<td className="px-4 py-3 w-[360px]">
+												<div className="font-semibold text-[var(--ff-green)] leading-snug">
+													{event.name}
+												</div>
+												{hasSessions && (
+													<span className="inline-block mt-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">
+														Multiple sessions
+													</span>
+												)}
+												{event.note && (
+													<div className="text-sm text-[var(--ff-gray)] mt-0.5 leading-snug">
+														{event.note}
+													</div>
+												)}
+												<span
+													className={`inline-block mt-1.5 text-[10px] font-semibold px-2 py-0.5 rounded-full ${CAT_COLORS[event.category]}`}>
+													{event.category}
+												</span>
+											</td>
 
-                  {/* Price */}
-                  <td className="px-3 py-3 whitespace-nowrap w-[100px]">
-                    {event.isFree ? (
-                      <span className="font-semibold text-[var(--ff-green)]">Free</span>
-                    ) : (
-                      <span className="text-[var(--ff-gray)]">{event.price}</span>
-                    )}
-                  </td>
+											{/* Location */}
+											<td className="px-4 py-3 text-[var(--ff-gray)] hidden sm:table-cell min-w-[160px] leading-snug">
+												{event.location}
+											</td>
 
-                  {/* Ages */}
-                  <td className="px-4 py-3 text-[var(--ff-gray)] hidden md:table-cell whitespace-nowrap">
-                    {event.ages}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+											{/* Price */}
+											<td className="px-3 py-3 w-[100px]">
+												{event.isFree ? (
+													<span className="font-semibold text-[var(--ff-green)]">
+														Free
+													</span>
+												) : (
+													<span className="text-[var(--ff-gray)]">
+														{event.price}
+													</span>
+												)}
+											</td>
 
-      <p className="data-note mt-5">
-        Source: Spring 2026 Parks &amp; Programs Guide (co.monmouth.nj.us). Registration opens Feb 11 at 8 AM.
-        For June &amp; summer programs check the Summer 2026 guide. Always verify dates before visiting.
-      </p>
-    </div>
+											{/* Ages */}
+											<td className="px-4 py-3 text-[var(--ff-gray)] hidden md:table-cell break-words">
+												{event.ages}
+											</td>
+										</tr>
+
+										{/* ── Expanded sessions sub-row ── */}
+										{hasSessions && isExpanded && (
+											<tr
+												key={`${rowKey}-sessions`}
+												className={`${rowBg} border-t-0`}>
+												<td />
+												<td
+													colSpan={4}
+													className="px-5 pb-4 pt-2">
+													<div className="flex flex-col gap-3">
+														{event.sessions!.map(
+															(s) => (
+																<div
+																	key={s.code}
+																	className="flex flex-col gap-1">
+																	<div className="flex items-center gap-2">
+																		<span className="font-mono text-xs font-bold bg-[var(--ff-green-pale)] text-[var(--ff-green)] px-2 py-0.5 rounded">
+																			{
+																				s.code
+																			}
+																		</span>
+																		<span className="text-sm font-medium text-[var(--ff-gray)]">
+																			{
+																				s.time
+																			}
+																		</span>
+																	</div>
+																	<div className="flex flex-wrap gap-x-3 gap-y-0.5 pl-1">
+																		{s.dates.map(
+																			(
+																				d,
+																			) => (
+																				<span
+																					key={
+																						d
+																					}
+																					className="text-xs text-[var(--ff-gray)]">
+																					{
+																						d
+																					}
+																				</span>
+																			),
+																		)}
+																	</div>
+																</div>
+															),
+														)}
+													</div>
+												</td>
+											</tr>
+										)}
+									</React.Fragment>
+								);
+							})}
+						</tbody>
+					</table>
+				</div>
+			)}
+
+			<p className="data-note mt-5">
+				Source: Spring 2026 Parks &amp; Programs Guide
+				(co.monmouth.nj.us). Registration opens Feb 11 at 8 AM. For June
+				&amp; summer programs check the Summer 2026 guide. Always verify
+				dates before visiting.
+			</p>
+		</div>
   );
 }

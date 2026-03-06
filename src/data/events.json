@@ -423,7 +423,7 @@
   {
     "name": "Friday Evening Pottery",
     "location": "Thompson Park Creative Arts Center",
-    "dates": "Fri Mar 13–Apr 24 6:30-8:30PM; Fri May 1–Jun 12 6:30-8:30PM",
+    "dates": "Fri Mar 13–Apr 24",
     "price": "$140/person (7 sessions, includes glazes, firings, 12 lbs clay)",
     "isFree": false,
     "ages": "Ages 11+",
@@ -431,11 +431,54 @@
     "series": "Arts & Crafts",
     "months": [
       "Mar",
-      "Apr",
+      "Apr"
+    ],
+    "note": "Discover throwing and hand building with clay. Great family class. Participants 13 and under must register with an adult. No makeup classes.",
+    "sessions": [
+      {
+        "code": "Z792X",
+        "time": "6:30–8:30 PM",
+        "dates": [
+          "Fri Mar 13",
+          "Fri Mar 20",
+          "Fri Mar 27",
+          "Fri Apr 3",
+          "Fri Apr 10",
+          "Fri Apr 17",
+          "Fri Apr 24"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Friday Evening Pottery",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Fri May 1–Jun 12",
+    "price": "$140/person (7 sessions, includes glazes, firings, 12 lbs clay)",
+    "isFree": false,
+    "ages": "Ages 11+",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
       "May",
       "Jun"
     ],
-    "note": "Discover throwing and hand building with clay. Great family class. Participants 13 and under must register with an adult. No makeup classes."
+    "note": "Discover throwing and hand building with clay. Great family class. Participants 13 and under must register with an adult. No makeup classes.",
+    "sessions": [
+      {
+        "code": "Z892X",
+        "time": "6:30–8:30 PM",
+        "dates": [
+          "Fri May 1",
+          "Fri May 8",
+          "Fri May 15",
+          "Fri May 22",
+          "Fri May 29",
+          "Fri Jun 5",
+          "Fri Jun 12"
+        ]
+      }
+    ]
   },
   {
     "name": "Puppet Making / Puppet Show Day!",
@@ -454,7 +497,7 @@
   {
     "name": "Sunday Ceramics",
     "location": "Thompson Park Creative Arts Center",
-    "dates": "Sun Mar 1; Sun Apr 12; Sun May 3 (11:30AM-1PM & 1:30-3PM)",
+    "dates": "Sun Mar 1; Sun Apr 12; Sun May 3",
     "price": "$15/person + bisqueware purchased on-site",
     "isFree": false,
     "ages": "Ages 8+ (under 18 with paying adult)",
@@ -465,7 +508,27 @@
       "Apr",
       "May"
     ],
-    "note": "Choose from bisque fired pottery pieces to glaze in your own style. Piece is glaze fired and ready to pick up in about a week. Space is limited."
+    "note": "Choose from bisque fired pottery pieces to glaze in your own style. Piece is glaze fired and ready to pick up in about a week. Space is limited.",
+    "sessions": [
+      {
+        "code": "ZC62X",
+        "time": "11:30 AM–1:00 PM",
+        "dates": [
+          "Sun Mar 1",
+          "Sun Apr 12",
+          "Sun May 3"
+        ]
+      },
+      {
+        "code": "ZC82X",
+        "time": "1:30–3:00 PM",
+        "dates": [
+          "Sun Mar 1",
+          "Sun Apr 12",
+          "Sun May 3"
+        ]
+      }
+    ]
   },
   {
     "name": "Flashlight Easter Eggstravaganza",
@@ -853,7 +916,7 @@
   {
     "name": "ART Capades",
     "location": "Fort Monmouth Recreation Center Program Room B",
-    "dates": "Thu Mar 12–Apr 2; Thu Apr 16–May 7; Thu May 14–Jun 4 (9:30-10:15AM)",
+    "dates": "Thu Mar 12–Apr 2",
     "price": "$60/parent-child, $52 additional sibling (4 sessions)",
     "isFree": false,
     "ages": "Ages 2-4 with adult",
@@ -861,16 +924,80 @@
     "series": "Arts & Crafts",
     "months": [
       "Mar",
+      "Apr"
+    ],
+    "note": "All about the process! Each week a new project, medium, and materials. Splatter painting, playdough, stamped art, mixing colors, ornaments, and more.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "9:30–10:15 AM",
+        "dates": [
+          "Thu Mar 12",
+          "Thu Mar 19",
+          "Thu Mar 26",
+          "Thu Apr 2"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ART Capades",
+    "location": "Fort Monmouth Recreation Center Program Room B",
+    "dates": "Thu Apr 16–May 7",
+    "price": "$60/parent-child, $52 additional sibling (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-4 with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
       "Apr",
+      "May"
+    ],
+    "note": "All about the process! Each week a new project, medium, and materials. Splatter painting, playdough, stamped art, mixing colors, ornaments, and more.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "9:30–10:15 AM",
+        "dates": [
+          "Thu Apr 16",
+          "Thu Apr 23",
+          "Thu Apr 30",
+          "Thu May 7"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ART Capades",
+    "location": "Fort Monmouth Recreation Center Program Room B",
+    "dates": "Thu May 14–Jun 4",
+    "price": "$60/parent-child, $52 additional sibling (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-4 with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
       "May",
       "Jun"
     ],
-    "note": "All about the process! Each week a new project, medium, and materials. Splatter painting, playdough, stamped art, mixing colors, ornaments, and more."
+    "note": "All about the process! Each week a new project, medium, and materials. Splatter painting, playdough, stamped art, mixing colors, ornaments, and more.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "9:30–10:15 AM",
+        "dates": [
+          "Thu May 14",
+          "Thu May 21",
+          "Thu May 28",
+          "Thu Jun 4"
+        ]
+      }
+    ]
   },
   {
     "name": "Craft 'n' Play",
     "location": "Fort Monmouth Recreation Center Program Room B",
-    "dates": "Wed Mar 11–Apr 1; Wed Apr 15–May 6; Wed May 13–Jun 3",
+    "dates": "Wed Mar 11–Apr 1",
     "price": "$60/parent-child, $52 additional sibling (4 sessions)",
     "isFree": false,
     "ages": "Ages 18 months–3 years with adult",
@@ -878,16 +1005,80 @@
     "series": "Arts & Crafts",
     "months": [
       "Mar",
+      "Apr"
+    ],
+    "note": "Crafts exploring colors, textures, paint, glitter, and glue while exploring seasons and holidays. Plus time in the play area.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "9:30–10:15 AM",
+        "dates": [
+          "Wed Mar 11",
+          "Wed Mar 18",
+          "Wed Mar 25",
+          "Wed Apr 1"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Craft 'n' Play",
+    "location": "Fort Monmouth Recreation Center Program Room B",
+    "dates": "Wed Apr 15–May 6",
+    "price": "$60/parent-child, $52 additional sibling (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 18 months–3 years with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
       "Apr",
+      "May"
+    ],
+    "note": "Crafts exploring colors, textures, paint, glitter, and glue while exploring seasons and holidays. Plus time in the play area.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "9:30–10:15 AM",
+        "dates": [
+          "Wed Apr 15",
+          "Wed Apr 22",
+          "Wed Apr 29",
+          "Wed May 6"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Craft 'n' Play",
+    "location": "Fort Monmouth Recreation Center Program Room B",
+    "dates": "Wed May 13–Jun 3",
+    "price": "$60/parent-child, $52 additional sibling (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 18 months–3 years with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
       "May",
       "Jun"
     ],
-    "note": "Crafts exploring colors, textures, paint, glitter, and glue while exploring seasons and holidays. Plus time in the play area."
+    "note": "Crafts exploring colors, textures, paint, glitter, and glue while exploring seasons and holidays. Plus time in the play area.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "9:30–10:15 AM",
+        "dates": [
+          "Wed May 13",
+          "Wed May 20",
+          "Wed May 27",
+          "Wed Jun 3"
+        ]
+      }
+    ]
   },
   {
     "name": "Messy Art",
     "location": "Fort Monmouth Recreation Center Program Room B",
-    "dates": "Wed Mar 11–Apr 1; Wed Apr 15–May 6; Wed May 13–Jun 3 (10:30-11:15AM)",
+    "dates": "Wed Mar 11–Apr 1",
     "price": "$60/parent-child, $52 additional sibling (4 sessions)",
     "isFree": false,
     "ages": "Ages 18 months–3 years with adult",
@@ -895,16 +1086,80 @@
     "series": "Arts & Crafts",
     "months": [
       "Mar",
+      "Apr"
+    ],
+    "note": "Toddlers delight in paint, glue, glitter, and more. Moves outdoors during nice weather.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "10:30–11:15 AM",
+        "dates": [
+          "Wed Mar 11",
+          "Wed Mar 18",
+          "Wed Mar 25",
+          "Wed Apr 1"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Messy Art",
+    "location": "Fort Monmouth Recreation Center Program Room B",
+    "dates": "Wed Apr 15–May 6",
+    "price": "$60/parent-child, $52 additional sibling (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 18 months–3 years with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
       "Apr",
+      "May"
+    ],
+    "note": "Toddlers delight in paint, glue, glitter, and more. Moves outdoors during nice weather.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "10:30–11:15 AM",
+        "dates": [
+          "Wed Apr 15",
+          "Wed Apr 22",
+          "Wed Apr 29",
+          "Wed May 6"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Messy Art",
+    "location": "Fort Monmouth Recreation Center Program Room B",
+    "dates": "Wed May 13–Jun 3",
+    "price": "$60/parent-child, $52 additional sibling (4 sessions)",
+    "isFree": false,
+    "ages": "Ages 18 months–3 years with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
       "May",
       "Jun"
     ],
-    "note": "Toddlers delight in paint, glue, glitter, and more. Moves outdoors during nice weather."
+    "note": "Toddlers delight in paint, glue, glitter, and more. Moves outdoors during nice weather.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "10:30–11:15 AM",
+        "dates": [
+          "Wed May 13",
+          "Wed May 20",
+          "Wed May 27",
+          "Wed Jun 3"
+        ]
+      }
+    ]
   },
   {
     "name": "Let's Create!",
     "location": "Dorbrook Recreation Area Program Building",
-    "dates": "Fri Mar 6–Apr 24 10:45-11:30AM (no class 4/3 & 4/10); Fri May 1–Jun 5",
+    "dates": "Fri Mar 6–Apr 24 (no class 4/3 & 4/10)",
     "price": "$77/parent-child (6 sessions)",
     "isFree": false,
     "ages": "Ages 2-4 with adult",
@@ -912,11 +1167,52 @@
     "series": "Arts & Crafts",
     "months": [
       "Mar",
-      "Apr",
+      "Apr"
+    ],
+    "note": "Circle time for socialization and fine motor skills, featuring a story and an art project to bring home. No additional family members please.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "10:45–11:30 AM",
+        "dates": [
+          "Fri Mar 6",
+          "Fri Mar 13",
+          "Fri Mar 20",
+          "Fri Mar 27",
+          "Fri Apr 17",
+          "Fri Apr 24"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Let's Create!",
+    "location": "Dorbrook Recreation Area Program Building",
+    "dates": "Fri May 1–Jun 5",
+    "price": "$77/parent-child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-4 with adult",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
       "May",
       "Jun"
     ],
-    "note": "Circle time for socialization and fine motor skills, featuring a story and an art project to bring home. No additional family members please."
+    "note": "Circle time for socialization and fine motor skills, featuring a story and an art project to bring home. No additional family members please.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "10:45–11:30 AM",
+        "dates": [
+          "Fri May 1",
+          "Fri May 8",
+          "Fri May 15",
+          "Fri May 22",
+          "Fri May 29",
+          "Fri Jun 5"
+        ]
+      }
+    ]
   },
   {
     "name": "KidzArt Squiggles to Grins",
@@ -1092,7 +1388,7 @@
   {
     "name": "Keyboard Beginnings Level 1",
     "location": "Thompson Park Visitor Center Tulip Room",
-    "dates": "Mon May 4–Jun 22 4-4:45PM (no class 5/25)",
+    "dates": "Mon May 4–Jun 22 (no class 5/25)",
     "price": "$162/parent-child (7 sessions) + $25 materials fee",
     "isFree": false,
     "ages": "Ages 4.5-6 with adult",
@@ -1102,12 +1398,27 @@
       "May",
       "Jun"
     ],
-    "note": "Young children learn the names of musical keys and play short songs on keyboards. Recommended to have keyboard at home. Includes music book, rhythm instrument, crayons, and lesson outlines."
+    "note": "Young children learn the names of musical keys and play short songs on keyboards. Recommended to have keyboard at home. Includes music book, rhythm instrument, crayons, and lesson outlines.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "4:00–4:45 PM",
+        "dates": [
+          "Mon May 4",
+          "Mon May 11",
+          "Mon May 18",
+          "Mon Jun 1",
+          "Mon Jun 8",
+          "Mon Jun 15",
+          "Mon Jun 22"
+        ]
+      }
+    ]
   },
   {
     "name": "Keyboard Beginnings Level 2",
     "location": "Thompson Park Visitor Center Tulip Room",
-    "dates": "Mon May 4–Jun 22 5-5:45PM (no class 5/25)",
+    "dates": "Mon May 4–Jun 22 (no class 5/25)",
     "price": "$162/parent-child (7 sessions) + $25 materials fee",
     "isFree": false,
     "ages": "Ages 5-7",
@@ -1117,12 +1428,27 @@
       "May",
       "Jun"
     ],
-    "note": "Continuation of Level 1. Play new songs, read notes on the musical staff. Includes Keyboard Beginnings Music Book 2, lesson outlines, flash cards, and concentration game."
+    "note": "Continuation of Level 1. Play new songs, read notes on the musical staff. Includes Keyboard Beginnings Music Book 2, lesson outlines, flash cards, and concentration game.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "5:00–5:45 PM",
+        "dates": [
+          "Mon May 4",
+          "Mon May 11",
+          "Mon May 18",
+          "Mon Jun 1",
+          "Mon Jun 8",
+          "Mon Jun 15",
+          "Mon Jun 22"
+        ]
+      }
+    ]
   },
   {
     "name": "Little Learners",
     "location": "Dorbrook Recreation Area Program Building",
-    "dates": "Fri Mar 6–Apr 24 9:30-10:15AM (no class 4/3 & 4/10); Fri May 1–Jun 5",
+    "dates": "Fri Mar 6–Apr 24 (no class 4/3 & 4/10)",
     "price": "$77/parent-child (6 sessions)",
     "isFree": false,
     "ages": "Ages 2-4 with adult",
@@ -1130,11 +1456,52 @@
     "series": "Education & Enrichment",
     "months": [
       "Mar",
-      "Apr",
+      "Apr"
+    ],
+    "note": "Introduction to literacy using play, movement, art, stories, and circle time. Much of the session outdoors when weather allows.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "9:30–10:15 AM",
+        "dates": [
+          "Fri Mar 6",
+          "Fri Mar 13",
+          "Fri Mar 20",
+          "Fri Mar 27",
+          "Fri Apr 17",
+          "Fri Apr 24"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Little Learners",
+    "location": "Dorbrook Recreation Area Program Building",
+    "dates": "Fri May 1–Jun 5",
+    "price": "$77/parent-child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-4 with adult",
+    "category": "Family Programs",
+    "series": "Education & Enrichment",
+    "months": [
       "May",
       "Jun"
     ],
-    "note": "Introduction to literacy using play, movement, art, stories, and circle time. Much of the session outdoors when weather allows."
+    "note": "Introduction to literacy using play, movement, art, stories, and circle time. Much of the session outdoors when weather allows.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "9:30–10:15 AM",
+        "dates": [
+          "Fri May 1",
+          "Fri May 8",
+          "Fri May 15",
+          "Fri May 22",
+          "Fri May 29",
+          "Fri Jun 5"
+        ]
+      }
+    ]
   },
   {
     "name": "Morning Tea Party",
@@ -1400,7 +1767,7 @@
   {
     "name": "Let's Explore",
     "location": "Dorbrook Recreation Area Program Building",
-    "dates": "Mon Mar 2–Apr 20 (10-10:45AM & 11-11:45AM); Mon Apr 27–Jun 8 (no class 5/25)",
+    "dates": "Mar 2–Apr 20 (Mondays)",
     "price": "$72/pair (6 sessions)",
     "isFree": false,
     "ages": "Ages 2-5 with adult",
@@ -1408,10 +1775,77 @@
     "series": "Play Groups",
     "months": [
       "Mar",
+      "Apr"
+    ],
+    "note": "Sensory play, fine and large motor activities, simple art projects, story time, and nature exploration. Dress for mess. No class 3/30 & 4/6.",
+    "sessions": [
+      {
+        "code": "A0562X",
+        "time": "10:00–10:45 AM",
+        "dates": [
+          "Mon Mar 2",
+          "Mon Mar 9",
+          "Mon Mar 16",
+          "Mon Mar 23",
+          "Mon Apr 13",
+          "Mon Apr 20"
+        ]
+      },
+      {
+        "code": "A0462X",
+        "time": "11:00–11:45 AM",
+        "dates": [
+          "Mon Mar 2",
+          "Mon Mar 9",
+          "Mon Mar 16",
+          "Mon Mar 23",
+          "Mon Apr 13",
+          "Mon Apr 20"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Let's Explore",
+    "location": "Dorbrook Recreation Area Program Building",
+    "dates": "Apr 27–Jun 8 (Mondays)",
+    "price": "$72/pair (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 2-5 with adult",
+    "category": "Family Programs",
+    "series": "Play Groups",
+    "months": [
       "Apr",
+      "May",
       "Jun"
     ],
-    "note": "Sensory play, fine and large motor activities, simple art projects, story time, and nature exploration. Dress for mess."
+    "note": "Sensory play, fine and large motor activities, simple art projects, story time, and nature exploration. Dress for mess. No class 5/25.",
+    "sessions": [
+      {
+        "code": "A0662X",
+        "time": "10:00–10:45 AM",
+        "dates": [
+          "Mon Apr 27",
+          "Mon May 4",
+          "Mon May 11",
+          "Mon May 18",
+          "Mon Jun 1",
+          "Mon Jun 8"
+        ]
+      },
+      {
+        "code": "A0762X",
+        "time": "11:15 AM–12:00 PM",
+        "dates": [
+          "Mon Apr 27",
+          "Mon May 4",
+          "Mon May 11",
+          "Mon May 18",
+          "Mon Jun 1",
+          "Mon Jun 8"
+        ]
+      }
+    ]
   },
   {
     "name": "Miss Melissa's Aardvarks",
@@ -1889,7 +2323,7 @@
   {
     "name": "Children's Ceramics",
     "location": "Thompson Park Creative Arts Center",
-    "dates": "Mar 14–Apr 25 (no 4/4), May 2–Jun 13 (no 5/9)",
+    "dates": "Sat Mar 14–Apr 25 (no 4/4)",
     "price": "$85.00/child (6 sessions)",
     "isFree": false,
     "ages": "Ages 8-16",
@@ -1897,16 +2331,57 @@
     "series": "Arts & Crafts",
     "months": [
       "Mar",
-      "Apr",
+      "Apr"
+    ],
+    "note": "Decorate pre-cast ceramic items. Learn about greenware, bisque, underglaze, and glaze. Fee includes instruction, tools, firings.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "TBD",
+        "dates": [
+          "Sat Mar 14",
+          "Sat Mar 21",
+          "Sat Mar 28",
+          "Sat Apr 11",
+          "Sat Apr 18",
+          "Sat Apr 25"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Children's Ceramics",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Sat May 2–Jun 13 (no 5/9)",
+    "price": "$85.00/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 8-16",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
       "May",
       "Jun"
     ],
-    "note": "Decorate pre-cast ceramic items. Learn about greenware, bisque, underglaze, and glaze. Fee includes instruction, tools, firings."
+    "note": "Decorate pre-cast ceramic items. Learn about greenware, bisque, underglaze, and glaze. Fee includes instruction, tools, firings.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "TBD",
+        "dates": [
+          "Sat May 2",
+          "Sat May 16",
+          "Sat May 23",
+          "Sat May 30",
+          "Sat Jun 6",
+          "Sat Jun 13"
+        ]
+      }
+    ]
   },
   {
     "name": "Children's Handbuilding with Clay",
     "location": "Thompson Park Creative Arts Center",
-    "dates": "Mar 13–Apr 24 (no 4/3) Fri, May 1–Jun 5 Fri",
+    "dates": "Fri Mar 13–Apr 24 (no 4/3)",
     "price": "$105.00/child (6 sessions)",
     "isFree": false,
     "ages": "Ages 7-10",
@@ -1914,16 +2389,57 @@
     "series": "Arts & Crafts",
     "months": [
       "Mar",
-      "Apr",
+      "Apr"
+    ],
+    "note": "Create functional or decorative clay works using slab and coil construction. Includes 10 lbs clay, glazes, and firings.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "TBD",
+        "dates": [
+          "Fri Mar 13",
+          "Fri Mar 20",
+          "Fri Mar 27",
+          "Fri Apr 10",
+          "Fri Apr 17",
+          "Fri Apr 24"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Children's Handbuilding with Clay",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Fri May 1–Jun 5",
+    "price": "$105.00/child (6 sessions)",
+    "isFree": false,
+    "ages": "Ages 7-10",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
       "May",
       "Jun"
     ],
-    "note": "Create functional or decorative clay works using slab and coil construction. Includes 10 lbs clay, glazes, and firings."
+    "note": "Create functional or decorative clay works using slab and coil construction. Includes 10 lbs clay, glazes, and firings.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "TBD",
+        "dates": [
+          "Fri May 1",
+          "Fri May 8",
+          "Fri May 15",
+          "Fri May 22",
+          "Fri May 29",
+          "Fri Jun 5"
+        ]
+      }
+    ]
   },
   {
     "name": "Children's Wheel-Thrown Pottery",
     "location": "Thompson Park Creative Arts Center",
-    "dates": "Mar 12–Apr 23 Thu, Apr 30–Jun 11 Thu; Sat Mar 14–Apr 25, May 2–Jun 20 (no 5/9)",
+    "dates": "Thu Mar 12–Apr 23",
     "price": "$140.00/child (7 sessions)",
     "isFree": false,
     "ages": "Ages 11-17",
@@ -1931,11 +2447,115 @@
     "series": "Arts & Crafts",
     "months": [
       "Mar",
+      "Apr"
+    ],
+    "note": "Learn wheel-throwing and hand-building with instructor demos and individual guidance. Includes tools, 10 lbs clay, glazes, firings.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "TBD",
+        "dates": [
+          "Thu Mar 12",
+          "Thu Mar 19",
+          "Thu Mar 26",
+          "Thu Apr 2",
+          "Thu Apr 9",
+          "Thu Apr 16",
+          "Thu Apr 23"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Children's Wheel-Thrown Pottery",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Thu Apr 30–Jun 11",
+    "price": "$140.00/child (7 sessions)",
+    "isFree": false,
+    "ages": "Ages 11-17",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
       "Apr",
       "May",
       "Jun"
     ],
-    "note": "Learn wheel-throwing and hand-building with instructor demos and individual guidance. Includes tools, 10 lbs clay, glazes, firings."
+    "note": "Learn wheel-throwing and hand-building with instructor demos and individual guidance. Includes tools, 10 lbs clay, glazes, firings.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "TBD",
+        "dates": [
+          "Thu Apr 30",
+          "Thu May 7",
+          "Thu May 14",
+          "Thu May 21",
+          "Thu May 28",
+          "Thu Jun 4",
+          "Thu Jun 11"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Children's Wheel-Thrown Pottery",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Sat Mar 14–Apr 25",
+    "price": "$140.00/child (7 sessions)",
+    "isFree": false,
+    "ages": "Ages 11-17",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "Mar",
+      "Apr"
+    ],
+    "note": "Learn wheel-throwing and hand-building with instructor demos and individual guidance. Includes tools, 10 lbs clay, glazes, firings.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "TBD",
+        "dates": [
+          "Sat Mar 14",
+          "Sat Mar 21",
+          "Sat Mar 28",
+          "Sat Apr 4",
+          "Sat Apr 11",
+          "Sat Apr 18",
+          "Sat Apr 25"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Children's Wheel-Thrown Pottery",
+    "location": "Thompson Park Creative Arts Center",
+    "dates": "Sat May 2–Jun 20 (no 5/9)",
+    "price": "$140.00/child (7 sessions)",
+    "isFree": false,
+    "ages": "Ages 11-17",
+    "category": "Arts & Crafts",
+    "series": "Arts & Crafts",
+    "months": [
+      "May",
+      "Jun"
+    ],
+    "note": "Learn wheel-throwing and hand-building with instructor demos and individual guidance. Includes tools, 10 lbs clay, glazes, firings.",
+    "sessions": [
+      {
+        "code": null,
+        "time": "TBD",
+        "dates": [
+          "Sat May 2",
+          "Sat May 16",
+          "Sat May 23",
+          "Sat May 30",
+          "Sat Jun 6",
+          "Sat Jun 13",
+          "Sat Jun 20"
+        ]
+      }
+    ]
   },
   {
     "name": "Mother's Day Plate",
