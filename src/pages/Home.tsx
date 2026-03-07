@@ -18,6 +18,7 @@ export default function Home() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email }),
       });
+
       if (res.ok) {
         setStatus("success");
         setName("");
@@ -110,12 +111,12 @@ export default function Home() {
           </div>
           <h2 className="text-xl font-bold text-[var(--ff-green)] mb-1">Stay in the loop</h2>
           <p className="text-sm text-[var(--ff-gray)] mb-5">
-            Get a monthly update whenever new events, gyms, or pools are added to FunFinder732.
+            Get a monthly update whenever new events or new updates are added to FunFinder732.
           </p>
 
           {status === "success" ? (
             <div className="rounded-lg bg-[var(--ff-green-pale)] text-[var(--ff-green)] px-5 py-4 font-medium text-sm">
-              🎉 You're on the list! We'll be in touch.
+              🎉 You're on the list! I'll be in touch.
             </div>
           ) : (
             <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
