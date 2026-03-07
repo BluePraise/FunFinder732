@@ -4,6 +4,8 @@ import { Send, CheckCircle } from "lucide-react";
 
 export default function SubmitEvent() {
   const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
   const [formData, setFormData] = useState({
     eventName: "",
     date: "",
@@ -14,17 +16,37 @@ export default function SubmitEvent() {
     cost: "",
     contactEmail: "",
     website: "",
+    subscribeNewsletter: false,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement actual submission logic
-    console.log("Event submitted:", formData);
-    setSubmitted(true);
+    setStatus("loading");
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/submit-event", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        setStatus("idle");
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setErrorMsg(data.error ?? "Something went wrong. Please try again.");
+        setStatus("error");
+      }
+    } catch {
+      setErrorMsg("Network error. Please try again.");
+      setStatus("error");
+    }
   };
 
   if (submitted) {
@@ -35,7 +57,7 @@ export default function SubmitEvent() {
         <p className="text-lg text-muted-foreground mb-6">
           Your event has been submitted for review. We'll add it to FunFinder732 once approved.
         </p>
-        <Button onClick={() => { setSubmitted(false); setFormData({ eventName: "", date: "", time: "", location: "", description: "", category: "", cost: "", contactEmail: "", website: "" }); }}>
+        <Button onClick={() => { setSubmitted(false); setStatus("idle"); setErrorMsg(""); setFormData({ eventName: "", date: "", time: "", location: "", description: "", category: "", cost: "", contactEmail: "", website: "", subscribeNewsletter: false }); }}>
           Submit Another Event
         </Button>
       </div>
@@ -186,12 +208,31 @@ export default function SubmitEvent() {
 					</p>
 				</div>
 
+				<div className="flex items-center gap-3">
+					<input
+						type="checkbox"
+						id="subscribeNewsletter"
+						name="subscribeNewsletter"
+						checked={formData.subscribeNewsletter}
+						onChange={handleChange}
+						className="h-4 w-4 rounded border-gray-300 accent-[var(--ff-green)]"
+					/>
+					<label htmlFor="subscribeNewsletter" className="text-sm text-muted-foreground cursor-pointer">
+						Also subscribe me to the FunFinder732 newsletter
+					</label>
+				</div>
+
+				{status === "error" && (
+					<p className="text-sm text-red-600">{errorMsg}</p>
+				)}
+
 				<Button
 					type="submit"
 					className="bg-[var(--ff-green)] text-white rounded-lg px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition-opacity disabled:opacity-60"
-					size="lg">
+					size="lg"
+					disabled={status === "loading"}>
 					<Send className="h-4 w-4 mr-2" />
-					Submit Event
+					{status === "loading" ? "Submitting…" : "Submit Event"}
 				</Button>
 			</form>
 		</div>
