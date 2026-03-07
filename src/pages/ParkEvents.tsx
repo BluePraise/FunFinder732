@@ -1,39 +1,13 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
+import { SlidersHorizontal } from "lucide-react";
 import EVENTS_RAW from "../data/events.json";
+import type { Month, AgeBucket, Category, SortBy, ParkEvent, EventRow } from "@/components/park-events/types";
+import FilterSidebar from "@/components/park-events/FilterSidebar";
+import EventsTable from "@/components/park-events/EventsTable";
+import SavedPanel from "@/components/park-events/SavedPanel";
+import MobileFilterDrawer from "@/components/park-events/MobileFilterDrawer";
 
-// ─── Types ────────────────────────────────────────────────────────────────────
-
-type Month = "Mar" | "Apr" | "May" | "Jun" | "Ongoing";
-type AgeBucket = "babies" | "toddlers" | "preschool" | "elementary" | "teens" | "adults";
-type Category =
-  | "Nature"
-  | "Arts & Crafts"
-  | "History & Tours"
-  | "Adventure & Fitness"
-  | "Family Programs"
-  | "Festivals & Culture";
-
-interface EventSession {
-  code: string;
-  time: string;
-  dates: string[];
-}
-
-interface ParkEvent {
-  name: string;
-  location: string;
-  dates: string;
-  price: string;
-  isFree: boolean;
-  ages: string;
-  category: Category;
-  series?: string;
-  months: Month[];
-  note?: string;
-  sessions?: EventSession[];
-}
-
-// ─── Age bucket helper ────────────────────────────────────────────────────────
+// ─── Helpers ─────────────────────────────────────────────────────────────────
 
 function getAgeBuckets(ages: string): AgeBucket[] {
   const s = ages.toLowerCase();
@@ -60,7 +34,7 @@ function getAgeBuckets(ages: string): AgeBucket[] {
     .map((m) => parseFloat(m[1]))
     .filter((n) => n < 100);
 
-  let lo = hasMonths ? 0 : nums.length ? Math.min(...nums) : 0;
+  const lo = hasMonths ? 0 : nums.length ? Math.min(...nums) : 0;
   let hi = nums.length ? Math.max(...nums) : 100;
 
   // "under 18 with adult" supervision cap
@@ -101,60 +75,23 @@ function parseFirstDate(dates: string): Date {
 
 const EVENTS = EVENTS_RAW as ParkEvent[];
 
-// ─── Constants ────────────────────────────────────────────────────────────────
-
-const MONTHS: { label: string; value: Month | "all" }[] = [
-  { label: "All months",  value: "all" },
-  { label: "March",       value: "Mar" },
-  { label: "April",       value: "Apr" },
-  { label: "May",         value: "May" },
-  { label: "June",        value: "Jun" },
-  { label: "Ongoing",     value: "Ongoing" },
-];
-
-const CATEGORIES: { label: string; value: Category | "all"; icon: string }[] = [
-  { label: "All",                value: "all",                icon: "🌎" },
-  { label: "Nature",             value: "Nature",             icon: "🌿" },
-  { label: "Arts & Crafts",      value: "Arts & Crafts",      icon: "🎨" },
-  { label: "History & Tours",    value: "History & Tours",    icon: "🏚️" },
-  { label: "Adventure & Fitness",value: "Adventure & Fitness",icon: "🧗" },
-  { label: "Family Programs",    value: "Family Programs",    icon: "👨‍👩‍👧" },
-  { label: "Festivals & Culture",value: "Festivals & Culture",icon: "🎭" },
-];
-
-const AGE_BUCKETS: { label: string; value: AgeBucket | "all"; icon: string }[] = [
-  { label: "All ages",      value: "all",         icon: "👤" },
-  { label: "Babies (0–2)",  value: "babies",      icon: "👶" },
-  { label: "Toddlers",      value: "toddlers",    icon: "🐣" },
-  { label: "Preschool",     value: "preschool",   icon: "🎒" },
-  { label: "Elementary",    value: "elementary",  icon: "🧒" },
-  { label: "Teens",         value: "teens",       icon: "🧑" },
-  { label: "Adults",        value: "adults",      icon: "🧑‍🦱" },
-];
-
-const CAT_COLORS: Record<Category, string> = {
-  "Nature":              "bg-[var(--ff-green-pale)] text-[var(--ff-green)]",
-  "Arts & Crafts":       "bg-purple-50 text-purple-700",
-  "History & Tours":     "bg-amber-50 text-amber-700",
-  "Adventure & Fitness": "bg-blue-50 text-blue-700",
-  "Family Programs":     "bg-pink-50 text-pink-700",
-  "Festivals & Culture": "bg-orange-50 text-orange-700",
-};
-
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function ParkEvents() {
-  const [search, setSearch]       = useState("");
-  const [month, setMonth]         = useState<Month | "all">("all");
-  const [category, setCategory]   = useState<Category | "all">("all");
-  const [ageGroup, setAgeGroup]   = useState<AgeBucket | "all">("all");
-  const [freeOnly, setFreeOnly]   = useState(false);
+  const [search, setSearch]         = useState("");
+  const [month, setMonth]           = useState<Month | "all">("all");
+  const [category, setCategory]     = useState<Category | "all">("all");
+  const [ageGroup, setAgeGroup]     = useState<AgeBucket | "all">("all");
+  const [freeOnly, setFreeOnly]     = useState(false);
+  const [sortBy, setSortBy]         = useState<SortBy>("date-asc");
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [expandedKeys, setExpandedKeys] = useState<Set<string>>(new Set());
 
   const toggleRow = (key: string) =>
     setExpandedKeys((prev) => {
       const next = new Set(prev);
-      next.has(key) ? next.delete(key) : next.add(key);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
       return next;
     });
 
@@ -196,12 +133,18 @@ export default function ParkEvents() {
           if (abbr && !seg.includes(abbr)) continue;
         }
 
-        result.push({ event: e, dateStr: seg, dateObj: parseFirstDate(seg) });
+        result.push({ event: e, dateStr: seg, dateObj: parseFirstDate(seg) } as EventRow);
       }
     }
 
-    return result.sort((a, b) => a.dateObj.getTime() - b.dateObj.getTime());
-  }, [search, month, category, ageGroup, freeOnly]);
+    // Apply sort
+    result.sort((a, b) => a.dateObj.getTime() - b.dateObj.getTime()); // base: date-asc
+    if (sortBy === "date-desc") result.reverse();
+    else if (sortBy === "alpha") result.sort((a, b) => a.event.name.localeCompare(b.event.name));
+    else if (sortBy === "free-first") result.sort((a, b) => Number(b.event.isFree) - Number(a.event.isFree));
+
+    return result;
+  }, [search, month, category, ageGroup, freeOnly, sortBy]);
 
   const uniqueEventCount = useMemo(
     () => new Set(rows.map((r) => r.event.name)).size,
@@ -214,9 +157,10 @@ export default function ParkEvents() {
     setCategory("all");
     setAgeGroup("all");
     setFreeOnly(false);
+    setSortBy("date-asc");
   };
 
-  const isFiltered = search || month !== "all" || category !== "all" || ageGroup !== "all" || freeOnly;
+  const isFiltered = !!(search || month !== "all" || category !== "all" || ageGroup !== "all" || freeOnly || sortBy !== "date-asc");
 
   return (
 		<div className="max-w-[1600px] mx-auto">
@@ -224,8 +168,8 @@ export default function ParkEvents() {
 			<div className="page-intro">
 				<h2>Monmouth County Park System — Spring 2026</h2>
 				<p>
-					Programs, events &amp; demonstrations from March through
-					June 2026. Registration opens{" "}
+					Programs, events &amp; demonstrations from March through June 2026.
+					Registration opens{" "}
 					<strong>Wednesday, February 11, 2026 at 8:00 AM</strong> at{" "}
 					<a
 						href="https://www.MonmouthCountyParks.com"
@@ -238,283 +182,69 @@ export default function ParkEvents() {
 				</p>
 			</div>
 
-			{/* ── Filter Panel ── */}
-			<div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 mb-5 flex flex-col gap-3">
-				{/* Search row */}
-				<div className="flex items-center gap-2">
-					<span className="text-lg">🔍</span>
-					<input
-						type="search"
-						value={search}
-						onChange={(e) => setSearch(e.target.value)}
-						placeholder="Search events, locations, activities…"
-						className="flex-1 border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--ff-green)] focus:border-transparent"
-					/>
-					{isFiltered && (
-						<button
-							onClick={clearFilters}
-							className="text-xs text-[var(--ff-gray)] hover:text-[var(--ff-green)] underline whitespace-nowrap">
-							Clear all
-						</button>
-					)}
-				</div>
+			{/* ── Three-column layout ── */}
+			<div className="flex gap-5 items-start">
 
-				{/* Filter chips row */}
-				<div className="flex flex-wrap gap-2 items-center">
-					{/* Month */}
-					<select
-						value={month}
-						onChange={(e) =>
-							setMonth(e.target.value as Month | "all")
-						}
-						className="border border-gray-300 rounded-lg px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[var(--ff-green)]">
-						{MONTHS.map((m) => (
-							<option key={m.value} value={m.value}>
-								{m.label}
-							</option>
-						))}
-					</select>
-
-					{/* Category pills */}
-					<div className="flex flex-wrap gap-1.5">
-						{CATEGORIES.map(({ label, value, icon }) => (
-							<button
-								key={value}
-								onClick={() =>
-									setCategory(value as Category | "all")
-								}
-								className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border transition-all
-                  ${
-						category === value
-							? "bg-[var(--ff-green)] text-white border-[var(--ff-green)]"
-							: "bg-white text-[var(--ff-gray)] border-gray-300 hover:border-[var(--ff-green)] hover:text-[var(--ff-green)]"
-					}`}>
-								{icon} {label}
-							</button>
-						))}
+				{/* Left sidebar — hidden on mobile, sticky on md+ */}
+				<aside className="hidden md:flex flex-col gap-0 w-64 shrink-0 sticky top-6 max-h-[calc(100vh-5rem)] overflow-y-auto">
+					<div className="gym-card p-4">
+						<FilterSidebar
+							search={search} setSearch={setSearch}
+							month={month} setMonth={setMonth}
+							category={category} setCategory={setCategory}
+							ageGroup={ageGroup} setAgeGroup={setAgeGroup}
+							freeOnly={freeOnly} setFreeOnly={setFreeOnly}
+							sortBy={sortBy} setSortBy={setSortBy}
+							isFiltered={isFiltered} clearFilters={clearFilters}
+						/>
 					</div>
-				</div>
+				</aside>
 
-				{/* Age row */}
-				<div className="flex flex-wrap gap-1.5 items-center">
-					{AGE_BUCKETS.map(({ label, value, icon }) => (
-						<button
-							key={value}
-							onClick={() =>
-								setAgeGroup(value as AgeBucket | "all")
-							}
-							className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border transition-all
-                ${
-					ageGroup === value
-						? "bg-[var(--ff-green)] text-white border-[var(--ff-green)]"
-						: "bg-white text-[var(--ff-gray)] border-gray-300 hover:border-[var(--ff-green)] hover:text-[var(--ff-green)]"
-				}`}>
-							{icon} {label}
-						</button>
-					))}
-
-					{/* Free toggle */}
+				{/* Center — main content */}
+				<div className="flex-1 min-w-0">
+					{/* Mobile filter button */}
 					<button
-						onClick={() => setFreeOnly(!freeOnly)}
-						className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border transition-all ml-auto
-              ${
-					freeOnly
-						? "bg-[var(--ff-green)] text-white border-[var(--ff-green)]"
-						: "bg-white text-[var(--ff-gray)] border-gray-300 hover:border-[var(--ff-green)] hover:text-[var(--ff-green)]"
-				}`}>
-						✅ Free only
+						onClick={() => setDrawerOpen(true)}
+						className="md:hidden flex items-center gap-2 mb-4 bg-white border border-gray-300 rounded-lg px-4 py-2 text-sm font-medium text-[var(--ff-gray)] hover:border-[var(--ff-green)] hover:text-[var(--ff-green)] transition-colors"
+					>
+						<SlidersHorizontal className="h-4 w-4" />
+						Filters &amp; Sort
+						{isFiltered && (
+							<span className="ml-1 bg-[var(--ff-green)] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+								ON
+							</span>
+						)}
 					</button>
+
+					<EventsTable
+						rows={rows}
+						expandedKeys={expandedKeys}
+						toggleRow={toggleRow}
+						isFiltered={isFiltered}
+						clearFilters={clearFilters}
+						uniqueEventCount={uniqueEventCount}
+						todayStr={todayStr}
+					/>
 				</div>
+
+				{/* Right panel — placeholder, hidden below lg */}
+				<aside className="hidden lg:block w-56 shrink-0">
+					<SavedPanel />
+				</aside>
 			</div>
 
-			{/* Result count */}
-			<p className="text-sm text-[var(--ff-gray)] mb-3 flex items-center gap-3">
-				<span className="font-medium text-[var(--ff-green)]">
-					Today: {todayStr}
-				</span>
-				<span className="text-gray-300">|</span>
-				<span>
-					{uniqueEventCount} event{uniqueEventCount !== 1 ? "s" : ""}
-					{isFiltered ? " match your filters" : " total"} ·{" "}
-					{rows.length} occurrence{rows.length !== 1 ? "s" : ""}
-				</span>
-			</p>
-
-			{/* ── Table ── */}
-			{rows.length === 0 ? (
-				<div className="gym-card p-10 text-center text-[var(--ff-gray)]">
-					No events match your filters.{" "}
-					<button
-						onClick={clearFilters}
-						className="underline text-[var(--ff-green)]">
-						Clear filters
-					</button>
-				</div>
-			) : (
-				<div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
-					<table className="w-full table-fixed text-sm border-collapse bg-white">
-						<thead>
-							<tr className="bg-[var(--ff-green)] text-white text-left">
-								<th className="px-4 py-3 font-semibold text-wrap w-[200px]">
-									Date
-								</th>
-								<th className="px-4 py-3 font-semibold w-[360px]">
-									Event
-								</th>
-								<th className="px-4 py-3 font-semibold hidden sm:table-cell">
-									Location
-								</th>
-								<th className="px-4 py-3 font-semibold w-[100px]">
-									Price
-								</th>
-								<th className="px-4 py-3 font-semibold hidden md:table-cell">
-									Ages
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-							{rows.map(({ event, dateStr }, i) => {
-								const rowKey = `${event.name}-${dateStr}`;
-								const hasSessions = !!event.sessions?.length;
-								const isExpanded = expandedKeys.has(rowKey);
-								const rowBg =
-									i % 2 === 0 ? "bg-white" : "bg-gray-50/60";
-
-								return (
-									<React.Fragment key={rowKey}>
-										<tr
-											onClick={
-												hasSessions
-													? () => toggleRow(rowKey)
-													: undefined
-											}
-											className={`border-t border-gray-100 align-top ${rowBg} hover:bg-[var(--ff-green-pale)] transition-colors ${hasSessions ? "cursor-pointer select-none" : ""}`}>
-											{/* Date */}
-											<td className="px-4 py-3 break-words text-[var(--ff-gray)] font-medium align-middle w-[400px]">
-												{hasSessions ? (
-													<span className="flex items-center gap-1">
-														<span
-															className={`text-[var(--ff-green)] transition-transform duration-200 inline-block ${isExpanded ? "rotate-90" : ""}`}
-															aria-hidden>
-															▶
-														</span>
-														<span className="ml-2">{dateStr}</span>
-													</span>
-												) : (
-													dateStr
-												)}
-											</td>
-
-											{/* Event name + category badge + note */}
-											<td className="px-4 py-3 w-[360px]">
-												<div className="font-semibold text-[var(--ff-green)] leading-snug">
-													{event.name}
-												</div>
-												{hasSessions && (
-													<span className="inline-block mt-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">
-														Multiple sessions
-													</span>
-												)}
-												{event.note && (
-													<div className="text-sm text-[var(--ff-gray)] mt-0.5 leading-snug">
-														{event.note}
-													</div>
-												)}
-												<span
-													className={`inline-block mt-1.5 text-[10px] font-semibold px-2 py-0.5 rounded-full ${CAT_COLORS[event.category]}`}>
-													{event.category}
-												</span>
-											</td>
-
-											{/* Location */}
-											<td className="px-4 py-3 text-[var(--ff-gray)] hidden sm:table-cell min-w-[160px] leading-snug">
-												{event.location}
-											</td>
-
-											{/* Price */}
-											<td className="px-3 py-3 w-[100px]">
-												{event.isFree ? (
-													<span className="font-semibold text-[var(--ff-green)]">
-														Free
-													</span>
-												) : (
-													<span className="text-[var(--ff-gray)]">
-														{event.price}
-													</span>
-												)}
-											</td>
-
-											{/* Ages */}
-											<td className="px-4 py-3 text-[var(--ff-gray)] hidden md:table-cell break-words">
-												{event.ages}
-											</td>
-										</tr>
-
-										{/* ── Expanded sessions sub-row ── */}
-										{hasSessions && isExpanded && (
-											<tr
-												key={`${rowKey}-sessions`}
-												className={`${rowBg} border-t-0`}>
-												<td />
-												<td
-													colSpan={4}
-													className="px-5 pb-4 pt-2">
-													<div className="flex flex-col gap-3">
-														{event.sessions!.map(
-															(s) => (
-																<div
-																	key={s.code}
-																	className="flex flex-col gap-1">
-																	<div className="flex items-center gap-2">
-																		<span className="font-mono text-xs font-bold bg-[var(--ff-green-pale)] text-[var(--ff-green)] px-2 py-0.5 rounded">
-																			{
-																				s.code
-																			}
-																		</span>
-																		<span className="text-sm font-medium text-[var(--ff-gray)]">
-																			{
-																				s.time
-																			}
-																		</span>
-																	</div>
-																	<div className="flex flex-wrap gap-x-3 gap-y-0.5 pl-1">
-																		{s.dates.map(
-																			(
-																				d,
-																			) => (
-																				<span
-																					key={
-																						d
-																					}
-																					className="text-xs text-[var(--ff-gray)]">
-																					{
-																						d
-																					}
-																				</span>
-																			),
-																		)}
-																	</div>
-																</div>
-															),
-														)}
-													</div>
-												</td>
-											</tr>
-										)}
-									</React.Fragment>
-								);
-							})}
-						</tbody>
-					</table>
-				</div>
-			)}
-
-			<p className="data-note mt-5">
-				Source: Spring 2026 Parks &amp; Programs Guide
-				(co.monmouth.nj.us). Registration opens Feb 11 at 8 AM. For June
-				&amp; summer programs check the Summer 2026 guide. Always verify
-				dates before visiting.
-			</p>
+			{/* Mobile filter drawer */}
+			<MobileFilterDrawer
+				isOpen={drawerOpen}
+				onClose={() => setDrawerOpen(false)}
+				search={search} setSearch={setSearch}
+				month={month} setMonth={setMonth}
+				category={category} setCategory={setCategory}
+				ageGroup={ageGroup} setAgeGroup={setAgeGroup}
+				freeOnly={freeOnly} setFreeOnly={setFreeOnly}
+				sortBy={sortBy} setSortBy={setSortBy}
+				isFiltered={isFiltered} clearFilters={clearFilters}
+			/>
 		</div>
   );
 }
