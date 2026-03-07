@@ -24,6 +24,8 @@ export default async function handler(req: Req, res: Res) {
     return res.status(500).json({ error: "Server configuration error." });
   }
 
+  const groupId = process.env.MAILERLITE_GROUP_ID;
+
   const mlRes = await fetch("https://connect.mailerlite.com/api/subscribers", {
     method: "POST",
     headers: {
@@ -34,6 +36,7 @@ export default async function handler(req: Req, res: Res) {
     body: JSON.stringify({
       email,
       fields: { name },
+      ...(groupId ? { groups: [groupId] } : {}),
     }),
   });
 
