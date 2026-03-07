@@ -3,21 +3,5 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ],
-
-  "compilerOptions": {
-     "baseUrl": ".",
-     "paths": {
-      "@/*": ["./src/*"]
-    },
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "target": "ES2022",
-    "outDir": "./dist",
-    "rootDir": "./",
-    "strict": true,
-    "esModuleInterop": true
-  },
-
-  "include": ["./"]
+  ]
 }

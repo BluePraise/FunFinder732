@@ -13,7 +13,22 @@
       "Apr",
       "May"
     ],
-    "note": "After a walk through the Longstreet Farmhouse, stop by the outdoor kitchen to see what's cooking on the wood-fired stove. Discover how recipes, cooking techniques and kitchens have changed since the 1890s."
+    "note": "After a walk through the Longstreet Farmhouse, stop by the outdoor kitchen to see what's cooking on the wood-fired stove. Discover how recipes, cooking techniques and kitchens have changed since the 1890s.",
+    "sessions": [
+      {
+        "time": "11AM-3PM",
+        "dates": [
+          "Sat Mar 7",
+          "Sat Mar 21",
+          "Sat Apr 4",
+          "Sat Apr 18",
+          "Sun Apr 26",
+          "Sat May 2",
+          "Sat May 16",
+          "Sun May 31"
+        ]
+      }
+    ]
   },
   {
     "name": "Accordion Melodies of the 1890s",
@@ -29,7 +44,17 @@
       "Apr",
       "May"
     ],
-    "note": "Enjoy melodies of the 1890s played on the accordion while you visit the Longstreet farmhouse."
+    "note": "Enjoy melodies of the 1890s played on the accordion while you visit the Longstreet farmhouse.",
+    "sessions": [
+      {
+        "time": "1-3PM",
+        "dates": [
+          "Sat Mar 21",
+          "Sat Apr 18",
+          "Sat May 16"
+        ]
+      }
+    ]
   },
   {
     "name": "Piano Ballads from the Turn of the Century",
@@ -45,7 +70,17 @@
       "Apr",
       "May"
     ],
-    "note": "Tap your feet, dance a one-step, or sing along to popular turn-of-the-19th-century ballads as they are played on the farmhouse piano."
+    "note": "Tap your feet, dance a one-step, or sing along to popular turn-of-the-19th-century ballads as they are played on the farmhouse piano.",
+    "sessions": [
+      {
+        "time": "1-3PM",
+        "dates": [
+          "Sat Mar 28",
+          "Sat May 30",
+          "Sat Apr 11"
+        ]
+      }
+    ]
   },
   {
     "name": "Blacksmith Demonstration",
@@ -61,7 +96,17 @@
       "Apr",
       "May"
     ],
-    "note": "The blacksmith will be working at the anvil turning iron into functional tools and hardware. See craftsmanship in action and learn about the rich history behind the forge."
+    "note": "The blacksmith will be working at the anvil turning iron into functional tools and hardware. See craftsmanship in action and learn about the rich history behind the forge.",
+    "sessions": [
+      {
+        "time": "1-3PM",
+        "dates": [
+          "Sun Mar 8",
+          "Sun May 10",
+          "Sun Apr 12"
+        ]
+      }
+    ]
   },
   {
     "name": "19th Century Woodworking Demonstration",
@@ -76,7 +121,16 @@
       "Mar",
       "May"
     ],
-    "note": "Woodworking is more than carpentry. See how a woodworker studies his materials, plies his tools, and crafts beautiful and functional items."
+    "note": "Woodworking is more than carpentry. See how a woodworker studies his materials, plies his tools, and crafts beautiful and functional items.",
+    "sessions": [
+      {
+        "time": "1-3PM",
+        "dates": [
+          "Sat Mar 21",
+          "Sat May 16"
+        ]
+      }
+    ]
   },
   {
     "name": "Wood Carving Demonstration",
@@ -188,7 +242,16 @@
     "months": [
       "Apr"
     ],
-    "note": "Learn how farmers use traditional blade shearing practices to remove the fleece from sheep. Gene Sheninger will return with his collies to demonstrate herding skills."
+    "note": "Learn how farmers use traditional blade shearing practices to remove the fleece from sheep. Gene Sheninger will return with his collies to demonstrate herding skills.",
+    "sessions": [
+      {
+        "time": "12-3PM",
+        "dates": [
+          "Sat Apr 25",
+          "Sun Apr 26"
+        ]
+      }
+    ]
   },
   {
     "name": "Decoration Day Celebration",
@@ -218,7 +281,20 @@
       "Apr",
       "May"
     ],
-    "note": "Help the farm staff with morning chores before the farm opens. Experience milking a cow, collecting eggs, and feeding the livestock. Ages 6+; under 18 must be with adult. Closed-toe shoes required. ONE session per season per participant."
+    "note": "Help the farm staff with morning chores before the farm opens. Experience milking a cow, collecting eggs, and feeding the livestock. Ages 6+; under 18 must be with adult. Closed-toe shoes required. ONE session per season per participant.",
+    "sessions": [
+      {
+        "time": "8-9:30AM",
+        "dates": [
+          "Sat Mar 7",
+          "Sun Mar 22",
+          "Sat Apr 4",
+          "Sun Apr 19",
+          "Sat May 2",
+          "Sun May 17"
+        ]
+      }
+    ]
   },
   {
     "name": "Adult Farm Chores",
@@ -261,7 +337,15 @@
       "Mar",
       "May"
     ],
-    "note": "Gather with other rug hookers or learn techniques from experienced rug hookers. Bring an existing project or come for inspiration. Bring your lunch."
+    "note": "Gather with other rug hookers or learn techniques from experienced rug hookers. Bring an existing project or come for inspiration. Bring your lunch.",
+    "sessions": [
+      {
+        "time": "10AM-3PM (10 sessions)",
+        "dates": [
+          "Tue Mar 17–May 19"
+        ]
+      }
+    ]
   },
   {
     "name": "Farm Buds",
@@ -276,7 +360,15 @@
       "Apr",
       "May"
     ],
-    "note": "Growing a garden! Each week, learn about a new plant, spend time in the garden, visit the chickens, and head to the farmhouse for stories and games. Plant seeds to take home."
+    "note": "Growing a garden! Each week, learn about a new plant, spend time in the garden, visit the chickens, and head to the farmhouse for stories and games. Plant seeds to take home.",
+    "sessions": [
+      {
+        "time": "10:30-11:45AM (9 sessions)",
+        "dates": [
+          "Thu Apr 2–May 28"
+        ]
+      }
+    ]
   },
   {
     "name": "Walnford Day",
@@ -306,7 +398,33 @@
       "May",
       "Jun"
     ],
-    "note": "Experience sights and sounds of years past as corn is ground into meal at Waln's Mill. Demonstrations on weekend afternoons April–November."
+    "note": "Experience sights and sounds of years past as corn is ground into meal at Waln's Mill. Demonstrations on weekend afternoons April–November.",
+    "sessions": [
+      {
+        "time": "12:30PM",
+        "dates": [
+          "Weekends Apr–Nov"
+        ]
+      },
+      {
+        "time": "1:30PM",
+        "dates": [
+          "Weekends Apr–Nov"
+        ]
+      },
+      {
+        "time": "2:30PM",
+        "dates": [
+          "Weekends Apr–Nov"
+        ]
+      },
+      {
+        "time": "3:30PM",
+        "dates": [
+          "Weekends Apr–Nov"
+        ]
+      }
+    ]
   },
   {
     "name": "Spring Eggstravaganza",
@@ -376,7 +494,15 @@
     "months": [
       "Apr"
     ],
-    "note": "Visit the Seabrook-Wilson House, dating back to the early 1700s — one of the oldest homes along the Jersey shore and the oldest along Sandy Hook Bay."
+    "note": "Visit the Seabrook-Wilson House, dating back to the early 1700s — one of the oldest homes along the Jersey shore and the oldest along Sandy Hook Bay.",
+    "sessions": [
+      {
+        "time": "1-4PM",
+        "dates": [
+          "Mon/Thu/Sun Apr 2–Oct 29"
+        ]
+      }
+    ]
   },
   {
     "name": "Historic Portland Place Tours",
@@ -390,7 +516,33 @@
     "months": [
       "May"
     ],
-    "note": "Owned by the Hartshorne family for most of its history, Portland Place is interwoven with the early settlement of the Navesink Highlands. Tours limited to 10 people."
+    "note": "Owned by the Hartshorne family for most of its history, Portland Place is interwoven with the early settlement of the Navesink Highlands. Tours limited to 10 people.",
+    "sessions": [
+      {
+        "time": "10:30AM",
+        "dates": [
+          "Wed–Sun May 2–Nov 14"
+        ]
+      },
+      {
+        "time": "11:30AM",
+        "dates": [
+          "Wed–Sun May 2–Nov 14"
+        ]
+      },
+      {
+        "time": "1:30PM",
+        "dates": [
+          "Wed–Sun May 2–Nov 14"
+        ]
+      },
+      {
+        "time": "2:30PM",
+        "dates": [
+          "Wed–Sun May 2–Nov 14"
+        ]
+      }
+    ]
   },
   {
     "name": "Historic Racing Stable Tours",
@@ -404,7 +556,15 @@
     "months": [
       "May"
     ],
-    "note": "Located within the Brookdale Farm National Historic District, the racing stable showcases the history of Thoroughbred racing in Monmouth County through exhibits in the horse stalls."
+    "note": "Located within the Brookdale Farm National Historic District, the racing stable showcases the history of Thoroughbred racing in Monmouth County through exhibits in the horse stalls.",
+    "sessions": [
+      {
+        "time": "10AM-4PM",
+        "dates": [
+          "Fri/Sat/Sun May 2–Oct 18"
+        ]
+      }
+    ]
   },
   {
     "name": "Historic Battery Lewis Tours",
@@ -418,7 +578,15 @@
     "months": [
       "May"
     ],
-    "note": "The restored Battery Lewis at the 224-acre Navesink Military Reservation includes interpretive exhibits and a 16-inch gun barrel."
+    "note": "The restored Battery Lewis at the 224-acre Navesink Military Reservation includes interpretive exhibits and a 16-inch gun barrel.",
+    "sessions": [
+      {
+        "time": "10AM-4PM",
+        "dates": [
+          "Sat/Sun May 23–Oct 11"
+        ]
+      }
+    ]
   },
   {
     "name": "Friday Evening Pottery",
@@ -542,7 +710,27 @@
     "months": [
       "Mar"
     ],
-    "note": "Grab your flashlight! Easter Bunny is supervising an egg clean-up. Help collect eggs, create spring crafts, and enjoy a visit with the Bunny."
+    "note": "Grab your flashlight! Easter Bunny is supervising an egg clean-up. Help collect eggs, create spring crafts, and enjoy a visit with the Bunny.",
+    "sessions": [
+      {
+        "time": "6-6:30PM",
+        "dates": [
+          "Fri Mar 27"
+        ]
+      },
+      {
+        "time": "6:45-7:15PM",
+        "dates": [
+          "Fri Mar 27"
+        ]
+      },
+      {
+        "time": "7:30-8PM",
+        "dates": [
+          "Fri Mar 27"
+        ]
+      }
+    ]
   },
   {
     "name": "Mum! Dad! Bingo! Bluey™!",
@@ -557,7 +745,16 @@
       "Mar",
       "May"
     ],
-    "note": "Step into the world of Bluey™! Musical Statues, Pass the Parcel, Keepy Uppy, Raiders, plus a Bluey™-themed craft and scavenger hunt."
+    "note": "Step into the world of Bluey™! Musical Statues, Pass the Parcel, Keepy Uppy, Raiders, plus a Bluey™-themed craft and scavenger hunt.",
+    "sessions": [
+      {
+        "time": "6-7PM",
+        "dates": [
+          "Fri Mar 13",
+          "Fri May 8"
+        ]
+      }
+    ]
   },
   {
     "name": "Agatha Christie's 'The Mousetrap'",
@@ -571,7 +768,16 @@
     "months": [
       "May"
     ],
-    "note": "A snowstorm traps strangers in a remote manor; a murder has been committed. The world's longest running play. Pre-registration required."
+    "note": "A snowstorm traps strangers in a remote manor; a murder has been committed. The world's longest running play. Pre-registration required.",
+    "sessions": [
+      {
+        "time": "3-5PM",
+        "dates": [
+          "Sat May 30",
+          "Sun May 31"
+        ]
+      }
+    ]
   },
   {
     "name": "Under the Spring Stars",
@@ -655,7 +861,30 @@
     "months": [
       "May"
     ],
-    "note": "America 250-themed evening pontoon tour on Manasquan Reservoir searching for bald eagles. Wear red, white, and blue! Life jackets provided and required."
+    "note": "America 250-themed evening pontoon tour on Manasquan Reservoir searching for bald eagles. Wear red, white, and blue! Life jackets provided and required.",
+    "sessions": [
+      {
+        "time": "4:30-5:30PM",
+        "dates": [
+          "Fri May 15",
+          "May 29"
+        ]
+      },
+      {
+        "time": "5:30-6:30PM",
+        "dates": [
+          "Fri May 15",
+          "May 29"
+        ]
+      },
+      {
+        "time": "6:30-7:30PM",
+        "dates": [
+          "Fri May 15",
+          "May 29"
+        ]
+      }
+    ]
   },
   {
     "name": "Forest Friends After Five",
@@ -795,7 +1024,33 @@
     "months": [
       "May"
     ],
-    "note": "45-minute narrated boat tours with chances to view turtles, egrets, herons, ospreys, and possibly a bald eagle. Life jackets provided and required. Call 732-751-9453."
+    "note": "45-minute narrated boat tours with chances to view turtles, egrets, herons, ospreys, and possibly a bald eagle. Life jackets provided and required. Call 732-751-9453.",
+    "sessions": [
+      {
+        "time": "2PM",
+        "dates": [
+          "May 23–Sep 7"
+        ]
+      },
+      {
+        "time": "3PM",
+        "dates": [
+          "May 23–Sep 7"
+        ]
+      },
+      {
+        "time": "4PM",
+        "dates": [
+          "May 23–Sep 7"
+        ]
+      },
+      {
+        "time": "5PM",
+        "dates": [
+          "May 23–Sep 7"
+        ]
+      }
+    ]
   },
   {
     "name": "Kayak Fishing the Manasquan Reservoir",
@@ -809,7 +1064,16 @@
     "months": [
       "May"
     ],
-    "note": "Fish for tiger muskies, largemouth bass, channel catfish, perch, crappie, and bluegill from sit-on-top kayaks. Bring gear or borrow ours."
+    "note": "Fish for tiger muskies, largemouth bass, channel catfish, perch, crappie, and bluegill from sit-on-top kayaks. Bring gear or borrow ours.",
+    "sessions": [
+      {
+        "time": "9AM-1PM",
+        "dates": [
+          "Tue May 19",
+          "Sun May 31"
+        ]
+      }
+    ]
   },
   {
     "name": "Freshwater Fishing Derbies",
@@ -823,7 +1087,21 @@
     "months": [
       "Jun"
     ],
-    "note": "Annual fishing derbies for beginners and experienced anglers. Free casting/rigging clinic 12:30-1:30PM. Prizes for longest fish. Worms included. Fishing poles rent $5."
+    "note": "Annual fishing derbies for beginners and experienced anglers. Free casting/rigging clinic 12:30-1:30PM. Prizes for longest fish. Worms included. Fishing poles rent $5.",
+    "sessions": [
+      {
+        "time": "Manasquan Res",
+        "dates": [
+          "Sat Jun 20 2-5PM"
+        ]
+      },
+      {
+        "time": "Turkey Swamp",
+        "dates": [
+          "Sun Jun 21 2-5PM"
+        ]
+      }
+    ]
   },
   {
     "name": "Canoe Rentals on Marlu Lake",
@@ -838,7 +1116,22 @@
       "May",
       "Jun"
     ],
-    "note": "Rent a canoe at Thompson Park's Marlu Lake. All equipment provided. Must return by 3PM. Available every other weekend from Memorial Day through August."
+    "note": "Rent a canoe at Thompson Park's Marlu Lake. All equipment provided. Must return by 3PM. Available every other weekend from Memorial Day through August.",
+    "sessions": [
+      {
+        "time": "10AM-3PM",
+        "dates": [
+          "May 23 & 24",
+          "Jun 6 & 7",
+          "Jun 20 & 21",
+          "Jul 4 & 5",
+          "Jul 18 & 19",
+          "Aug 1 & 2",
+          "Aug 15 & 16",
+          "Aug 29 & 30"
+        ]
+      }
+    ]
   },
   {
     "name": "Climb Time",
@@ -853,7 +1146,21 @@
       "Apr",
       "May"
     ],
-    "note": "Experience the thrill of climbing our 25-foot portable climbing wall. Must be 42 inches or taller to climb."
+    "note": "Experience the thrill of climbing our 25-foot portable climbing wall. Must be 42 inches or taller to climb.",
+    "sessions": [
+      {
+        "time": "12-3PM",
+        "dates": [
+          "Fri Apr 10"
+        ]
+      },
+      {
+        "time": "3-6PM",
+        "dates": [
+          "Fri May 8"
+        ]
+      }
+    ]
   },
   {
     "name": "Open Shoot Archery",
@@ -869,7 +1176,17 @@
       "Apr",
       "May"
     ],
-    "note": "Improve your archery skills at Thompson Park Activity Barn's indoor range. NOT for beginners — take an instructional class first. Dress for weather (barn not heated/cooled)."
+    "note": "Improve your archery skills at Thompson Park Activity Barn's indoor range. NOT for beginners — take an instructional class first. Dress for weather (barn not heated/cooled).",
+    "sessions": [
+      {
+        "time": "10AM-1PM",
+        "dates": [
+          "Sat Mar 14",
+          "Sat Apr 11",
+          "Sat May 16"
+        ]
+      }
+    ]
   },
   {
     "name": "Archery Golf",
@@ -1229,7 +1546,28 @@
       "May",
       "Jun"
     ],
-    "note": "Fun and creative activities to enhance motor skills and develop language and social skills using fun and safe materials."
+    "note": "Fun and creative activities to enhance motor skills and develop language and social skills using fun and safe materials.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Multiple series: Tue Mar 31–May 5",
+          "Thu Apr 2–May 7"
+        ]
+      },
+      {
+        "time": "Thompson",
+        "dates": [
+          "Tue May 12–Jun 16"
+        ]
+      },
+      {
+        "time": "Henry Hudson",
+        "dates": [
+          "Thu May 14–Jun 18"
+        ]
+      }
+    ]
   },
   {
     "name": "Mommy and Me for Mother's Day",
@@ -1327,7 +1665,21 @@
     "months": [
       "May"
     ],
-    "note": "A patriotic themed tea party — make a snack, drink tea, do a craft, and enjoy quality time together."
+    "note": "A patriotic themed tea party — make a snack, drink tea, do a craft, and enjoy quality time together.",
+    "sessions": [
+      {
+        "time": "10-10:45AM",
+        "dates": [
+          "Thu May 21"
+        ]
+      },
+      {
+        "time": "11:15AM-12PM",
+        "dates": [
+          "Thu May 21"
+        ]
+      }
+    ]
   },
   {
     "name": "Shamrock Cut-Up Cake",
@@ -1355,7 +1707,21 @@
     "months": [
       "Mar"
     ],
-    "note": "Make a spring bunny cut-up cake using chocolate cake mix with food coloring design techniques."
+    "note": "Make a spring bunny cut-up cake using chocolate cake mix with food coloring design techniques.",
+    "sessions": [
+      {
+        "time": "10AM-12:30PM",
+        "dates": [
+          "Sat Mar 21"
+        ]
+      },
+      {
+        "time": "6-8:30PM",
+        "dates": [
+          "Fri Mar 27"
+        ]
+      }
+    ]
   },
   {
     "name": "Summer Treats",
@@ -1516,7 +1882,23 @@
       "Mar",
       "May"
     ],
-    "note": "Themed stories, snacks, and making a simple snack and tea together. Make new friends!"
+    "note": "Themed stories, snacks, and making a simple snack and tea together. Make new friends!",
+    "sessions": [
+      {
+        "time": "10-10:45AM",
+        "dates": [
+          "Thu Mar 26",
+          "Thu May 7"
+        ]
+      },
+      {
+        "time": "11-11:45AM",
+        "dates": [
+          "Thu Mar 26",
+          "Thu May 7"
+        ]
+      }
+    ]
   },
   {
     "name": "You, Me & Karaoke",
@@ -1544,7 +1926,16 @@
     "months": [
       "May"
     ],
-    "note": "Paint a flower pot together and plant seeds to watch flowers grow at home. For mothers and all mother figures to celebrate Mother's Day."
+    "note": "Paint a flower pot together and plant seeds to watch flowers grow at home. For mothers and all mother figures to celebrate Mother's Day.",
+    "sessions": [
+      {
+        "time": "10-11:30AM",
+        "dates": [
+          "Sat May 2",
+          "Sat May 9"
+        ]
+      }
+    ]
   },
   {
     "name": "Storytime in the Garden: Growing Vegetable Soup",
@@ -1558,7 +1949,16 @@
     "months": [
       "May"
     ],
-    "note": "Springtime story about growing vegetables, followed by a spring-themed craft and a garden walk to see what's growing."
+    "note": "Springtime story about growing vegetables, followed by a spring-themed craft and a garden walk to see what's growing.",
+    "sessions": [
+      {
+        "time": "10-11AM",
+        "dates": [
+          "Fri May 15",
+          "Sat May 23"
+        ]
+      }
+    ]
   },
   {
     "name": "Storytime in the Garden: Planting a Rainbow",
@@ -1573,7 +1973,17 @@
       "Mar",
       "Apr"
     ],
-    "note": "Story time about planting rainbow seeds and watching a garden grow, followed by a rainbow-themed craft."
+    "note": "Story time about planting rainbow seeds and watching a garden grow, followed by a rainbow-themed craft.",
+    "sessions": [
+      {
+        "time": "10-11AM",
+        "dates": [
+          "Fri Mar 13",
+          "Fri Mar 20",
+          "Sat Apr 18"
+        ]
+      }
+    ]
   },
   {
     "name": "Abracadabra, It's Spring!",
@@ -1643,7 +2053,16 @@
     "months": [
       "Apr"
     ],
-    "note": "De-stress with a forest-bathing adventure. Mindful hour in the woods listening to trees and birds. Closed-toe shoes required."
+    "note": "De-stress with a forest-bathing adventure. Mindful hour in the woods listening to trees and birds. Closed-toe shoes required.",
+    "sessions": [
+      {
+        "time": "11AM-12PM",
+        "dates": [
+          "Wed Apr 22",
+          "Wed Apr 29"
+        ]
+      }
+    ]
   },
   {
     "name": "Grow with Love",
@@ -1700,7 +2119,21 @@
       "Apr",
       "May"
     ],
-    "note": "Walk where children explore nature through the lens of a single color. Toddler's pace, building observation skills and sparking curiosity."
+    "note": "Walk where children explore nature through the lens of a single color. Toddler's pace, building observation skills and sparking curiosity.",
+    "sessions": [
+      {
+        "time": "Deep Cut",
+        "dates": [
+          "Tue Apr 21 10-11AM"
+        ]
+      },
+      {
+        "time": "Freneau",
+        "dates": [
+          "Wed May 20 10-11AM"
+        ]
+      }
+    ]
   },
   {
     "name": "My First Fish",
@@ -1715,7 +2148,16 @@
       "Apr",
       "May"
     ],
-    "note": "A Naturalist helps you and your child catch their first fish! Catch-and-release. Bait, poles, and instruction provided."
+    "note": "A Naturalist helps you and your child catch their first fish! Catch-and-release. Bait, poles, and instruction provided.",
+    "sessions": [
+      {
+        "time": "10-11:30AM",
+        "dates": [
+          "Sun Apr 26",
+          "Sun May 17"
+        ]
+      }
+    ]
   },
   {
     "name": "Nature Tots",
@@ -1731,7 +2173,17 @@
       "Apr",
       "May"
     ],
-    "note": "Outdoor fun with toddlers on scenic park trails with nature discovery and craft activities. Designed for short legs and short attention spans. Children under 2 welcome free."
+    "note": "Outdoor fun with toddlers on scenic park trails with nature discovery and craft activities. Designed for short legs and short attention spans. Children under 2 welcome free.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Chipmunk Series: Fri Mar 6-20",
+          "Purple Martin Series: Wed Apr 1-15",
+          "Butterfly Series: Thu May 7-21"
+        ]
+      }
+    ]
   },
   {
     "name": "Springing Into Sunshine",
@@ -1746,7 +2198,15 @@
       "Apr",
       "May"
     ],
-    "note": "Preschool series exploring nature topics with short walks, games, and crafts. At times part of the program takes place indoors."
+    "note": "Preschool series exploring nature topics with short walks, games, and crafts. At times part of the program takes place indoors.",
+    "sessions": [
+      {
+        "time": "10-11:15AM",
+        "dates": [
+          "Wed Apr 22–May 13"
+        ]
+      }
+    ]
   },
   {
     "name": "Hiking Adventures",
@@ -1762,7 +2222,27 @@
       "Apr",
       "May"
     ],
-    "note": "Short hikes designed for little legs and short attention spans. Children under 2 welcome free. Bring a back or front carrier."
+    "note": "Short hikes designed for little legs and short attention spans. Children under 2 welcome free. Bring a back or front carrier.",
+    "sessions": [
+      {
+        "time": "Thompson Pk",
+        "dates": [
+          "Sat Mar 21"
+        ]
+      },
+      {
+        "time": "Big Brook Pk",
+        "dates": [
+          "Sat Apr 18"
+        ]
+      },
+      {
+        "time": "Deep Cut Gardens",
+        "dates": [
+          "Fri May 22"
+        ]
+      }
+    ]
   },
   {
     "name": "Let's Explore",
@@ -1875,7 +2355,27 @@
       "Mar",
       "Jun"
     ],
-    "note": "Pre-ballet class! Basic ballet movement through props and fun songs. Adults dressed to move. Students wear ballet shoes and attire."
+    "note": "Pre-ballet class! Basic ballet movement through props and fun songs. Adults dressed to move. Students wear ballet shoes and attire.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Tue Mar 24–Jun 9"
+        ]
+      },
+      {
+        "time": "9:30-10:15AM, no class 4/7-8",
+        "dates": [
+          "Wed Mar 25–Jun 10"
+        ]
+      },
+      {
+        "time": "5/12-13",
+        "dates": [
+          "Wed Mar 25–Jun 10"
+        ]
+      }
+    ]
   },
   {
     "name": "Morning Playtime",
@@ -1906,7 +2406,21 @@
       "Apr",
       "Jun"
     ],
-    "note": "Introduction to dance and movement! Sing, dance, and explore while building basic motor skills using scarves, beanbags, and musical instruments."
+    "note": "Introduction to dance and movement! Sing, dance, and explore while building basic motor skills using scarves, beanbags, and musical instruments.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Wed Mar 4–Apr 22"
+        ]
+      },
+      {
+        "time": "various times",
+        "dates": [
+          "Wed Apr 29–Jun 3"
+        ]
+      }
+    ]
   },
   {
     "name": "My Morning Playtime",
@@ -1923,7 +2437,18 @@
       "May",
       "Jun"
     ],
-    "note": "Most active Playtime class for preschoolers ready for a little independence. Free-play with tunnels and trampolines, then themed and movement activities."
+    "note": "Most active Playtime class for preschoolers ready for a little independence. Free-play with tunnels and trampolines, then themed and movement activities.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Multiple series: Thu Mar 12–Apr 9",
+          "Thu Apr 23–May 21",
+          "Wed Apr 1-29",
+          "Wed May 6–Jun 3"
+        ]
+      }
+    ]
   },
   {
     "name": "PreK Prep",
@@ -1939,7 +2464,16 @@
       "Apr",
       "May"
     ],
-    "note": "Get your child ready for school: number recognition, counting, letter recognition, seasons, days of week, shapes, and free play."
+    "note": "Get your child ready for school: number recognition, counting, letter recognition, seasons, days of week, shapes, and free play.",
+    "sessions": [
+      {
+        "time": "11:30AM-12:15PM",
+        "dates": [
+          "Thu Mar 12–Apr 16",
+          "Thu Apr 30–May 28"
+        ]
+      }
+    ]
   },
   {
     "name": "Sensory Explorers",
@@ -1955,7 +2489,16 @@
       "Apr",
       "Jun"
     ],
-    "note": "Explore the world through sound, vision, and touch! Multi-sensory activities, messy art, song, and dance. Designed to grow young children's brains and fine motor skills."
+    "note": "Explore the world through sound, vision, and touch! Multi-sensory activities, messy art, song, and dance. Designed to grow young children's brains and fine motor skills.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Tue Mar 3–Apr 21",
+          "Tue Apr 28–Jun 2"
+        ]
+      }
+    ]
   },
   {
     "name": "Superheroes",
@@ -1971,7 +2514,16 @@
       "Apr",
       "May"
     ],
-    "note": "Unleash your child's inner superhero! After a story, soar, climb, jump, run, and have fun. Different superhero each week. Avengers series (Mar) and Justice League series (Apr-May)."
+    "note": "Unleash your child's inner superhero! After a story, soar, climb, jump, run, and have fun. Different superhero each week. Avengers series (Mar) and Justice League series (Apr-May).",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Avengers: Mon Mar 2-30",
+          "Justice League: Mon Apr 13–May 11"
+        ]
+      }
+    ]
   },
   {
     "name": "The Power of Play",
@@ -1987,7 +2539,16 @@
       "Apr",
       "May"
     ],
-    "note": "Structured play using games and recreation to reinforce following directions, taking turns, motor skills, and social play. Fun intro to competition for young children."
+    "note": "Structured play using games and recreation to reinforce following directions, taking turns, motor skills, and social play. Fun intro to competition for young children.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Fri Mar 13–Apr 10",
+          "Fri Apr 24–May 15"
+        ]
+      }
+    ]
   },
   {
     "name": "When You Wish Upon a Star",
@@ -2031,7 +2592,18 @@
       "May",
       "Jun"
     ],
-    "note": "Parent and child practice passing, shooting, and dribbling together. Parent participation required."
+    "note": "Parent and child practice passing, shooting, and dribbling together. Parent participation required.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Multiple series: Mon Apr 6–27",
+          "Sat Apr 11–May 2",
+          "Mon May 11–Jun 8",
+          "Sat May 16–Jun 20"
+        ]
+      }
+    ]
   },
   {
     "name": "Hat Trick Hockey - Mites",
@@ -2047,7 +2619,17 @@
       "May",
       "Jun"
     ],
-    "note": "Fun start in sports with sneakers (not skates) and soft equipment! Parental assistance required during each class. Bring a camera!"
+    "note": "Fun start in sports with sneakers (not skates) and soft equipment! Parental assistance required during each class. Bring a camera!",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Thu Apr 9-30",
+          "Sat Apr 11–May 2",
+          "Thu May 14–Jun 4"
+        ]
+      }
+    ]
   },
   {
     "name": "Summer Job Fair",
@@ -2133,7 +2715,20 @@
       "Apr",
       "May"
     ],
-    "note": "Join a Park System Naturalist on a peaceful trail walk. Trees blossoming, birds returning from migration, and tons of topics to discuss!"
+    "note": "Join a Park System Naturalist on a peaceful trail walk. Trees blossoming, birds returning from migration, and tons of topics to discuss!",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Wed Mar 11",
+          "Wed Mar 18",
+          "Wed Apr 15",
+          "Wed Apr 29",
+          "Wed May 13",
+          "Wed May 21"
+        ]
+      }
+    ]
   },
   {
     "name": "Casual Birder",
@@ -2149,7 +2744,18 @@
       "Apr",
       "May"
     ],
-    "note": "FREE laid-back morning bird walks with a Park System Naturalist for about an hour and a half. No expertise needed."
+    "note": "FREE laid-back morning bird walks with a Park System Naturalist for about an hour and a half. No expertise needed.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Tue Mar 24",
+          "Tue Apr 28",
+          "Tue May 5",
+          "Tue May 19"
+        ]
+      }
+    ]
   },
   {
     "name": "Menhaden: The Most Important Fish Along the Jersey Shore!",
@@ -2211,7 +2817,21 @@
       "May",
       "Jun"
     ],
-    "note": "Combines soccer skills with art projects. Builds gross and fine motor skills, socialization, and preschool readiness."
+    "note": "Combines soccer skills with art projects. Builds gross and fine motor skills, socialization, and preschool readiness.",
+    "sessions": [
+      {
+        "time": "indoor",
+        "dates": [
+          "Mar 10–31"
+        ]
+      },
+      {
+        "time": "outdoor",
+        "dates": [
+          "Apr 7–28, May 12–Jun 2"
+        ]
+      }
+    ]
   },
   {
     "name": "Kixx Soccer & Crafts: World Cup Edition!",
@@ -2243,7 +2863,15 @@
       "Apr",
       "May"
     ],
-    "note": "Intro to movement: throwing, kicking, running, jumping. Fun noncompetitive setting designed for toddlers with parent guidance."
+    "note": "Intro to movement: throwing, kicking, running, jumping. Fun noncompetitive setting designed for toddlers with parent guidance.",
+    "sessions": [
+      {
+        "time": "1–29",
+        "dates": [
+          "Mar 13–Apr 17 (no 4/3), May"
+        ]
+      }
+    ]
   },
   {
     "name": "Pee Wee Sports",
@@ -2259,7 +2887,15 @@
       "Apr",
       "May"
     ],
-    "note": "Fundamentals of sport through fun, skill-building games. Coordination, teamwork, and confidence in a positive noncompetitive environment."
+    "note": "Fundamentals of sport through fun, skill-building games. Coordination, teamwork, and confidence in a positive noncompetitive environment.",
+    "sessions": [
+      {
+        "time": "1–29",
+        "dates": [
+          "Mar 13–Apr 17 (no 4/3), May"
+        ]
+      }
+    ]
   },
   {
     "name": "Mini-Hawk Multi Sport",
@@ -2304,7 +2940,21 @@
     "months": [
       "Apr"
     ],
-    "note": "Hand-build a clay flower pot. Learn basic techniques and embellish with glazes. Ready for pickup 2 weeks after."
+    "note": "Hand-build a clay flower pot. Learn basic techniques and embellish with glazes. Ready for pickup 2 weeks after.",
+    "sessions": [
+      {
+        "time": "12–1:30 PM",
+        "dates": [
+          "Sat Apr 11"
+        ]
+      },
+      {
+        "time": "2–3:30 PM",
+        "dates": [
+          "Sat Apr 11"
+        ]
+      }
+    ]
   },
   {
     "name": "Ceramic Bunnies",
@@ -2318,7 +2968,21 @@
     "months": [
       "Mar"
     ],
-    "note": "Glaze and decorate a pre-cast ceramic Easter bunny. Kiln-fired and ready for pickup one week after class."
+    "note": "Glaze and decorate a pre-cast ceramic Easter bunny. Kiln-fired and ready for pickup one week after class.",
+    "sessions": [
+      {
+        "time": "12–1:30 PM",
+        "dates": [
+          "Sat Mar 14"
+        ]
+      },
+      {
+        "time": "2–3:30 PM",
+        "dates": [
+          "Sat Mar 14"
+        ]
+      }
+    ]
   },
   {
     "name": "Children's Ceramics",
@@ -2569,7 +3233,21 @@
     "months": [
       "Apr"
     ],
-    "note": "Paint and decorate a ceramic plate as a Mother's Day gift. Kiln-fired, ready for pickup in one week."
+    "note": "Paint and decorate a ceramic plate as a Mother's Day gift. Kiln-fired, ready for pickup in one week.",
+    "sessions": [
+      {
+        "time": "12–1:30 PM",
+        "dates": [
+          "Sat Apr 18"
+        ]
+      },
+      {
+        "time": "2–3:30 PM",
+        "dates": [
+          "Sat Apr 18"
+        ]
+      }
+    ]
   },
   {
     "name": "Springtime Birdhouses",
@@ -2583,7 +3261,21 @@
     "months": [
       "May"
     ],
-    "note": "Build and paint a clay birdhouse. Hand-building skills included. Ready for pickup two weeks after class."
+    "note": "Build and paint a clay birdhouse. Hand-building skills included. Ready for pickup two weeks after class.",
+    "sessions": [
+      {
+        "time": "12–1:30 PM",
+        "dates": [
+          "Sat May 16"
+        ]
+      },
+      {
+        "time": "2–3:30 PM",
+        "dates": [
+          "Sat May 16"
+        ]
+      }
+    ]
   },
   {
     "name": "Aspiring Artists for Homeschoolers",
@@ -2615,7 +3307,15 @@
       "Apr",
       "May"
     ],
-    "note": "Learn Impressionism/Fauvism brushstrokes using acrylic paints. Paint famous masterpieces plus original compositions. Instructor: Debra Stasiak."
+    "note": "Learn Impressionism/Fauvism brushstrokes using acrylic paints. Paint famous masterpieces plus original compositions. Instructor: Debra Stasiak.",
+    "sessions": [
+      {
+        "time": "2–30",
+        "dates": [
+          "Mar 7–28, Mar 4–25, Apr 1–22, Apr 4–25, Apr 29–May 20, May"
+        ]
+      }
+    ]
   },
   {
     "name": "Great Impressionism for Aspiring Young Artists",
@@ -2739,7 +3439,15 @@
       "Apr",
       "May"
     ],
-    "note": "Explore basic recipes, practice fine motor skills, and read stories while food cooks. Kitchen safety basics in a fun environment."
+    "note": "Explore basic recipes, practice fine motor skills, and read stories while food cooks. Kitchen safety basics in a fun environment.",
+    "sessions": [
+      {
+        "time": "6–27",
+        "dates": [
+          "Mar 18–Apr 22 (no 4/1 & 4/8), Mar 19–Apr 23 (no 4/2 & 4/9), May"
+        ]
+      }
+    ]
   },
   {
     "name": "Cooking Basics for Teens",
@@ -2875,7 +3583,21 @@
       "Apr",
       "May"
     ],
-    "note": "Real-life version of the popular social deduction game with multiple rounds and Among Us activities."
+    "note": "Real-life version of the popular social deduction game with multiple rounds and Among Us activities.",
+    "sessions": [
+      {
+        "time": "1:30-3PM",
+        "dates": [
+          "Apr 11, May 2 (ages 6-10"
+        ]
+      },
+      {
+        "time": "3:30-5PM)",
+        "dates": [
+          "ages 7-14"
+        ]
+      }
+    ]
   },
   {
     "name": "Beginner Chess",
@@ -2919,7 +3641,15 @@
     "months": [
       "Apr"
     ],
-    "note": "Fingerprinting, grid searches, invisible ink, UV puzzles, and CSI crime scenes. Taught by active duty and retired detectives."
+    "note": "Fingerprinting, grid searches, invisible ink, UV puzzles, and CSI crime scenes. Taught by active duty and retired detectives.",
+    "sessions": [
+      {
+        "time": "9 AM–12 PM",
+        "dates": [
+          "Wed–Thu Apr 8–9,"
+        ]
+      }
+    ]
   },
   {
     "name": "Learn to Play Dungeons & Dragons",
@@ -3083,7 +3813,15 @@
       "Apr",
       "May"
     ],
-    "note": "Lose the training wheels! Small class with individual attention. Parents assist the instructor and practice between sessions."
+    "note": "Lose the training wheels! Small class with individual attention. Parents assist the instructor and practice between sessions.",
+    "sessions": [
+      {
+        "time": "19–21",
+        "dates": [
+          "Mar 30–Apr 2, Apr 25–May 2, May"
+        ]
+      }
+    ]
   },
   {
     "name": "Take a Shot: Intro to Archery",
@@ -3113,7 +3851,15 @@
     "months": [
       "Apr"
     ],
-    "note": "Three-session archery series with new games each session. Beginner or refresher. All equipment provided."
+    "note": "Three-session archery series with new games each session. Beginner or refresher. All equipment provided.",
+    "sessions": [
+      {
+        "time": "4:30–6:30 PM",
+        "dates": [
+          "Apr 2–16 (Thu)"
+        ]
+      }
+    ]
   },
   {
     "name": "Super Archers Academy",
@@ -3157,7 +3903,16 @@
       "Apr",
       "May"
     ],
-    "note": "Original play performed on the last day for family and friends. Includes acting games and performance skills."
+    "note": "Original play performed on the last day for family and friends. Includes acting games and performance skills.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Mar 30–May 4 Mon",
+          "Apr 14–May 19 Tue"
+        ]
+      }
+    ]
   },
   {
     "name": "Downtown Daily News Special Edition: USA's 250th Birthday Bash!",
@@ -3173,7 +3928,21 @@
       "Apr",
       "May"
     ],
-    "note": "Original play with performance for family on last day. Covers vocal, movement, and creative acting skills."
+    "note": "Original play with performance for family on last day. Covers vocal, movement, and creative acting skills.",
+    "sessions": [
+      {
+        "time": "no 4/3",
+        "dates": [
+          "Mar 20–May 1 Fri"
+        ]
+      },
+      {
+        "time": null,
+        "dates": [
+          "Mar 26–Apr 30 Thu"
+        ]
+      }
+    ]
   },
   {
     "name": "Homeschool Troupe of Actors",
@@ -3188,7 +3957,21 @@
       "Apr",
       "May"
     ],
-    "note": "Create monologues/scenes/play performed for family on last day. Voice, movement, imagination, and the Four Centers of Acting."
+    "note": "Create monologues/scenes/play performed for family on last day. Voice, movement, imagination, and the Four Centers of Acting.",
+    "sessions": [
+      {
+        "time": "ages 9-15",
+        "dates": [
+          "Apr 7–May 12 Tue"
+        ]
+      },
+      {
+        "time": "ages 13-17",
+        "dates": [
+          "Apr 8–May 13 Wed"
+        ]
+      }
+    ]
   },
   {
     "name": "Good Morning Puppet Show!",
@@ -3202,7 +3985,15 @@
     "months": [
       "Apr"
     ],
-    "note": "Make your own puppet, play acting games, and perform stories, songs, and jokes for family on the last day."
+    "note": "Make your own puppet, play acting games, and perform stories, songs, and jokes for family on the last day.",
+    "sessions": [
+      {
+        "time": "10:00–11:30 AM",
+        "dates": [
+          "Apr 8–29 Wed,"
+        ]
+      }
+    ]
   },
   {
     "name": "The Afternoon Puppet Show",
@@ -3217,7 +4008,16 @@
       "Apr",
       "May"
     ],
-    "note": "Make a puppet, play acting games, and perform stories, songs, and jokes for family on the last day."
+    "note": "Make a puppet, play acting games, and perform stories, songs, and jokes for family on the last day.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Apr 10–May 1 Fri",
+          "Apr 9–30 Thu"
+        ]
+      }
+    ]
   },
   {
     "name": "Hip Hop Dance",
@@ -3233,7 +4033,23 @@
       "Apr",
       "May"
     ],
-    "note": "Breaking, crumping, Slide Glide, and more. Warm-ups, moves into routines, and a parent performance at end of session."
+    "note": "Breaking, crumping, Slide Glide, and more. Warm-ups, moves into routines, and a parent performance at end of session.",
+    "sessions": [
+      {
+        "time": "4:30 PM",
+        "dates": [
+          "Mar 3–Apr 7 (Tue)",
+          "Apr 21–May 26 (Tue)"
+        ]
+      },
+      {
+        "time": "5:30 PM",
+        "dates": [
+          "Mar 3–Apr 7 (Tue)",
+          "Apr 21–May 26 (Tue)"
+        ]
+      }
+    ]
   },
   {
     "name": "Little Dancers",
@@ -3248,7 +4064,15 @@
       "Mar",
       "Jun"
     ],
-    "note": "Basic ballet movement, terminology, and first barre introduction. Tap section builds rhythmic coordination. Ballet attire and shoes required."
+    "note": "Basic ballet movement, terminology, and first barre introduction. Tap section builds rhythmic coordination. Ballet attire and shoes required.",
+    "sessions": [
+      {
+        "time": "4:45–5:30 PM",
+        "dates": [
+          "Mar 24–Jun 9 (Tue, no 4/7 & 5/12)"
+        ]
+      }
+    ]
   },
   {
     "name": "Storytime Ballet",
@@ -3263,7 +4087,15 @@
       "Mar",
       "Jun"
     ],
-    "note": "Children's books + movement: listening skills, language, and coordination. Ballet attire and shoes required."
+    "note": "Children's books + movement: listening skills, language, and coordination. Ballet attire and shoes required.",
+    "sessions": [
+      {
+        "time": "10:15–11:00 AM",
+        "dates": [
+          "Mar 25–Jun 10 (Wed, no 4/8 & 5/13)"
+        ]
+      }
+    ]
   },
   {
     "name": "Tots in Tutus I",
@@ -3278,7 +4110,15 @@
       "Mar",
       "Jun"
     ],
-    "note": "Simple ballet exercises with professional instruction in a beautiful park setting. Creativity and enjoyment emphasized."
+    "note": "Simple ballet exercises with professional instruction in a beautiful park setting. Creativity and enjoyment emphasized.",
+    "sessions": [
+      {
+        "time": "10:15–11:00 AM",
+        "dates": [
+          "Mar 24–Jun 9 (Tue, no 4/7 & 5/12)"
+        ]
+      }
+    ]
   },
   {
     "name": "Tots in Tutus II Combo",
@@ -3293,7 +4133,15 @@
       "Mar",
       "Jun"
     ],
-    "note": "Ballet and tap basics using fun music and props. Builds self-confidence, listening skills, and imagination."
+    "note": "Ballet and tap basics using fun music and props. Builds self-confidence, listening skills, and imagination.",
+    "sessions": [
+      {
+        "time": "4:00–4:45 PM",
+        "dates": [
+          "Mar 24–Jun 9 (Tue, no 4/7 & 5/12)"
+        ]
+      }
+    ]
   },
   {
     "name": "Rock to Bach - Guitar for Kids",
@@ -3310,7 +4158,21 @@
       "May",
       "Jun"
     ],
-    "note": "Classical to rock: read music, strum chords, and develop technique. Small group. Required workbook; bring your own guitar."
+    "note": "Classical to rock: read music, strum chords, and develop technique. Small group. Required workbook; bring your own guitar.",
+    "sessions": [
+      {
+        "time": "8 sessions",
+        "dates": [
+          "Mar 9–Apr 27 Mon"
+        ]
+      },
+      {
+        "time": "6 sessions, no 5/25",
+        "dates": [
+          "May 4–Jun 15 Mon"
+        ]
+      }
+    ]
   },
   {
     "name": "Rock to Bach - Vocal for Kids",
@@ -3327,7 +4189,21 @@
       "May",
       "Jun"
     ],
-    "note": "Classical harmonies to rock melodies: sheet music, hitting notes, vocal technique. Small group. Required workbook; bring your voice."
+    "note": "Classical harmonies to rock melodies: sheet music, hitting notes, vocal technique. Small group. Required workbook; bring your voice.",
+    "sessions": [
+      {
+        "time": "8 sessions",
+        "dates": [
+          "Mar 9–Apr 27 Mon"
+        ]
+      },
+      {
+        "time": "6 sessions, no 5/25",
+        "dates": [
+          "May 4–Jun 15 Mon"
+        ]
+      }
+    ]
   },
   {
     "name": "Baseball FUNdamentals",
@@ -3343,7 +4219,16 @@
       "May",
       "Jun"
     ],
-    "note": "Fun, noncompetitive baseball: batting, fielding, base running, and the rules of the game."
+    "note": "Fun, noncompetitive baseball: batting, fielding, base running, and the rules of the game.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Apr 11–May 2 (Sat)",
+          "May 16–Jun 13 (Sat, no 5/23)"
+        ]
+      }
+    ]
   },
   {
     "name": "T-Ball",
@@ -3360,7 +4245,21 @@
       "May",
       "Jun"
     ],
-    "note": "Fun introduction to baseball/softball: hitting, throwing, base running, and fielding. Mini-game situations at end."
+    "note": "Fun introduction to baseball/softball: hitting, throwing, base running, and fielding. Mini-game situations at end.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Mar 7–28 Sat"
+        ]
+      },
+      {
+        "time": "multiple times",
+        "dates": [
+          "Apr 7–28 Tue, Apr 11–May 3, May 12–Jun 14"
+        ]
+      }
+    ]
   },
   {
     "name": "T-Ball 2",
@@ -3405,7 +4304,17 @@
       "Apr",
       "May"
     ],
-    "note": "One-off basketball intro session. Fun and noncompetitive fundamentals without the full program commitment."
+    "note": "One-off basketball intro session. Fun and noncompetitive fundamentals without the full program commitment.",
+    "sessions": [
+      {
+        "time": "10:00–10:55 AM",
+        "dates": [
+          "Apr 12",
+          "Apr 26",
+          "May 10 (Sun)"
+        ]
+      }
+    ]
   },
   {
     "name": "Girls' Basketball FUNdamentals",
@@ -3436,7 +4345,16 @@
       "Apr",
       "May"
     ],
-    "note": "One-off girls' basketball intro. Non-intimidating, noncompetitive environment."
+    "note": "One-off girls' basketball intro. Non-intimidating, noncompetitive environment.",
+    "sessions": [
+      {
+        "time": "11:00–11:55 AM",
+        "dates": [
+          "Apr 12",
+          "May 10 (Sun)"
+        ]
+      }
+    ]
   },
   {
     "name": "Junior Hoopsters",
@@ -3452,7 +4370,16 @@
       "May",
       "Jun"
     ],
-    "note": "Continue developing shooting, passing, rebounding, ball handling, and defense. For athletes with beginner basketball experience."
+    "note": "Continue developing shooting, passing, rebounding, ball handling, and defense. For athletes with beginner basketball experience.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Apr 9–30 (Thu)",
+          "May 14–Jun 4 (Thu)"
+        ]
+      }
+    ]
   },
   {
     "name": "Young Junior Hoopsters Clinic",
@@ -3483,7 +4410,16 @@
       "May",
       "Jun"
     ],
-    "note": "Swordsmanship with sportsmanship. Taught by a four-time Olympic coach. Protective gear provided. Space very limited."
+    "note": "Swordsmanship with sportsmanship. Taught by a four-time Olympic coach. Protective gear provided. Space very limited.",
+    "sessions": [
+      {
+        "time": "3:30–4:30 PM",
+        "dates": [
+          "Mar 12–Apr 30 (Thu)",
+          "May 7–Jun 25 (Thu)"
+        ]
+      }
+    ]
   },
   {
     "name": "Gymnastics - Kids",
@@ -3515,7 +4451,15 @@
       "Apr",
       "May"
     ],
-    "note": "Basic chants, stunts, arm motions, and beginner tumbling in a positive, recreational environment."
+    "note": "Basic chants, stunts, arm motions, and beginner tumbling in a positive, recreational environment.",
+    "sessions": [
+      {
+        "time": "11:00–11:45 AM",
+        "dates": [
+          "Mar 7–28, Apr 11–May 2, May 9–30 Sat,"
+        ]
+      }
+    ]
   },
   {
     "name": "Hat Trick Hockey - Floor",
@@ -3531,7 +4475,17 @@
       "May",
       "Jun"
     ],
-    "note": "No skates or pads needed! Learn to shoot, pass, and control the puck in sneakers. Noncompetitive, builds hand-eye coordination."
+    "note": "No skates or pads needed! Learn to shoot, pass, and control the puck in sneakers. Noncompetitive, builds hand-eye coordination.",
+    "sessions": [
+      {
+        "time": "10 AM or 11 AM",
+        "dates": [
+          "Apr 9–30 (Thu)",
+          "Apr 11–May 2 (Sat)",
+          "May 14–Jun 4 (Thu)"
+        ]
+      }
+    ]
   },
   {
     "name": "Skyhawks Field Hockey",
@@ -3546,7 +4500,15 @@
       "Apr",
       "Jun"
     ],
-    "note": "USA Field Hockey curriculum: stick handling, dribbling, passing, and receiving. All participants receive a stick and ball. For boys and girls."
+    "note": "USA Field Hockey curriculum: stick handling, dribbling, passing, and receiving. All participants receive a stick and ball. For boys and girls.",
+    "sessions": [
+      {
+        "time": "5:00–5:50 PM",
+        "dates": [
+          "Apr 27–Jun 8 (Mon, no 5/25)"
+        ]
+      }
+    ]
   },
   {
     "name": "Skyhawks Flag Football",
@@ -3562,7 +4524,16 @@
       "May",
       "Jun"
     ],
-    "note": "USA Football curriculum: passing, receiving, kicking, and flag pulling. Confidence and life lessons in a fun, positive environment."
+    "note": "USA Football curriculum: passing, receiving, kicking, and flag pulling. Confidence and life lessons in a fun, positive environment.",
+    "sessions": [
+      {
+        "time": "9:00–9:50 AM",
+        "dates": [
+          "Apr 12–May 10 (Sun)",
+          "May 31–Jun 28 (Sun)"
+        ]
+      }
+    ]
   },
   {
     "name": "Skyhawks Lacrosse",
@@ -3578,7 +4549,16 @@
       "May",
       "Jun"
     ],
-    "note": "Stick handling, cradling, passing, and shooting in a fun, non-checking environment. Respect, teamwork, and discipline emphasized."
+    "note": "Stick handling, cradling, passing, and shooting in a fun, non-checking environment. Respect, teamwork, and discipline emphasized.",
+    "sessions": [
+      {
+        "time": "10:00–10:50 AM",
+        "dates": [
+          "Apr 12–May 10 (Sun)",
+          "May 31–Jun 28 (Sun)"
+        ]
+      }
+    ]
   },
   {
     "name": "Skyhawks Track & Field",
@@ -3594,7 +4574,16 @@
       "May",
       "Jun"
     ],
-    "note": "Javelin, shot put, hurdles, long jump, and relay races with special equipment. Builds footspeed, flexibility, endurance, and coordination."
+    "note": "Javelin, shot put, hurdles, long jump, and relay races with special equipment. Builds footspeed, flexibility, endurance, and coordination.",
+    "sessions": [
+      {
+        "time": "11:00–11:50 AM",
+        "dates": [
+          "Apr 12–May 10 (Sun)",
+          "May 31–Jun 28 (Sun)"
+        ]
+      }
+    ]
   },
   {
     "name": "Pickleball for Kids",
@@ -3610,7 +4599,21 @@
       "May",
       "Jun"
     ],
-    "note": "Learn rules, skills, and gameplay of one of the fastest growing sports. Youth-geared instruction. Paddles and balls provided."
+    "note": "Learn rules, skills, and gameplay of one of the fastest growing sports. Youth-geared instruction. Paddles and balls provided.",
+    "sessions": [
+      {
+        "time": null,
+        "dates": [
+          "Apr 1–22, May 13–Jun 3 Wed (ages 7-10 4:30–5:30"
+        ]
+      },
+      {
+        "time": "5:45–6:45 PM)",
+        "dates": [
+          "ages 11-14"
+        ]
+      }
+    ]
   },
   {
     "name": "Cool Runners Fitness Run for Fun",

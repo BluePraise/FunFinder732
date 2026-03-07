@@ -168,9 +168,9 @@ export default function ParkEvents() {
 			<div className="page-intro">
 				<h2>Monmouth County Park System — Spring 2026</h2>
 				<p>
-					Programs, events &amp; demonstrations from March through June 2026.
-					Registration opens{" "}
-					<strong>Wednesday, February 11, 2026 at 8:00 AM</strong> at{" "}
+					Programs, events &amp; demonstrations from March through
+					June 2026. <br />
+					For questions:{" "}
 					<a
 						href="https://www.MonmouthCountyParks.com"
 						target="_blank"
@@ -184,18 +184,24 @@ export default function ParkEvents() {
 
 			{/* ── Three-column layout ── */}
 			<div className="flex gap-5 items-start">
-
 				{/* Left sidebar — hidden on mobile, sticky on md+ */}
 				<aside className="hidden md:flex flex-col gap-0 w-64 shrink-0 sticky top-6 max-h-[calc(100vh-5rem)] overflow-y-auto">
 					<div className="gym-card p-4">
 						<FilterSidebar
-							search={search} setSearch={setSearch}
-							month={month} setMonth={setMonth}
-							category={category} setCategory={setCategory}
-							ageGroup={ageGroup} setAgeGroup={setAgeGroup}
-							freeOnly={freeOnly} setFreeOnly={setFreeOnly}
-							sortBy={sortBy} setSortBy={setSortBy}
-							isFiltered={isFiltered} clearFilters={clearFilters}
+							search={search}
+							setSearch={setSearch}
+							month={month}
+							setMonth={setMonth}
+							category={category}
+							setCategory={setCategory}
+							ageGroup={ageGroup}
+							setAgeGroup={setAgeGroup}
+							freeOnly={freeOnly}
+							setFreeOnly={setFreeOnly}
+							sortBy={sortBy}
+							setSortBy={setSortBy}
+							isFiltered={isFiltered}
+							clearFilters={clearFilters}
 						/>
 					</div>
 				</aside>
@@ -205,8 +211,7 @@ export default function ParkEvents() {
 					{/* Mobile filter button */}
 					<button
 						onClick={() => setDrawerOpen(true)}
-						className="md:hidden flex items-center gap-2 mb-4 bg-white border border-gray-300 rounded-lg px-4 py-2 text-sm font-medium text-[var(--ff-gray)] hover:border-[var(--ff-green)] hover:text-[var(--ff-green)] transition-colors"
-					>
+						className="md:hidden flex items-center gap-2 mb-4 bg-white border border-gray-300 rounded-lg px-4 py-2 text-sm font-medium text-[var(--ff-gray)] hover:border-[var(--ff-green)] hover:text-[var(--ff-green)] transition-colors">
 						<SlidersHorizontal className="h-4 w-4" />
 						Filters &amp; Sort
 						{isFiltered && (
@@ -237,13 +242,20 @@ export default function ParkEvents() {
 			<MobileFilterDrawer
 				isOpen={drawerOpen}
 				onClose={() => setDrawerOpen(false)}
-				search={search} setSearch={setSearch}
-				month={month} setMonth={setMonth}
-				category={category} setCategory={setCategory}
-				ageGroup={ageGroup} setAgeGroup={setAgeGroup}
-				freeOnly={freeOnly} setFreeOnly={setFreeOnly}
-				sortBy={sortBy} setSortBy={setSortBy}
-				isFiltered={isFiltered} clearFilters={clearFilters}
+				search={search}
+				setSearch={setSearch}
+				month={month}
+				setMonth={setMonth}
+				category={category}
+				setCategory={setCategory}
+				ageGroup={ageGroup}
+				setAgeGroup={setAgeGroup}
+				freeOnly={freeOnly}
+				setFreeOnly={setFreeOnly}
+				sortBy={sortBy}
+				setSortBy={setSortBy}
+				isFiltered={isFiltered}
+				clearFilters={clearFilters}
 			/>
 		</div>
   );

@@ -21,7 +21,7 @@ export const CATEGORIES: { label: string; value: Category | "all"; icon: string 
 
 export const AGE_BUCKETS: { label: string; value: AgeBucket | "all"; icon: string }[] = [
   { label: "All ages",     value: "all",        icon: "👤" },
-  { label: "Babies (0–2)", value: "babies",     icon: "👶" },
+  { label: "Babies (0-2)", value: "babies",     icon: "👶" },
   { label: "Toddlers",     value: "toddlers",   icon: "🐣" },
   { label: "Preschool",    value: "preschool",  icon: "🎒" },
   { label: "Elementary",   value: "elementary", icon: "🧒" },
