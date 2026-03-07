@@ -149,10 +149,11 @@ export default function SubmitEvent() {
 				</div>
 
 				<div>
-					<label className="block font-medium mb-1">Cost</label>
+					<label className="block font-medium mb-1">Cost *</label>
 					<input
 						type="text"
 						name="cost"
+						required
 						value={formData.cost}
 						onChange={handleChange}
 						className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--ff-green)] focus:border-transparent"

@@ -14,7 +14,7 @@ interface EventSubmission {
   location: string;
   description: string;
   category: string;
-  cost?: string;
+  cost: string;
   contactEmail: string;
   website?: string;
   subscribeNewsletter?: boolean;
@@ -26,9 +26,9 @@ export default async function handler(req: Req, res: Res) {
   }
 
   const body = req.body as Partial<EventSubmission>;
-  const { eventName, date, location, description, category, contactEmail } = body;
+  const { eventName, date, location, description, category, cost, contactEmail } = body;
 
-  if (!eventName || !date || !location || !description || !category || !contactEmail) {
+  if (!eventName || !date || !location || !description || !category || !cost || !contactEmail) {
     return res.status(400).json({ error: "Please fill in all required fields." });
   }
 
@@ -49,7 +49,7 @@ export default async function handler(req: Req, res: Res) {
       location,
       description,
       category,
-      cost: body.cost ?? "",
+      cost: cost,
       contactEmail,
       website: body.website ?? "",
       submittedAt: new Date().toISOString(),
