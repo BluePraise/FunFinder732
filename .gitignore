@@ -30,3 +30,5 @@ PDF/
 *.njsproj
 *.sln
 *.sw?
+.vercel
+.env*.local
