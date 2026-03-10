@@ -152,8 +152,15 @@ export default function ParkEvents() {
       }
     }
 
-    // Apply sort
-    result.sort((a, b) => a.dateObj.getTime() - b.dateObj.getTime()); // base: date-asc
+    // Apply sort — use effective date (next upcoming date if available, else original)
+    const effectiveTime = (r: EventRow) => {
+      if (r.nextUpcomingSessionDate) {
+        const d = parseFirstDate(r.nextUpcomingSessionDate);
+        if (d.getTime() !== 8640000000000000) return d.getTime();
+      }
+      return r.dateObj.getTime();
+    };
+    result.sort((a, b) => effectiveTime(a) - effectiveTime(b)); // base: date-asc
     if (sortBy === "date-desc") result.reverse();
     else if (sortBy === "alpha") result.sort((a, b) => a.event.name.localeCompare(b.event.name));
     else if (sortBy === "free-first") result.sort((a, b) => Number(b.event.isFree) - Number(a.event.isFree));
