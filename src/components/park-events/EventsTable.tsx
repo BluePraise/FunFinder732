@@ -13,6 +13,8 @@ interface EventsTableProps {
   clearFilters: () => void;
   uniqueEventCount: number;
   todayStr: string;
+  showPastEvents: boolean;
+  setShowPastEvents: (v: boolean) => void;
 }
 
 export default function EventsTable({
@@ -23,8 +25,15 @@ export default function EventsTable({
   clearFilters,
   uniqueEventCount,
   todayStr,
+  showPastEvents,
+  setShowPastEvents,
 }: EventsTableProps) {
   const today = useMemo(() => new Date(), []);
+
+  const visibleRows = useMemo(
+    () => showPastEvents ? rows : rows.filter((r) => !r.isEventFullyPast),
+    [rows, showPastEvents]
+  );
 
   return (
     <>
@@ -37,9 +46,19 @@ export default function EventsTable({
           {isFiltered ? " match your filters" : " total"} · {rows.length}{" "}
           occurrence{rows.length !== 1 ? "s" : ""}
         </span>
+        <span className="text-gray-300">|</span>
+        <label className="flex items-center gap-1.5 cursor-pointer select-none">
+          <input
+            type="checkbox"
+            checked={showPastEvents}
+            onChange={(e) => setShowPastEvents(e.target.checked)}
+            className="accent-[var(--ff-green)] w-3.5 h-3.5"
+          />
+          <span>Show past events</span>
+        </label>
       </p>
 
-      {rows.length === 0 ? (
+      {visibleRows.length === 0 ? (
         <div className="gym-card p-10 text-center text-[var(--ff-gray)]">
           No events match your filters.{" "}
           <button onClick={clearFilters} className="underline text-[var(--ff-green)]">
@@ -59,7 +78,7 @@ export default function EventsTable({
               </Tr>
             </Thead>
             <Tbody>
-              {rows.map(({ event, dateStr, isEventFullyPast, nextUpcomingSessionDate }, i) => {
+              {visibleRows.map(({ event, dateStr, isEventFullyPast, nextUpcomingSessionDate }, i) => {
                 const rowKey = `${event.name}-${dateStr}`;
                 const hasSessions = !!event.sessions?.length;
                 const isExpanded = expandedKeys.has(rowKey);

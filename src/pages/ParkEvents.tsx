@@ -86,6 +86,7 @@ export default function ParkEvents() {
   const [freeOnly, setFreeOnly]     = useState(false);
   const [sortBy, setSortBy]         = useState<SortBy>("date-asc");
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [showPastEvents, setShowPastEvents] = useState(false);
   const [expandedKeys, setExpandedKeys] = useState<Set<string>>(new Set());
 
   const toggleRow = (key: string) =>
@@ -251,6 +252,8 @@ export default function ParkEvents() {
 						clearFilters={clearFilters}
 						uniqueEventCount={uniqueEventCount}
 						todayStr={todayStr}
+						showPastEvents={showPastEvents}
+						setShowPastEvents={setShowPastEvents}
 					/>
 				</div>
 
