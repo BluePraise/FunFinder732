@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { SlidersHorizontal } from "lucide-react";
 import EVENTS_RAW from "../data/events.json";
 import type { Month, AgeBucket, Category, SortBy, ParkEvent, EventRow } from "@/components/park-events/types";
+import { getEventDateStatus } from "@/components/park-events/dateUtils";
 import FilterSidebar from "@/components/park-events/FilterSidebar";
 import EventsTable from "@/components/park-events/EventsTable";
 import SavedPanel from "@/components/park-events/SavedPanel";
@@ -95,7 +96,7 @@ export default function ParkEvents() {
       return next;
     });
 
-  const today = new Date();
+  const today = useMemo(() => new Date(), []);
   const todayStr = today.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
   // Each entry in `rows` is a single date occurrence for an event.
@@ -104,7 +105,7 @@ export default function ParkEvents() {
     const MONTH_ABBRS: Record<string, string> = {
       Mar: "Mar", Apr: "Apr", May: "May", Jun: "Jun",
     };
-    const result: { event: ParkEvent; dateStr: string; dateObj: Date }[] = [];
+    const result: EventRow[] = [];
 
     for (const e of EVENTS) {
       if (freeOnly && !e.isFree) continue;
@@ -114,6 +115,13 @@ export default function ParkEvents() {
       if (q && !`${e.name} ${e.location} ${e.note ?? ""}`.toLowerCase().includes(q)) continue;
 
       const segments = e.dates.split(";").map((s) => s.trim()).filter(Boolean);
+
+      // ── Date-status check ──────────────────────────────────────────
+      const { isFullyPast, hasCurrentMonthDate, nextUpcomingDate } =
+        getEventDateStatus(segments, e.sessions, today);
+
+      // Omit events entirely in the past that have no dates in the current month
+      if (isFullyPast && !hasCurrentMonthDate) continue;
 
       // Detect trailing "(all HH…)" shared time and propagate it to earlier segments
       const lastSeg = segments[segments.length - 1];
@@ -133,7 +141,14 @@ export default function ParkEvents() {
           if (abbr && !seg.includes(abbr)) continue;
         }
 
-        result.push({ event: e, dateStr: seg, dateObj: parseFirstDate(seg) } as EventRow);
+        result.push({
+          event: e,
+          dateStr: seg,
+          dateObj: parseFirstDate(seg),
+          isEventFullyPast: isFullyPast,
+          hasCurrentMonthDate,
+          nextUpcomingSessionDate: nextUpcomingDate,
+        } as EventRow);
       }
     }
 
@@ -144,7 +159,7 @@ export default function ParkEvents() {
     else if (sortBy === "free-first") result.sort((a, b) => Number(b.event.isFree) - Number(a.event.isFree));
 
     return result;
-  }, [search, month, category, ageGroup, freeOnly, sortBy]);
+  }, [search, month, category, ageGroup, freeOnly, sortBy, today]);
 
   const uniqueEventCount = useMemo(
     () => new Set(rows.map((r) => r.event.name)).size,

@@ -34,4 +34,10 @@ export interface EventRow {
   event: ParkEvent;
   dateStr: string;
   dateObj: Date;
+  /** True when every date of the event is in the past */
+  isEventFullyPast: boolean;
+  /** True when at least one event date falls in the current month */
+  hasCurrentMonthDate: boolean;
+  /** The next upcoming session date string, or null if all past */
+  nextUpcomingSessionDate: string | null;
 }

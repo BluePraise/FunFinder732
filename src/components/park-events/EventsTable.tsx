@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 import type { EventRow } from "./types";
 import { CAT_COLORS } from "./constants";
+import { parseEventDate, isDatePast } from "./dateUtils";
 
 interface EventsTableProps {
   rows: EventRow[];
@@ -22,6 +23,8 @@ export default function EventsTable({
   uniqueEventCount,
   todayStr,
 }: EventsTableProps) {
+  const today = useMemo(() => new Date(), []);
+
   return (
     <>
       {/* Result count */}
@@ -55,11 +58,12 @@ export default function EventsTable({
               </Tr>
             </Thead>
             <Tbody>
-              {rows.map(({ event, dateStr }, i) => {
+              {rows.map(({ event, dateStr, isEventFullyPast, nextUpcomingSessionDate }, i) => {
                 const rowKey = `${event.name}-${dateStr}`;
                 const hasSessions = !!event.sessions?.length;
                 const isExpanded = expandedKeys.has(rowKey);
                 const rowBg = i % 2 === 0 ? "bg-white" : "bg-gray-50/60";
+                const pastRowClass = isEventFullyPast ? "opacity-50 grayscale" : "";
 
                 return (
 					<React.Fragment key={rowKey}>
@@ -69,20 +73,29 @@ export default function EventsTable({
 									? () => toggleRow(rowKey)
 									: undefined
 							}
-							className={`border-t border-gray-100 align-top ${rowBg} hover:bg-[var(--ff-green-pale)] transition-colors ${hasSessions ? "cursor-pointer select-none" : ""}`}>
+							className={`border-t border-gray-100 align-top ${rowBg} ${pastRowClass} ${!isEventFullyPast ? "hover:bg-[var(--ff-green-pale)]" : ""} transition-colors ${hasSessions ? "cursor-pointer select-none" : ""}`}>
 							{/* Date */}
-							<Td className="px-4 py-3 text-[var(--ff-gray)] font-medium align-middle">
+							<Td className="px-4 py-3 text-[var(--ff-gray)] font-medium">
 								{hasSessions ? (
-									<span className="flex items-center gap-1">
-										<span className="inline-block mt-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">
+									<span className="flex flex-col items-start gap-1 h-full">
+										<div className="block mt-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">
 											Multiple sessions
-										</span>
-										<span
-											className={`text-[var(--ff-green)] transition-transform duration-200 inline-block ${isExpanded ? "rotate-90" : ""}`}
-											aria-hidden>
-											▶
-										</span>
-										<span className="ml-2">{dateStr}</span>
+										</div>
+										{!isEventFullyPast && nextUpcomingSessionDate && (
+											<div className="text-xs font-semibold text-[var(--ff-green)]">
+												Next: {nextUpcomingSessionDate}
+											</div>
+										)}
+										<div className="multiple-date flex items-center">
+											<span
+												className={`text-[var(--ff-green)] transition-transform duration-200 inline-block ${isExpanded ? "rotate-90" : ""}`}
+												aria-hidden>
+												▶
+											</span>
+											<span className="ml-2">
+												{dateStr}
+											</span>
+										</div>
 									</span>
 								) : (
 									dateStr
@@ -133,7 +146,7 @@ export default function EventsTable({
 						{hasSessions && isExpanded && (
 							<Tr
 								key={`${rowKey}-sessions`}
-								className={`${rowBg} border-t-0`}>
+								className={`${rowBg} border-t-0 ${pastRowClass}`}>
 								<Td />
 								<Td colSpan={4} className="px-5 pb-4 pt-2">
 									<div className="flex flex-col gap-3">
@@ -150,21 +163,24 @@ export default function EventsTable({
 													</span>
 												</div>
 												<div className="flex flex-wrap gap-x-3 gap-y-0.5 pl-1">
-													{s.dates.map((d, i) => (
-														// add a separator between dates
-														<span
-															key={d}
-															className="text-xs text-[var(--ff-gray)]">
-															{d}
-															{i <
-																s.dates.length -
-																	1 && (
-																<span className="text-xs text-[var(--ff-gray)] display-inline-block ml-1">
-																	-
-																</span>
-															)}
-														</span>
-													))}
+													{s.dates.map((d, i) => {
+														const parsed = parseEventDate(d);
+														const isPast = parsed ? isDatePast(parsed, today) : false;
+														return (
+															<span
+																key={d}
+																className={`text-xs ${isPast ? "line-through text-gray-400" : "text-[var(--ff-gray)]"}`}>
+																{d}
+																{i <
+																	s.dates.length -
+																		1 && (
+																	<span className="text-xs text-gray-300 display-inline-block ml-1">
+																		-
+																	</span>
+																)}
+															</span>
+														);
+													})}
 												</div>
 											</div>
 										))}
