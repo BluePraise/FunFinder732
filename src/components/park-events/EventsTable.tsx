@@ -173,9 +173,11 @@ export default function EventsTable({
 												key={s.code}
 												className="flex flex-col gap-1">
 												<div className="flex items-center gap-2">
-													<span className="font-mono text-xs font-bold bg-[var(--ff-green-pale)] text-[var(--ff-green)] px-2 py-0.5 rounded">
-														{s.code}
-													</span>
+													{s.code && (
+														<span className="font-mono text-xs font-bold bg-[var(--ff-green-pale)] text-[var(--ff-green)] px-2 py-0.5 rounded">
+															{s.code}
+														</span>
+													)}
 													<span className="text-sm font-medium text-[var(--ff-gray)]">
 														{s.time}
 													</span>
