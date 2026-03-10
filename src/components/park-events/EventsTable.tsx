@@ -3,6 +3,7 @@ import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 import type { EventRow } from "./types";
 import { CAT_COLORS } from "./constants";
 import { parseEventDate, isDatePast } from "./dateUtils";
+import { compareAsc } from "date-fns";
 
 interface EventsTableProps {
   rows: EventRow[];
@@ -81,11 +82,6 @@ export default function EventsTable({
 										<div className="block mt-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">
 											Multiple sessions
 										</div>
-										{!isEventFullyPast && nextUpcomingSessionDate && (
-											<div className="text-xs font-semibold text-[var(--ff-green)]">
-												Next: {nextUpcomingSessionDate}
-											</div>
-										)}
 										<div className="multiple-date flex items-center">
 											<span
 												className={`text-[var(--ff-green)] transition-transform duration-200 inline-block ${isExpanded ? "rotate-90" : ""}`}
@@ -93,7 +89,10 @@ export default function EventsTable({
 												▶
 											</span>
 											<span className="ml-2">
-												{dateStr}
+												{!isEventFullyPast &&
+												nextUpcomingSessionDate
+													? nextUpcomingSessionDate
+													: dateStr}
 											</span>
 										</div>
 									</span>
@@ -163,24 +162,50 @@ export default function EventsTable({
 													</span>
 												</div>
 												<div className="flex flex-wrap gap-x-3 gap-y-0.5 pl-1">
-													{s.dates.map((d, i) => {
-														const parsed = parseEventDate(d);
-														const isPast = parsed ? isDatePast(parsed, today) : false;
-														return (
-															<span
-																key={d}
-																className={`text-xs ${isPast ? "line-through text-gray-400" : "text-[var(--ff-gray)]"}`}>
-																{d}
-																{i <
-																	s.dates.length -
-																		1 && (
-																	<span className="text-xs text-gray-300 display-inline-block ml-1">
-																		-
-																	</span>
-																)}
-															</span>
-														);
-													})}
+													{[...s.dates]
+														.sort((a, b) => {
+															const da =
+																parseEventDate(
+																	a,
+																);
+															const db =
+																parseEventDate(
+																	b,
+																);
+															if (!da || !db)
+																return 0;
+															return compareAsc(
+																da,
+																db,
+															);
+														})
+														.map((d, i, sorted) => {
+															const parsed =
+																parseEventDate(
+																	d,
+																);
+															const isPast =
+																parsed
+																	? isDatePast(
+																			parsed,
+																			today,
+																		)
+																	: false;
+															return (
+																<span
+																	key={d}
+																	className={`text-xs ${isPast ? "line-through text-gray-400" : "text-[var(--ff-gray)]"}`}>
+																	{d}
+																	{i <
+																		sorted.length -
+																			1 && (
+																		<span className="text-xs text-gray-300 display-inline-block ml-1">
+																			-
+																		</span>
+																	)}
+																</span>
+															);
+														})}
 												</div>
 											</div>
 										))}
